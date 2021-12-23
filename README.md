@@ -1,7 +1,9 @@
 # Blech documentation
 
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
 Documentation for the Blech embedded programming language.
-[Read the documentation on our homepage.](https://boschresearch.github.io/blech-doc/)
+[Read the documentation on blech-lang.org](https://www.blech-lang.org)
 
 If you want to change the contents of that website read the following to get started.
 
