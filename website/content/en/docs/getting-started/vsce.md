@@ -49,7 +49,7 @@ npm --version
 Clone the `blech-tools` repository, including the blech compiler submodule.
 
 ```
-git clone --recurse-submodules https://github.com/boschresearch/blech-tools.git
+git clone --recurse-submodules https://github.com/blech-lang/blech-tools.git
 ```
 
 Change to the `ide` subdirectory.

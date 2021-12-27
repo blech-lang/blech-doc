@@ -1,0 +1,10 @@
+{{ $url_text := .Get "url_text" -}}
+<div class="col-md-auto mb-0 mb-lg-0">
+<h4 class="h3">
+  {{- .Get "title" | markdownify -}}
+</h4>
+<!-- <div class="mb-0"> -->
+{{ .Inner }}
+<!-- </div> -->
+{{ with .Get "url" }}<p><a href="{{ . }}">{{ with $url_text }}{{ $url_text }}{{ else }}{{ T "ui_read_more" }}{{ end }} …</a></p>{{ end }}
+</div>

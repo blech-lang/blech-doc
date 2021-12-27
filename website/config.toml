@@ -120,9 +120,9 @@ privacy_policy = "/about/privacy-policy/"
 version_menu = "Releases"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/boschresearch/blech-doc"
+github_repo = "https://github.com/blech-lang/blech-doc"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/boschresearch/blech"
+github_project_repo = "https://github.com/blech-lang/blech"
 
 # Specify a value here if your content directory is not in your repo's root directory
 github_subdir = "website"
@@ -156,8 +156,8 @@ footer_about_disable = false
 [params.ui.feedback]
 enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-yes = 'Glad to hear it! Please <a href="https://github.com/boschresearch/blech-doc/issues/new">tell us how we can improve</a>.'
-no = 'Sorry to hear that. Please <a href="https://github.com/boschresearch/blech-doc/issues/new">tell us how we can improve</a>.'
+yes = 'Glad to hear it! Please <a href="https://github.com/blech-lang/blech-doc/issues/new">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/blech-lang/blech-doc/issues/new">tell us how we can improve</a>.'
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
@@ -175,22 +175,22 @@ no = 'Sorry to hear that. Please <a href="https://github.com/boschresearch/blech
     name ="Twitter @BlechLanguage"
     url = "https://twitter.com/BlechLanguage"
     icon = "fab fa-twitter"
-    desc = "Follow us on Twitter to get the latest news!"
+        desc = "Follow us on Twitter to get the latest news!"
 [[params.links.user]]
     name ="Documentation on GitHub"
-    url = "https://github.com/boschresearch/blech-doc"
+    url = "https://github.com/blech-lang/blech-doc"
     icon = "fas fa-book"
-    desc = "Documentation is collected here!"
+        desc = "Documentation is collected here!"
 
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
     name = "Blech compiler on Github"
-    url = "https://github.com/boschresearch/blech"
+    url = "https://github.com/blech-lang/blech"
     icon = "fab fa-github"
         desc = "Compiler development takes place here!"
 [[params.links.developer]]
     name = "Blech tools on Github"
-    url = "https://github.com/boschresearch/blech-tools"
+    url = "https://github.com/blech-lang/blech-tools"
     icon = "fas fa-tools"
         desc = "Tool development takes place here!"
 [[params.links.developer]]

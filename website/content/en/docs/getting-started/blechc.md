@@ -13,7 +13,7 @@ description: >
 Clone the blech compiler project using
 
 ```
-git clone https://github.com/boschresearch/blech
+git clone https://github.com/blech-lang/blech
 ```
 
 To build the project, you need **.NET Core** installed. Go to the [Microsoft .NET website](https://dotnet.microsoft.com/download) and follow their instructions to install the latest stable **.NET Core** available for your operating system.

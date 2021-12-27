@@ -1,6 +1,6 @@
 # Blech documentation
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Slack chat](https://img.shields.io/static/v1?logo=slack&style=flat&label=slack&color=green&message=blech-lang)](http://chat.blech-lang.org)
 
 Documentation for the Blech embedded programming language.
 [Read the documentation on blech-lang.org](https://www.blech-lang.org)
@@ -134,7 +134,7 @@ Give GitHub some time to deploy the content and open the Blech site on:
 
 * https://blech-lang.org 
 * https://www.blech-lang.org
-* https://boschresearch.github.io/blech-doc
+* https://blech-lang.github.io/blech-doc
 
 
 #### Check for broken links on the website
@@ -165,8 +165,6 @@ The last command only works in a network with commandline DNS access, i.e. witho
 The [documentation for the Docsy Theme](https://www.docsy.dev/docs/adding-content/) explains how to create content.
 
 Creating a blog post is easy. The [Docsy example site shows how to do this](https://example.docsy.dev/blog/2018/10/06/easy-documentation-with-docsy/).
-
-Additional information can be found in the [TechOS theme documentation](https://temp.bep.is/td/docs/theme-documentation/).
 
 
 
