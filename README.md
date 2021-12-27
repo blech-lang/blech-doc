@@ -48,7 +48,7 @@ The Blech documentation already contains the Docsy theme as a git submodule. For
 Therefore clone in the following way:
 
 ```
-git clone --recurse-submodules --depth 1 https://github.com/boschresearch/blech-doc.git
+git clone --recurse-submodules --depth 1 https://github.com/blech-lang/blech-doc.git
 ```
 
 #### Install local npm modules
