@@ -185,10 +185,10 @@
     <a class="btn btn-lg btn-primary mr-3 mb-4" href="/blech-doc/docs/">
         Documentation <i class="fas fa-arrow-alt-circle-right ml-2"></i>
     </a>
-    <a class="btn btn-lg btn-secondary mr-3 mb-4" href="/docs/getting-started">
+    <a class="btn btn-lg btn-secondary mr-3 mb-4" href="/blech-doc/docs/getting-started/">
         Download <i class="fab fa-github ml-2 "></i>
     </a>
-    <a class="btn btn-lg btn-light mr-3 mb-4" href="blog/">
+    <a class="btn btn-lg btn-light mr-3 mb-4" href="/blech-doc/blog/">
         News <i class="fas fa-blog ml-2 "></i>
     </a>
     <p class="lead mt-5">Embedded real-time programming</p>
@@ -239,7 +239,7 @@
 <div style="white-space: pre; font-size: smaller; font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;" class=""><br class=""><div class=""><span style="color: rgb(63, 151, 223);" class="">activity</span> StopWatchController (isPressedStartStop: <span style="color: rgb(63, 151, 223);" class="">bool</span>, <br class="">                              isPressedResetLap: <span style="color: rgb(63, 151, 223);" class="">bool</span>) </div><div class="">                             (display: Display)</div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> totalTime: <span style="color: rgb(63, 151, 223);" class="">int32</span> </div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> lastLap: <span style="color: rgb(63, 151, 223);" class="">int32</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">        <span style="color: rgb(146, 205, 120);" class="">// init</span></div><div class="">        totalTime = 0</div><div class="">        lastLap = 0</div><div class="">        writeTicksToDisplay(totalTime)(display)</div><div class="">        <span style="color: rgb(157, 78, 150);" class="">await</span> isPressedStartStop    <span style="color: rgb(146, 205, 120);" class="">// transition init -> run</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">            <span style="color: rgb(157, 78, 150);" class="">when</span> isPressedStartStop <span style="color: rgb(157, 78, 150);" class="">abort</span></div><div class="">                <span style="color: rgb(157, 78, 150);" class="">run</span> Measurement(isPressedResetLap)<br class="">                               (totalTime, lastLap, display)</div><div class="">            <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class="">            <span style="color: rgb(146, 205, 120);" class="">// stop, show total time and wait</span></div><div class="">            writeTicksToDisplay(totalTime)(display)</div><div class="">            <span style="color: rgb(157, 78, 150);" class="">await</span> isPressedStartStop <span style="color: rgb(63, 151, 223);" class="">or</span> isPressedResetLap</div><div class="">        <span style="color: rgb(157, 78, 150);" class="">until</span> isPressedResetLap <span style="color: rgb(157, 78, 150);" class="">end</span> <span style="color: rgb(146, 205, 120);" class="">// repeat if StartStop was pressed</span></div><div class="">        <span style="color: rgb(146, 205, 120);" class="">// back to init if ResetLap was pressed</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">end</span></div><br class=""><div class=""><span style="color: rgb(162, 86, 55);" class="">@[EntryPoint]</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">activity</span> Main (isPressedStartStop: <span style="color: rgb(63, 151, 223);" class="">bool</span>, isPressedReset: <span style="color: rgb(63, 151, 223);" class="">bool</span>)</div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> display: Display</div><div class="">    <span style="color: rgb(157, 78, 150);" class="">cobegin</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">run</span> StopWatchController(isPressedStartStop, isPressedReset)<br class="">                               (display)</div><div class="">    <span style="color: rgb(157, 78, 150);" class="">with</span> </div><div class="">        <span style="color: rgb(146, 205, 120);" class="">// render display in every tick</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">            show(display)</div><div class="">            <span style="color: rgb(157, 78, 150);" class="">await</span> <span style="color: rgb(63, 151, 223);" class="">true</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">end</span></div><br class=""></div>
 
 
-<p><a href="/lecture-blech.pdf">Get and overview …</a></p>
+<p><a href="/lecture-blech.pdf">Get an overview …</a></p>
 </div>
 
 
@@ -424,7 +424,7 @@ It allows writing reactive subprograms and combining them both sequentially and 
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
         <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
         
-        <small class="ml-1"><a href="/about/privacy-policy/" style="color: skyblue" target="_blank">Privacy Policy</a></small>
+        <small class="ml-1"><a href="about/privacy-policy/" style="color: skyblue" target="_blank">Privacy Policy</a></small>
         
           <p class="mt-2"><a href="/blech-doc/about/legal-notice/" style="color: skyblue">Legal notice</a></p>
         
