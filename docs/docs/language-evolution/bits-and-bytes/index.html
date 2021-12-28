@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.90.0" />
+<meta name="generator" content="Hugo 0.81.0" />
 <meta name="robots" content="index, follow">
 
 
@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/language-evolution/bits-and-bytes/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2020-09-03T11:25:19+02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Bits and bytes">
 <meta itemprop="description" content="The `bitsN` datatype and bitwise operations.
 ">
-<meta itemprop="dateModified" content="2020-09-03T11:25:19+02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
 <meta itemprop="wordCount" content="1044">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bits and bytes"/>
@@ -42,12 +42,12 @@
 
 
 
-<link rel="preload" href="/scss/main.min.d75c3d940bf0614613f22420ee723cee36dd4ebc30cdeaa13cb2b417438390a1.css" as="style">
-<link href="/scss/main.min.d75c3d940bf0614613f22420ee723cee36dd4ebc30cdeaa13cb2b417438390a1.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.c1d5b57073f9fd7f9fe0d8ade829d6e14198ec4d5c85447f2cd346a8af4d8c8b.css" as="style">
+<link href="/scss/main.min.c1d5b57073f9fd7f9fe0d8ade829d6e14198ec4d5c85447f2cd346a8af4d8c8b.css" rel="stylesheet" integrity="">
 
 <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 <script src=https://www.blech-lang.org/js/opt-in.js></script>
 
@@ -256,11 +256,11 @@
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href="https://github.com/boschresearch/blech-doc/tree/master/website/content/en/docs/language-evolution/bits-and-bytes.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa fa-file-alt fa-fw"></i> View page source</a>
-  <a href="https://github.com/boschresearch/blech-doc/edit/master/website/content/en/docs/language-evolution/bits-and-bytes.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-  <a href="https://github.com/boschresearch/blech-doc/new/master/website/content/en/docs/language-evolution/bits-and-bytes.md?filename=change-me.md&amp;value=---%0D%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0D%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0D%0Aweight%3A&#43;100%0D%0Adescription%3A&#43;%3E-%0D%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0D%0A---%0D%0A%0D%0A%23%23&#43;Heading%0D%0A%0D%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0D%0A%0D%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0D%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0D%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0D%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0D%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Create child page</a>
-  <a href="https://github.com/boschresearch/blech-doc/issues/new?title=Bits%20and%20bytes" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
-  <a href="https://github.com/boschresearch/blech/issues/new" class="td-page-meta--project-issue" target="_blank" rel="noopener"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+<a href="https://github.com/blech-lang/blech-doc/tree/master/website/content/en/docs/language-evolution/bits-and-bytes.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+  <a href="https://github.com/blech-lang/blech-doc/edit/master/website/content/en/docs/language-evolution/bits-and-bytes.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/blech-lang/blech-doc/new/master/website/content/en/docs/language-evolution/bits-and-bytes.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+  <a href="https://github.com/blech-lang/blech-doc/issues/new?title=Bits%20and%20bytes" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/blech-lang/blech/issues/new" class="td-page-meta--project-issue" target="_blank" rel="noopener"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
   
 </div>
 
@@ -362,8 +362,8 @@ A good argument for this change is given by the <a href="https://devblogs.micros
 <p>Reason: <code>uint</code> is not allowed to overflow and saturates in release code or panics in debug code.
 The name <code>uint</code> addresses the wrong association.
 Therefore we should rename <code>uint</code> to <code>nat</code></p>
-<p>NOTE: Maybe we should rename <code>bitsN</code> to <code>wordN</code>. 
-Those types occur only in 4 different sizes. 
+<p>NOTE: Maybe we should rename <code>bitsN</code> to <code>wordN</code>.
+Those types occur only in 4 different sizes.
 The name <code>bits</code> might be associated with an arbitrary number.
 Additional inspiration, a <a href="https://whatis.techtarget.com/definition/word" target="_blank">word</a>
  is a unit of data of a defined bit length.
@@ -383,7 +383,7 @@ NOTE: Maybe the default should be <code>float32</code> for embedded systems?</p>
 <p>Any <code>natLiteral</code> can be annotated with a float type.
 The range is checked, to get a precise float representation.</p>
 <p>The following are all valid float literals.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
 (42: float64)
 (42: float32)
 
@@ -422,11 +422,11 @@ shift right: <code>&gt;&gt;</code></p>
 left rotate: <code>&lt;&lt;&gt;</code>
 right rotate: <code>&lt;&gt;&gt;</code></p>
 <p>Type: <code>function (bitsN, AnyNat) returns bitsN</code></p>
-<p>These operators can be defined as Macros. 
+<p>These operators can be defined as Macros.
 If the macro has a suitable form, C compilers can translate circular shifts into one machine instruction.
 C compilers recognize the <a href="https://en.wikipedia.org/wiki/Circular_shift#Implementing_circular_shifts" target="_blank">circular shift idiom</a>
 .</p>
-<p>The shift and rotate amount is a general unsigned integer type. 
+<p>The shift and rotate amount is a general unsigned integer type.
 It is considered modulo the <code>bitsN</code> width <code>N</code>.</p>
 <h4 id="arithmetic-operators">Arithmetic operators</h4>
 <p>As arithmetic types, <code>bitsN</code> types implement numeric wrap-around (modulo <code>2**N</code>).</p>
@@ -462,7 +462,7 @@ Decimal literals have type <code>AnyInteger</code>.</p>
 <p>A type annotation can be ommited if an assignment determines the type.</p>
 <p>For negative values of type <code>AnyInteger</code> the two&rsquo;s-complement representation is used to create the bits.</p>
 <p>IMPORTANT: The two&rsquo;s-complement representation for <code>intN</code> is not mandatory in C.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let b1: bits8 = 0x1
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let b1: bits8 = 0x1
 let b2 = 0x1 : bits8
 let b3 = (0x1 : bits8) &lt;&lt; 2  // 0x4 as bits8
 let b32 = 0x1A4: bits8   // type error not representable in bits8
@@ -474,19 +474,19 @@ let b8 = (-50 - 150): bits8 // compile time error, not representable as 2-comple
 </code></pre></div><h3 id="use-of-operations">Use of operations</h3>
 <p>Bitwise operatorions and arithmetic operations cannot be applied to values of type <code>AnyBits</code>.
 Bitwise and arithmetic operations can only be applied to values of type <code>bitsN</code>, that means the size has to be fixed before any operation.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let x: bits8 = -0x1 // type error size of `0x1` not known, for a suitable unary minus
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let x: bits8 = -0x1 // type error size of `0x1` not known, for a suitable unary minus
 let x = -(0x1: bits8) // ok, is (0xFF: bits8), by wrap around
 </code></pre></div><h3 id="hackers-delight-translated-to-blech">Hacker&rsquo;s Delight translated to Blech</h3>
 <p><a href="https://en.wikipedia.org/wiki/Hacker%27s_Delight" target="_blank">Hacker’s Delight</a>
- is the definitive source of bitwise programming algorithms. 
+ is the definitive source of bitwise programming algorithms.
 It should be possible to use these hacks in Blech.</p>
 <p>Turn off the rightmost 1-bit in a byte, producing 0 if none (e.g. 0b_0101_1000 =&gt; 0b_0101_0000, 0x_00 =&gt; 0x_00).</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits8
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits8
 x = x &amp; (x - (1: bits8))
 // or
 x = x &amp; (x - 0x_01)
 </code></pre></div><p>Turn on the rightmost 0-bit in a word, producing all 1&rsquo;s if none (e.g. 0x7AF3 =&gt; 0x7AF4, 0xFFFF =&gt; 0xFFFF).</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits32
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits32
 x = x | (x + (1: bits32))
 // or
 x = x | (x + 0b_1)
@@ -494,7 +494,7 @@ x = x | (x + 0b_1)
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified September 3, 2020: <a href="https://github.com/boschresearch/blech-doc/commit/ac60c7386c6f6da9c01f8a3c75069b2045125f42">Layout test (ac60c73)</a>
+  Last modified May 4, 2021: <a href="https://github.com/blech-lang/blech-doc/commit/fa3db018d2c65d0c91d73c796807be02cb8f10f4">drafting the module chapter (fa3db01)</a>
 </div>
 
 </div>
@@ -540,7 +540,7 @@ x = x | (x + 0b_1)
   </li>
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Documentation on GitHub" aria-label="Documentation on GitHub">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech-doc">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech-doc">
       <i class="fas fa-book"></i>
     </a>
   </li>
@@ -558,13 +558,13 @@ x = x | (x + 0b_1)
 <ul class="list-inline mb-0">
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Blech compiler on Github" aria-label="Blech compiler on Github">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech">
       <i class="fab fa-github"></i>
     </a>
   </li>
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Blech tools on Github" aria-label="Blech tools on Github">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech-tools">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech-tools">
       <i class="fas fa-tools"></i>
     </a>
   </li>
@@ -587,7 +587,7 @@ x = x | (x + 0b_1)
         
         <small class="ml-1"><a href="/about/privacy-policy/" style="color: skyblue" target="_blank">Privacy Policy</a></small>
         
-          <p class="mt-2"><a href="/about/corporate-information/" style="color: skyblue">Corporate information</a></p>
+          <p class="mt-2"><a href="/about/legal-notice/" style="color: skyblue">Legal notice</a></p>
         
       </div>
       

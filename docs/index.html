@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.90.0" />
+<meta name="generator" content="Hugo 0.81.0" />
 <meta name="robots" content="index, follow">
 
 
@@ -49,12 +49,12 @@
 
 
 
-<link rel="preload" href="/scss/main.min.d75c3d940bf0614613f22420ee723cee36dd4ebc30cdeaa13cb2b417438390a1.css" as="style">
-<link href="/scss/main.min.d75c3d940bf0614613f22420ee723cee36dd4ebc30cdeaa13cb2b417438390a1.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.c1d5b57073f9fd7f9fe0d8ade829d6e14198ec4d5c85447f2cd346a8af4d8c8b.css" as="style">
+<link href="/scss/main.min.c1d5b57073f9fd7f9fe0d8ade829d6e14198ec4d5c85447f2cd346a8af4d8c8b.css" rel="stylesheet" integrity="">
 
 <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 <script src=https://www.blech-lang.org/js/opt-in.js></script>
 
@@ -171,7 +171,7 @@
 }
 </style>
 
-<section id="td-cover-block-0" class="row td-cover-block td-cover-block--height-full js-td-cover td-overlay td-overlay--dark -bg-primary">
+<section id="td-cover-block-0" class="row td-cover-block td-cover-block--height-auto js-td-cover td-overlay td-overlay--dark -bg-primary">
   <div class="container td-overlay__inner">
     <div class="row">
       <div class="col-12">
@@ -214,19 +214,60 @@
 
 
 
-
-
+ 
 <a id="td-block-1" class="td-offset-anchor"></a>
+<section class="row td-box td-box--dark td-box--gradient td-box--height-auto">
+	<div class="col">
+		<div class="row ">
+			
+				
+
+<div class="col-md-auto mb-0 mb-lg-0">
+<h4 class="h3">Look and feel</h4>
+
+<div style="white-space: pre; font-size: smaller; font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;" class=""><br class=""><div class=""><span style="color: rgb(63, 151, 223);" class="">struct</span> Display</div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> hundredth: <span style="color: rgb(63, 151, 223);" class="">int32</span> </div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> seconds: <span style="color: rgb(63, 151, 223);" class="">int32</span></div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> minutes: <span style="color: rgb(63, 151, 223);" class="">int32</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">end</span></div><br class=""><div class=""><span style="color: rgb(162, 86, 55);" class="">@[CFunction(binding = "showConsole", header = "runtimeLAPFAST.h")]</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">extern</span> <span style="color: rgb(63, 151, 223);" class="">function</span> show (this: Display)</div><br class=""><div class=""><span style="color: rgb(63, 151, 223);" class="">function</span> writeTicksToDisplay (ticks: <span style="color: rgb(63, 151, 223);" class="">int32</span>) (display: Display)</div><div class="">    <span style="color: rgb(63, 151, 223);" class="">let</span> seconds = ticks / 100</div><div class="">    display.minutes = seconds / 60</div><div class="">    display.seconds = seconds - 60 * display.minutes</div><div class="">    display.hundredth = ticks - 100 * seconds</div><div class=""><span style="color: rgb(63, 151, 223);" class="">end</span></div><br class=""><div class=""><span style="color: rgb(63, 151, 223);" class="">activity</span> Measurement (isPressedResetLap: <span style="color: rgb(63, 151, 223);" class="">bool</span>) </div><div class="">                     (totalTime: <span style="color: rgb(63, 151, 223);" class="">int32</span>, lastLap: <span style="color: rgb(63, 151, 223);" class="">int32</span>, display: Display)</div><div class=""><span style="color: rgb(157, 78, 150);" class="">    cobegin</span><span style="color: rgb(146, 205, 120);" class=""> // run</div><div class="">        <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">            <span style="color: rgb(157, 78, 150);" class="">await</span> <span style="color: rgb(63, 151, 223);" class="">true</span></div><div class="">            totalTime = totalTime + 1</div><div class="">        <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">with</span><span style="color: rgb(146, 205, 120);" class="">    // lap</div><div class="">        <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">            <span style="color: rgb(146, 205, 120);" class="">// show total time every tick</span></div><div class="">            <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">                writeTicksToDisplay(totalTime)(display)</div><div class="">                <span style="color: rgb(157, 78, 150);" class="">await</span> <span style="color: rgb(63, 151, 223);" class="">true</span></div><div class="">            <span style="color: rgb(157, 78, 150);" class="">until</span> isPressedResetLap <span style="color: rgb(157, 78, 150);" class="">end</span></div><br class=""><div class="">            <span style="color: rgb(146, 205, 120);" class="">// calculate lap and update display once</span></div><div class="">            <span style="color: rgb(63, 151, 223);" class="">let</span> lapTime = totalTime - lastLap</div><div class="">            lastLap = totalTime</div><div class="">            writeTicksToDisplay(lapTime)(display) </div><div class="">            <span style="color: rgb(157, 78, 150);" class="">await</span> isPressedResetLap</div><div class="">            <span style="color: rgb(146, 205, 120);" class="">// back to total time</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">end</span></div></div>
+
+
+
+</div>
+
+
+
+<div class="col-md-auto mb-0 mb-lg-0">
+<h4 class="h3"></h4>
+
+<div style="white-space: pre; font-size: smaller; font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;" class=""><br class=""><div class=""><span style="color: rgb(63, 151, 223);" class="">activity</span> StopWatchController (isPressedStartStop: <span style="color: rgb(63, 151, 223);" class="">bool</span>, <br class="">                              isPressedResetLap: <span style="color: rgb(63, 151, 223);" class="">bool</span>) </div><div class="">                             (display: Display)</div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> totalTime: <span style="color: rgb(63, 151, 223);" class="">int32</span> </div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> lastLap: <span style="color: rgb(63, 151, 223);" class="">int32</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">        <span style="color: rgb(146, 205, 120);" class="">// init</span></div><div class="">        totalTime = 0</div><div class="">        lastLap = 0</div><div class="">        writeTicksToDisplay(totalTime)(display)</div><div class="">        <span style="color: rgb(157, 78, 150);" class="">await</span> isPressedStartStop    <span style="color: rgb(146, 205, 120);" class="">// transition init -> run</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">            <span style="color: rgb(157, 78, 150);" class="">when</span> isPressedStartStop <span style="color: rgb(157, 78, 150);" class="">abort</span></div><div class="">                <span style="color: rgb(157, 78, 150);" class="">run</span> Measurement(isPressedResetLap)<br class="">                               (totalTime, lastLap, display)</div><div class="">            <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class="">            <span style="color: rgb(146, 205, 120);" class="">// stop, show total time and wait</span></div><div class="">            writeTicksToDisplay(totalTime)(display)</div><div class="">            <span style="color: rgb(157, 78, 150);" class="">await</span> isPressedStartStop <span style="color: rgb(63, 151, 223);" class="">or</span> isPressedResetLap</div><div class="">        <span style="color: rgb(157, 78, 150);" class="">until</span> isPressedResetLap <span style="color: rgb(157, 78, 150);" class="">end</span> <span style="color: rgb(146, 205, 120);" class="">// repeat if StartStop was pressed</span></div><div class="">        <span style="color: rgb(146, 205, 120);" class="">// back to init if ResetLap was pressed</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">end</span></div><br class=""><div class=""><span style="color: rgb(162, 86, 55);" class="">@[EntryPoint]</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">activity</span> Main (isPressedStartStop: <span style="color: rgb(63, 151, 223);" class="">bool</span>, isPressedReset: <span style="color: rgb(63, 151, 223);" class="">bool</span>)</div><div class="">    <span style="color: rgb(63, 151, 223);" class="">var</span> display: Display</div><div class="">    <span style="color: rgb(157, 78, 150);" class="">cobegin</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">run</span> StopWatchController(isPressedStartStop, isPressedReset)<br class="">                               (display)</div><div class="">    <span style="color: rgb(157, 78, 150);" class="">with</span> </div><div class="">        <span style="color: rgb(146, 205, 120);" class="">// render display in every tick</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">repeat</span></div><div class="">            show(display)</div><div class="">            <span style="color: rgb(157, 78, 150);" class="">await</span> <span style="color: rgb(63, 151, 223);" class="">true</span></div><div class="">        <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class="">    <span style="color: rgb(157, 78, 150);" class="">end</span></div><div class=""><span style="color: rgb(63, 151, 223);" class="">end</span></div><br class=""></div>
+
+
+<p><a href="/lecture-blech.pdf">Get and overview …</a></p>
+</div>
+
+
+
+			
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<a id="td-block-2" class="td-offset-anchor"></a>
 <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto">
 	<div class="container text-center td-arrow-down">
 		<span class="h4 mb-0">
 			
-				<p>Blech is a <em>synchronous</em> programming language for embedded, reactive, realtime-critical software.</p>
-<p>It allows writing reactive subprograms and combining them both sequentially and concurrently. 
-Blech compiles to <em>clean</em> C, which may be integrated into existing projects or simulation frameworks.</p>
-<p>The German word <em>Blech</em> roughly translates to <em>bare metal</em>. 
-Blech programs can run directly on <em>the Blech</em> on pretty much any embedded device.</p>
-<p>Read our introductory blog post to learn more on <a href="/blog/2020/05/27/the-purpose-of-blech/">the purpose of Blech</a>
+				<p>Blech is a <em>synchronous</em> programming language for embedded, reactive, realtime-critical software.
+It allows writing reactive subprograms and combining them both sequentially and concurrently.</p>
+<p>Blech compiles to <em>clean</em> C, which may be integrated into existing projects or simulation frameworks.</p>
+<p>Blech started at <a href="https://github.com/boschresearch/blech" target="_blank"><span style="color: #63BCE5">Bosch Research</span></a>
+ and <a href="http://development.blech-lang.org" target="_blank"><span style="color: #63BCE5">now evolves as a community-driven open-source project</span></a>
+.</p>
+<p>The name <em>Blech</em> ironically describes embedded hardware. It expresses that Blech programs can run directly on <em>the Blech</em> of pretty much any embedded device.</p>
+<p>Read our introductory blog post to learn more on <a href="/blog/2020/05/27/the-purpose-of-blech/"><span style="color: #63BCE5">the purpose of Blech</span></a>
 .</p>
 
 			
@@ -240,8 +281,8 @@ Blech programs can run directly on <em>the Blech</em> on pretty much any embedde
 
 
  
-<a id="td-block-2" class="td-offset-anchor"></a>
-<section class="row td-box td-box--dark td-box--gradient td-box--height-auto">
+<a id="td-block-3" class="td-offset-anchor"></a>
+<section class="row td-box td-box--secondary td-box--gradient td-box--height-auto">
 	<div class="col">
 		<div class="row ">
 			
@@ -254,7 +295,7 @@ Blech programs can run directly on <em>the Blech</em> on pretty much any embedde
 </div>
 <h4 class="h3">Contributions welcome!</h4>
 <div class="mb-0">
-<p>We do a <a href="https://github.com/boschresearch/blech/pulls" target="_blank">Pull Request</a>
+<p>We do a <a href="https://github.com/blech-lang/blech/pulls" target="_blank">Pull Request</a>
  contributions workflow on <strong>GitHub</strong>. New contributors are always welcome!</p>
 
 </div>
@@ -271,7 +312,7 @@ Blech programs can run directly on <em>the Blech</em> on pretty much any embedde
 <p>Exchange ideas on the development and evolution of Blech; its compiler, tools and documentation.</p>
 
 </div>
-<p><a href="https://blech-lang.slack.com/">Read more …</a></p>
+<p><a href="http://slack.blech-lang.org">Read more …</a></p>
 </div>
 
 
@@ -293,6 +334,7 @@ Blech programs can run directly on <em>the Blech</em> on pretty much any embedde
 		</div>
 	</div>
 </section>
+
 
 
 
@@ -337,7 +379,7 @@ Blech programs can run directly on <em>the Blech</em> on pretty much any embedde
   </li>
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Documentation on GitHub" aria-label="Documentation on GitHub">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech-doc">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech-doc">
       <i class="fas fa-book"></i>
     </a>
   </li>
@@ -355,13 +397,13 @@ Blech programs can run directly on <em>the Blech</em> on pretty much any embedde
 <ul class="list-inline mb-0">
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Blech compiler on Github" aria-label="Blech compiler on Github">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech">
       <i class="fab fa-github"></i>
     </a>
   </li>
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Blech tools on Github" aria-label="Blech tools on Github">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech-tools">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech-tools">
       <i class="fas fa-tools"></i>
     </a>
   </li>
@@ -384,7 +426,7 @@ Blech programs can run directly on <em>the Blech</em> on pretty much any embedde
         
         <small class="ml-1"><a href="/about/privacy-policy/" style="color: skyblue" target="_blank">Privacy Policy</a></small>
         
-          <p class="mt-2"><a href="/about/corporate-information/" style="color: skyblue">Corporate information</a></p>
+          <p class="mt-2"><a href="/about/legal-notice/" style="color: skyblue">Legal notice</a></p>
         
       </div>
       

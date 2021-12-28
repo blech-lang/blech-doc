@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.90.0" />
+<meta name="generator" content="Hugo 0.81.0" />
 <meta name="robots" content="index, follow">
 
 
@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/blechc-development/const-and-expr/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2020-04-16T18:22:07+02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Expressions, conditions, initialisers, constants">
 <meta itemprop="description" content="This explains the variants of expressions in Blech.
 ">
-<meta itemprop="dateModified" content="2020-04-16T18:22:07+02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
 <meta itemprop="wordCount" content="587">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Expressions, conditions, initialisers, constants"/>
@@ -42,12 +42,12 @@
 
 
 
-<link rel="preload" href="/scss/main.min.d75c3d940bf0614613f22420ee723cee36dd4ebc30cdeaa13cb2b417438390a1.css" as="style">
-<link href="/scss/main.min.d75c3d940bf0614613f22420ee723cee36dd4ebc30cdeaa13cb2b417438390a1.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.c1d5b57073f9fd7f9fe0d8ade829d6e14198ec4d5c85447f2cd346a8af4d8c8b.css" as="style">
+<link href="/scss/main.min.c1d5b57073f9fd7f9fe0d8ade829d6e14198ec4d5c85447f2cd346a8af4d8c8b.css" rel="stylesheet" integrity="">
 
 <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 <script src=https://www.blech-lang.org/js/opt-in.js></script>
 
@@ -256,11 +256,11 @@
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href="https://github.com/boschresearch/blech-doc/tree/master/website/content/en/docs/blechc-development/const-and-expr.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa fa-file-alt fa-fw"></i> View page source</a>
-  <a href="https://github.com/boschresearch/blech-doc/edit/master/website/content/en/docs/blechc-development/const-and-expr.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-  <a href="https://github.com/boschresearch/blech-doc/new/master/website/content/en/docs/blechc-development/const-and-expr.md?filename=change-me.md&amp;value=---%0D%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0D%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0D%0Aweight%3A&#43;100%0D%0Adescription%3A&#43;%3E-%0D%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0D%0A---%0D%0A%0D%0A%23%23&#43;Heading%0D%0A%0D%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0D%0A%0D%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0D%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0D%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0D%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0D%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Create child page</a>
-  <a href="https://github.com/boschresearch/blech-doc/issues/new?title=Expressions,%20conditions,%20initialisers,%20constants" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
-  <a href="https://github.com/boschresearch/blech/issues/new" class="td-page-meta--project-issue" target="_blank" rel="noopener"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+<a href="https://github.com/blech-lang/blech-doc/tree/master/website/content/en/docs/blechc-development/const-and-expr.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+  <a href="https://github.com/blech-lang/blech-doc/edit/master/website/content/en/docs/blechc-development/const-and-expr.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/blech-lang/blech-doc/new/master/website/content/en/docs/blechc-development/const-and-expr.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+  <a href="https://github.com/blech-lang/blech-doc/issues/new?title=Expressions,%20conditions,%20initialisers,%20constants" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/blech-lang/blech/issues/new" class="td-page-meta--project-issue" target="_blank" rel="noopener"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
   
 </div>
 
@@ -336,45 +336,45 @@
 		
 	</header>    
 	<h2 id="equality-expressions">Equality expressions</h2>
-<p>Theoretically, every type supports some notion of equality (and inequality). 
-This is straightforward for <strong>simple (or primitive) value types</strong> that consist of one memory cell only (booleans and all numeric types of all sizes): 
+<p>Theoretically, every type supports some notion of equality (and inequality).
+This is straightforward for <strong>simple (or primitive) value types</strong> that consist of one memory cell only (booleans and all numeric types of all sizes):
 <code>a == b</code> holds iff the value of <code>a</code> is the same as the value of <code>b</code>.</p>
 <p>For <strong>structured (complex) value types</strong> we can decide equality by comparing every element of data structures recursively.
-At compile time the result of a comparison can be evaluated if the arguments are compile time constants. 
+At compile time the result of a comparison can be evaluated if the arguments are compile time constants.
 Thus it is technically no problem to compare compile time constants of any value type.</p>
-<p>At runtime a recursive comparison algorithm is too much of a runtime penalty and what looks like a constant time operation turns out to be growing with the dimension of the structure. 
+<p>At runtime a recursive comparison algorithm is too much of a runtime penalty and what looks like a constant time operation turns out to be growing with the dimension of the structure.
 An optimisation of runtime - not changing the run-time complexity but providing better factors - could be achieved by comparing the data structures byte-wise (<code>memcmp</code>).
-But this requires to fix padding in structs and then fails in special cases: 
-floating point elements may use different bit representations for the same numerical value, e.g. <code>+0.0</code> and <code>-0.0</code>. 
+But this requires to fix padding in structs and then fails in special cases:
+floating point elements may use different bit representations for the same numerical value, e.g. <code>+0.0</code> and <code>-0.0</code>.
 Consequently, the comparison operator for structured data may not be used at runtime (like in C) and results in a type check error.</p>
 <p><em>Reference types are not implemented yet but in principle they will have the same behaviour: compare (dereferenced) values for simple types, and disallow comparison for complex types.</em></p>
 <h2 id="using-constants">Using constants</h2>
-<p>In order to make evaluation work for arbitrary constant expressions the names are resolved by the constant values (literals) they represent. 
+<p>In order to make evaluation work for arbitrary constant expressions the names are resolved by the constant values (literals) they represent.
 Thus at the end of the type check phase the declarations of the consts do exist and can be translated to C but all their usages disappear (being substituted by the value).
 This has the drawback of less readable C code but still allows to export constants as #defines and use them in foreign code by including the relevant <code>.h</code> file.</p>
-<p>In C89, structs can be initialised using structured literals but cannot be assigned new values using structured literals. 
-The same is true for arrays in all versions of C. 
-Additionally, when calling functions the arguments need to be pointers to memory locations that contain the (structured) data. 
-In all these cases, in the generated C code we create a stack local (automatic) temporary variable that is initialised using the literal and then use that variable (or its address) to perform assignments or function calls. 
+<p>In C89, structs can be initialised using structured literals but cannot be assigned new values using structured literals.
+The same is true for arrays in all versions of C.
+Additionally, when calling functions the arguments need to be pointers to memory locations that contain the (structured) data.
+In all these cases, in the generated C code we create a stack local (automatic) temporary variable that is initialised using the literal and then use that variable (or its address) to perform assignments or function calls.
 In summary, literals occur only on the right hand side of initialisation in the generated C code.</p>
 <h2 id="side-effects-in-conditions-are-not-allowed">Side effects in conditions are not allowed</h2>
-<p>It is obvious that testing an <code>await</code> condition may not have any impact on the state to implement a synchronous program. 
-Additionally, we forbid side effects in conditions of preemption and all standard, imperative statements. 
-This clearly seperates concerns of making decision about the current program state and (possibly) triggering other, (possibly) concurrent computation. 
+<p>It is obvious that testing an <code>await</code> condition may not have any impact on the state to implement a synchronous program.
+Additionally, we forbid side effects in conditions of preemption and all standard, imperative statements.
+This clearly seperates concerns of making decision about the current program state and (possibly) triggering other, (possibly) concurrent computation.
 The common programming practice of C where conditions' side effects are used to also advance computation is regarded as bad practice in Blech until proven otherwise.</p>
 <h2 id="side-effects-are-allowed-in-initialisers">Side effects are allowed in initialisers</h2>
-<p>Despite the urge to restrict the wild programmer, we allow side effects when declaring and initialising a variable. 
+<p>Despite the urge to restrict the wild programmer, we allow side effects when declaring and initialising a variable.
 Otherwise the following code that declares an immutable variable cannot be written:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let status = f()(x)
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let status = f()(x)
 </code></pre></div><p>Instead, we would have to write</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var status: typeOfF
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var status: typeOfF
 status = f()(x)
 </code></pre></div><p>which not only is longer and less readable but makes <code>status</code> a mutable variable which is not the intention of the programmer.</p>
 
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified April 16, 2020: <a href="https://github.com/boschresearch/blech-doc/commit/69da3de03d10948818565864e0b771ce65f6faf1">Google analytics, google search, analytics opt-in search page, more community links (69da3de)</a>
+  Last modified May 4, 2021: <a href="https://github.com/blech-lang/blech-doc/commit/fa3db018d2c65d0c91d73c796807be02cb8f10f4">drafting the module chapter (fa3db01)</a>
 </div>
 
 </div>
@@ -420,7 +420,7 @@ status = f()(x)
   </li>
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Documentation on GitHub" aria-label="Documentation on GitHub">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech-doc">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech-doc">
       <i class="fas fa-book"></i>
     </a>
   </li>
@@ -438,13 +438,13 @@ status = f()(x)
 <ul class="list-inline mb-0">
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Blech compiler on Github" aria-label="Blech compiler on Github">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech">
       <i class="fab fa-github"></i>
     </a>
   </li>
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Blech tools on Github" aria-label="Blech tools on Github">
-    <a class="text-white" target="_blank" href="https://github.com/boschresearch/blech-tools">
+    <a class="text-white" target="_blank" href="https://github.com/blech-lang/blech-tools">
       <i class="fas fa-tools"></i>
     </a>
   </li>
@@ -467,7 +467,7 @@ status = f()(x)
         
         <small class="ml-1"><a href="/about/privacy-policy/" style="color: skyblue" target="_blank">Privacy Policy</a></small>
         
-          <p class="mt-2"><a href="/about/corporate-information/" style="color: skyblue">Corporate information</a></p>
+          <p class="mt-2"><a href="/about/legal-notice/" style="color: skyblue">Legal notice</a></p>
         
       </div>
       
