@@ -1,4 +1,5 @@
-baseURL = "https://www.blech-lang.org/"  
+#baseURL = "https://www.blech-lang.org/"  
+baseURL = "https://blech-lang.github.io/blech-doc/"
 
 # This is neccesary because of the github projects page, for correct relative URLs
 # canonifyURLs = true
