@@ -25,7 +25,7 @@ In order to improve the content and the experience on the website we kindly ask 
 
 You can opt-in for site analytics, in this opt-in notice
 
-![Opt-in notice](/images/opt-in-notice.png)
+![Opt-in notice](../../images/opt-in-notice.png)
 
 - If you `Opt-in` we use site analytics to collect your anonymous resource usage data.
 - If you close `x` this notice, no data will be collected.
