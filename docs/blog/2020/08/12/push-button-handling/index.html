@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blech-lang.github.io/blech-doc/blog/2020/08/12/push-button-handling/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-08-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-12-29T17:18:23&#43;01:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Push button handling">
 <meta itemprop="description" content="Push buttons are widely used in embedded systems for user input. While their look and feel come in different flavours, their operating principle is basically always the same: By opening or closing an electrical contact they change the voltage level of a signal line. In this article we show how these level changes can be processed and handled in a Blech program. 
 "><meta itemprop="datePublished" content="2020-08-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-12-29T17:18:23&#43;01:00" />
 <meta itemprop="wordCount" content="3642">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Push button handling"/>
@@ -295,7 +295,7 @@
 		
 	</header>
 	<h2 id="application-example-push-button-handling">Application example: Push button handling</h2>
-<p>In this example three push buttons, <code>TOP</code>, <code>CENTER</code> and <code>BOTTOM</code>, are connected to our embedded system for user input. Like in our <a href="../blog/2020/06/15/decoding-the-dcf77-signal-with-blech/">previous blog post</a>
+<p>In this example three push buttons, <code>TOP</code>, <code>CENTER</code> and <code>BOTTOM</code>, are connected to our embedded system for user input. Like in our <a href="../../../../../blog/2020/06/15/decoding-the-dcf77-signal-with-blech/">previous blog post</a>
  our hardware setup is based on a <a href="https://www.st.com/en/evaluation-tools/stm32f4discovery.html" target="_blank">STM32F4DISCOVERY</a>
  board. The latter has four color LEDs, red, blue, green and orange, which we are going to use for showing the button states.</p>
 <p>Additionally, we connect a small breadboard with three general purpose push buttons. All buttons share a common electrical ground on the left-hand side of the breadboard. On the right-hand side, there is an individual signal wire for each button which is connected to a dedicated GPIO of the discovery board. The pull-up resistors of these GPIOs are active.</p>
@@ -356,7 +356,7 @@ Hardware setup for the push button handling example.
 <p><em>Timeouts</em>: Sometimes we just need to know whether a certain event, or sequence of events, has happend before or after a certain amount of time &ndash; the <em>timeout time</em> &ndash; has been elapsed. Depending on that the embedded software is going to behave differently.</p>
 </li>
 </ol>
-<p>Both types require to express physical time in our code. For this, we establish the same execution scheme for Blech as described in <a href="../blog/2020/06/15/decoding-the-dcf77-signal-with-blech/#execution-scheme-and-integration-of-blech">this</a>
+<p>Both types require to express physical time in our code. For this, we establish the same execution scheme for Blech as described in <a href="../../../../../blog/2020/06/15/decoding-the-dcf77-signal-with-blech/#execution-scheme-and-integration-of-blech">this</a>
  blog post. That is, the entire Blech code is <em>purely time-driven</em> based on a periodic system tick. Based on this, we can easily implement a small helper activity <code>AwaitMsec</code> in Blech for suspending the program for an arbitrary number of milliseconds. The maximal resolution is given by the period interval of the system tick which is set to <em>10 milliseconds</em> in this example.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
