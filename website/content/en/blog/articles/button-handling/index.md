@@ -10,7 +10,7 @@ resources:
 ---
 
 ## Application example: Push button handling
-In this example three push buttons, `TOP`, `CENTER` and `BOTTOM`, are connected to our embedded system for user input. Like in our [previous blog post](/blog/2020/06/15/decoding-the-dcf77-signal-with-blech/) our hardware setup is based on a [STM32F4DISCOVERY](https://www.st.com/en/evaluation-tools/stm32f4discovery.html) board. The latter has four color LEDs, red, blue, green and orange, which we are going to use for showing the button states.
+In this example three push buttons, `TOP`, `CENTER` and `BOTTOM`, are connected to our embedded system for user input. Like in our [previous blog post](../blog/2020/06/15/decoding-the-dcf77-signal-with-blech/) our hardware setup is based on a [STM32F4DISCOVERY](https://www.st.com/en/evaluation-tools/stm32f4discovery.html) board. The latter has four color LEDs, red, blue, green and orange, which we are going to use for showing the button states.
 
 Additionally, we connect a small breadboard with three general purpose push buttons. All buttons share a common electrical ground on the left-hand side of the breadboard. On the right-hand side, there is an individual signal wire for each button which is connected to a dedicated GPIO of the discovery board. The pull-up resistors of these GPIOs are active.
 
@@ -43,7 +43,7 @@ In practically all embedded applications we have to describe temporal behaviour 
 
 1. *Timeouts*: Sometimes we just need to know whether a certain event, or sequence of events, has happend before or after a certain amount of time -- the *timeout time* -- has been elapsed. Depending on that the embedded software is going to behave differently.
 
-Both types require to express physical time in our code. For this, we establish the same execution scheme for Blech as described in [this](/blog/2020/06/15/decoding-the-dcf77-signal-with-blech/#execution-scheme-and-integration-of-blech) blog post. That is, the entire Blech code is *purely time-driven* based on a periodic system tick. Based on this, we can easily implement a small helper activity `AwaitMsec` in Blech for suspending the program for an arbitrary number of milliseconds. The maximal resolution is given by the period interval of the system tick which is set to *10 milliseconds* in this example.
+Both types require to express physical time in our code. For this, we establish the same execution scheme for Blech as described in [this](../blog/2020/06/15/decoding-the-dcf77-signal-with-blech/#execution-scheme-and-integration-of-blech) blog post. That is, the entire Blech code is *purely time-driven* based on a periodic system tick. Based on this, we can easily implement a small helper activity `AwaitMsec` in Blech for suspending the program for an arbitrary number of milliseconds. The maximal resolution is given by the period interval of the system tick which is set to *10 milliseconds* in this example.
 
 ```txt {linenos=true}
 const MSEC_PER_SYSTICK: nat16 = 10

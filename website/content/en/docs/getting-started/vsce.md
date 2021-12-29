@@ -24,7 +24,7 @@ It can be installed locally without admin rights.
 
 The build from source needs **.NET Core** and **NodeJS** for the Blech Language Services.
 
-If you [built the Blech compiler from source](/docs/getting-started/blechc/#build-blechc-from-source) .NET Core is already installed.
+If you [built the Blech compiler from source](../../getting-started/blechc/#build-blechc-from-source) .NET Core is already installed.
 
 To install NodeJS [download and install the Long Term Support version](https://nodejs.org/).
 Enclosed is a version of the Node Package Manager `npm`.
