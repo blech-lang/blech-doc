@@ -13,3 +13,5 @@ temp/
 **/articles/*.pdf
 .fake
 .ionide
+
+.hugo_build.lock
