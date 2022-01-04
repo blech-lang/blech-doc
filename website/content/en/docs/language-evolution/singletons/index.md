@@ -13,10 +13,11 @@ The singleton globals proposal is work in progress.
 .
 ## Singletons 
 
-A `singleton` in Blech is a `function` or an `activity` that cannot be used concurrently in order to prevent a concurrent write-write conflict.
+A `singleton` in Blech is a `function` or an `activity` that cannot be used concurrently in order to prevent a concurrent write-write or read-write conflict.
 
-Singletons originate from functions or activities that are allowed to change a global in the environment.
-If a subprogram - a `function` or an `activity` - declares an `extern var` the compiler overestimates that such a function or activity changes a global in the environment even if the `extern var` is not changed in the code. The subprogram becomes a `singleton function` or a `singleton activity`.
+Singletons originate from functions or activities that are allowed to change a global in the environment.   
+If a subprogram - a `function` or an `activity` - declares an `extern var` the compiler overestimates that such a function or activity accesses a global in the environment even if the `extern var` is not changed in the code. The subprogram becomes a `singleton function` or a `singleton activity`.
+Note that even if the function or activity only reads the global, there is a risk of read-write data races if the global is not synchronised with the activity, such as memory-mapped external sensors. 
 
 The use of a `singleton` creates a dependent singleton. If a subprogram `caller` calls or runs a singleton subprogram `callee`,  `caller` becomes a dependent singleton function `singleton [callee] function caller` or activity `singleton [callee] activity caller`.
 Subprogram `caller` cannot be used concurrently with itself, with subprogram `callee` and with any other singleton that depends on `callee`.
