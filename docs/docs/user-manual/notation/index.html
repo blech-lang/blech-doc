@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -28,13 +28,13 @@ name ::= lc_letter (lc_letter | &#34;_&#34;)* lc_letter ::= &#34;a&#34;." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/user-manual/notation/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Notation">
 <meta itemprop="description" content="We use a modified Backus-Naur form notation to describe the Blech language syntax. The modifications to the original BNF make the rules look more like regular expressions. We follow the same notation conventions as the Python language documentation . Here is what they write about notation:
  The descriptions of lexical analysis and syntax use a modified BNF grammar notation. This uses the following style of definition:
 name ::= lc_letter (lc_letter | &#34;_&#34;)* lc_letter ::= &#34;a&#34;.">
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="322">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Notation"/>
@@ -45,8 +45,8 @@ name ::= lc_letter (lc_letter | &#34;_&#34;)* lc_letter ::= &#34;a&#34;."/>
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -335,7 +335,7 @@ We follow the same notation conventions as the <a href="https://docs.python.org/
 . Here is what they write about notation:</p>
 <blockquote>
 <p>The descriptions of lexical analysis and syntax use a modified BNF grammar notation. This uses the following style of definition:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">name</span>      ::<span style="color:#ce5c00;font-weight:bold">=</span>  lc_<span style="color:#000">letter</span> <span style="color:#000;font-weight:bold">(</span>lc_<span style="color:#000">letter</span> | <span style="color:#000">&#34;_&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">name</span>      ::<span style="color:#ce5c00;font-weight:bold">=</span>  lc_<span style="color:#000">letter</span> <span style="color:#000;font-weight:bold">(</span>lc_<span style="color:#000">letter</span> | <span style="color:#000">&#34;_&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span>
 lc_<span style="color:#000">letter</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">&#34;a&#34;</span>...<span style="color:#000">&#34;z&#34;</span>
 </code></pre></div><p>The first line says that a <code>name</code> is an <code>lc_letter</code> followed by a sequence of zero or more <code>lc_letter</code>s and underscores. An <code>lc_letter</code> in turn is any of the single characters <code>'a'</code> through <code>'z'</code>. (This rule is actually adhered to for the names defined in lexical and grammar rules in this document.)</p>
 <p>Each rule begins with a name (which is the name defined by the rule) and <code>::=</code>. A vertical bar (<code>|</code>) is used to separate alternatives; it is the least binding operator in this notation. A star (<code>*</code>) means zero or more repetitions of the preceding item; likewise, a plus (<code>+</code>) means one or more repetitions, and a phrase enclosed in square brackets (<code>[ ]</code>) means zero or one occurrences (in other words, the enclosed phrase is optional). The <code>*</code> and <code>+</code> operators bind as tightly as possible; parentheses are used for grouping. Literal strings are enclosed in quotes. White space is only meaningful to separate tokens. Rules are normally contained on a single line; rules with many alternatives may be formatted alternatively with each line after the first beginning with a vertical bar.</p>
@@ -436,7 +436,7 @@ lc_<span style="color:#000">letter</span> ::<span style="color:#ce5c00;font-weig
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

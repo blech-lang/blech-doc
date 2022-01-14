@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -28,13 +28,13 @@ For example, signed integers and unsigned integers share some interval in which 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/user-manual/types/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Types">
 <meta itemprop="description" content="A type defines a domain &ndash; a set of values &ndash; a representation for those values and a set of operations on those values.
 Often the domains overlap between types. Also operations may be overloaded for multiple types. This provides the programmer with some versatility:
 For example, signed integers and unsigned integers share some interval in which calculations may be carried out and interpreted as either one. Another example is that operations such as addition may have different implementations depending on type (and machine architecture): addition of 16-bit unsigned integers on a 16-bit machine invokes a different set of machine instructions than addition of 32-bit unsigned integers on that same machine.">
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="1625">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Types"/>
@@ -45,8 +45,8 @@ For example, signed integers and unsigned integers share some interval in which 
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -422,7 +422,7 @@ It is the system integrators responsibility to ensure that the C compiler at han
 The shape of an array is its dimensionality and length in each dimension.
 It is not possible to declare an array data type with an unspecified length.</p>
 <h3 id="arrays">Arrays</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function f(a: [4][5]float32)
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function f(a: [4][5]float32)
     /* ... */
 end
 </code></pre></div><p>The function <code>f</code> expects one read-only argument <code>a</code>.
@@ -435,7 +435,7 @@ If an array dimension has <code>N</code> values, the last index is <code>N-1</co
 The index argument must be an integer number within array bounds.</p>
 <p>The contents of one array may be copied to another using assignment provided their shape and payload data type are the same.</p>
 <h3 id="array-operations">Array operations</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// Initialise the following matrix
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// Initialise the following matrix
 //      cols
 // rows 0.0  0.0
 //      1.2  3.4
@@ -450,13 +450,13 @@ let x = a[1][1]          // copy 3.4 to x
 <p>A structure declaration introduces a new type identifier.
 A structure contains a fixed number of <em>fields</em>.
 Each field has an access capability (<code>let</code> or <code>var</code>), a name, some data type and possibly a default value initialiser.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">StructDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;struct&#34;</span> <span style="color:#000">Identifier</span> <span style="color:#000">Field</span>+ <span style="color:#000">&#34;end&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">StructDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;struct&#34;</span> <span style="color:#000">Identifier</span> <span style="color:#000">Field</span>+ <span style="color:#000">&#34;end&#34;</span>
 <span style="color:#000">Field</span>            ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">&#34;var&#34;</span> | <span style="color:#000">&#34;let&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">Identifier</span> <span style="color:#000">&#34;:&#34;</span> <span style="color:#000">Type</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;=&#34;</span> <span style="color:#000">Expr</span><span style="color:#000;font-weight:bold">]</span>
 </code></pre></div><p>If an initialiser is given for a field this value is taken as the default value when constructing a new instance of this structure.
 The initialisation expression must be a compile time value.
 Of course, this default value may be overruled by the initialiser given at the instantiation.</p>
 <h3 id="mutable-and-immutable-structures">Mutable and immutable structures</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct S
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct S
    var a: int32 = 7
    var b: int32
 end
@@ -481,7 +481,7 @@ Structures may be assigned using a struct literal or a name of another struct of
 Assigning the empty literal <code>{}</code> means that all default values are restored.</p>
 <h3 id="immutable-fields-in-structures">Immutable fields in structures</h3>
 <p><code>let</code> fields cannot be changed once the structure is instantiated.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct T
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct T
     let a: int32
     var b: int32
 end
@@ -506,7 +506,7 @@ It is automatically included (via <code>blech.h</code>) in every generated C sou
 The Blech compiler guarantees type safety and correct operational behaviour so long as Blech types are mapped onto C types that fit above representation sizes.
 It is up to the system integrator to ensure that this mapping is valid for the C compiler and hardware platform at hand.</p>
 <p>A default mapping that makes sense in most cases is shipped with the compiler:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#8f5902;font-style:italic">#define BLC_VOID void 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#8f5902;font-style:italic">#define BLC_VOID void 
 </span><span style="color:#8f5902;font-style:italic">#define BLC_BOOL int 
 </span><span style="color:#8f5902;font-style:italic"></span>
 <span style="color:#8f5902;font-style:italic">#define BLC_INT8 signed char
@@ -622,7 +622,7 @@ It is up to the system integrator to ensure that this mapping is valid for the C
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

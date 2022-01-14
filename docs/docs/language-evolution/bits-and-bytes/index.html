@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/language-evolution/bits-and-bytes/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Bits and bytes">
 <meta itemprop="description" content="The `bitsN` datatype and bitwise operations.
 ">
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="1044">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bits and bytes"/>
@@ -42,8 +42,8 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -383,7 +383,7 @@ NOTE: Maybe the default should be <code>float32</code> for embedded systems?</p>
 <p>Any <code>natLiteral</code> can be annotated with a float type.
 The range is checked, to get a precise float representation.</p>
 <p>The following are all valid float literals.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
 (42: float64)
 (42: float32)
 
@@ -462,7 +462,7 @@ Decimal literals have type <code>AnyInteger</code>.</p>
 <p>A type annotation can be ommited if an assignment determines the type.</p>
 <p>For negative values of type <code>AnyInteger</code> the two&rsquo;s-complement representation is used to create the bits.</p>
 <p>IMPORTANT: The two&rsquo;s-complement representation for <code>intN</code> is not mandatory in C.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let b1: bits8 = 0x1
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let b1: bits8 = 0x1
 let b2 = 0x1 : bits8
 let b3 = (0x1 : bits8) &lt;&lt; 2  // 0x4 as bits8
 let b32 = 0x1A4: bits8   // type error not representable in bits8
@@ -474,19 +474,19 @@ let b8 = (-50 - 150): bits8 // compile time error, not representable as 2-comple
 </code></pre></div><h3 id="use-of-operations">Use of operations</h3>
 <p>Bitwise operatorions and arithmetic operations cannot be applied to values of type <code>AnyBits</code>.
 Bitwise and arithmetic operations can only be applied to values of type <code>bitsN</code>, that means the size has to be fixed before any operation.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let x: bits8 = -0x1 // type error size of `0x1` not known, for a suitable unary minus
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let x: bits8 = -0x1 // type error size of `0x1` not known, for a suitable unary minus
 let x = -(0x1: bits8) // ok, is (0xFF: bits8), by wrap around
 </code></pre></div><h3 id="hackers-delight-translated-to-blech">Hacker&rsquo;s Delight translated to Blech</h3>
 <p><a href="https://en.wikipedia.org/wiki/Hacker%27s_Delight" target="_blank">Hacker’s Delight</a>
  is the definitive source of bitwise programming algorithms.
 It should be possible to use these hacks in Blech.</p>
 <p>Turn off the rightmost 1-bit in a byte, producing 0 if none (e.g. 0b_0101_1000 =&gt; 0b_0101_0000, 0x_00 =&gt; 0x_00).</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits8
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits8
 x = x &amp; (x - (1: bits8))
 // or
 x = x &amp; (x - 0x_01)
 </code></pre></div><p>Turn on the rightmost 0-bit in a word, producing all 1&rsquo;s if none (e.g. 0x7AF3 =&gt; 0x7AF4, 0xFFFF =&gt; 0xFFFF).</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits32
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits32
 x = x | (x + (1: bits32))
 // or
 x = x | (x + 0b_1)
@@ -585,7 +585,7 @@ x = x | (x + 0b_1)
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

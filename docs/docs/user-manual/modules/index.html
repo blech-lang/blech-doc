@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -28,12 +28,12 @@ Both a program file and a module file have the .blc extension. However a file re
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/user-manual/modules/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-17T13:44:14&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-17T13:44:14+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Modules">
 <meta itemprop="description" content="Compilation units A Blech program may be split into multiple files: a program file and so-called module files. The purpose of modules is to encapsulate the implementation of a certain aspect (functionality) in a given software project.
 Both a program file and a module file have the .blc extension. However a file representing the program must contain an entry point activity . There must not be a module declaration in a program file.">
-<meta itemprop="dateModified" content="2021-05-17T13:44:14&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-17T13:44:14+02:00" />
 <meta itemprop="wordCount" content="1643">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Modules"/>
@@ -43,8 +43,8 @@ Both a program file and a module file have the .blc extension. However a file re
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -365,7 +365,7 @@ All declarations <em>within</em> a module are visible.
 In particular, implementations details such as the fields of a structure are visible.</p>
 <p>By contrast, no declaration is visible <em>outside</em> the module unless it is explicitly <em>exposed</em>.</p>
 <p>Thus modules are a mechanism to encapsulate code, provide an API for it and hide implementation details from client code.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Module</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;module&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">DeclarationList</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Module</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;module&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">DeclarationList</span>
 <span style="color:#000">IdentifierList</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span>
 <span style="color:#000">DeclarationList</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;&#34;</span> | <span style="color:#000">StructDeclaration</span> | <span style="color:#000">DataDeclaration</span> | <span style="color:#000">ProgramDeclaration</span>
 </code></pre></div><p>Note that the module itself has no identifier. Client code which uses this module will <em>find</em> it by its file name and <em>give</em> it some local name when <a href="#Imports">importing</a>
@@ -373,7 +373,7 @@ In particular, implementations details such as the fields of a structure are vis
 <p>Also, remember that the <a href="../declarations/#qualifiers">qualifiers</a>
  <code>let</code> and <code>var</code> must not appear on the top-level scope - no globals in Blech.</p>
 <p>Example of a module:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes initialise, push, average
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes initialise, push, average
 
 const Size: nat8 = 10
 
@@ -431,7 +431,7 @@ Since Blech programs cannot be imported in other <code>.blc</code> files, no sig
 Opaque types only have a name but do not reveal their inner implementation details.
 The declaration of the name is required by the client code so that it can &ldquo;pass around&rdquo; values of the opaque types between procedures even though the content cannot be accessed directly.</p>
 <p>Here is an example of the generated signature for the module in the previous section.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
 
 @[StructType]
 type RingBuffer
@@ -455,7 +455,7 @@ Then, in order to declare a prototype of this function in the signature, an impo
 <p>Finally, signatures also declare <em>opaque singletons</em>.
 These are the names of procedures which are singletons themselves, not explicitly exposed, but used in exposed procedures.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes f
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes f
 
 singleton x
 @[CFunction (binding = &#34;foo()&#34;, header = &#34;bar.h&#34;)]
@@ -466,7 +466,7 @@ singleton [x] function f()
     //...
 end
 </code></pre></div><p>Accordingly, the signature contains an opaque singleton <code>y</code> without specifying that it was an (external) function.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
 
 singleton x
 
@@ -478,7 +478,7 @@ singleton [x, y] function f ()
 <h2 id="imports">Imports</h2>
 <p>A module needs to be imported by the down stream client code if the latter want to use the exposed members.</p>
 <p>Following our previous ring buffer example, its usage might look like this:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import rb &#34;/data_structures/ringbuffer&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import rb &#34;/data_structures/ringbuffer&#34;
 
 module exposes SlidingAverage 
 
@@ -500,7 +500,7 @@ end
 In order to use its exposed members the local name <code>rb</code> is introduced.
 Now we can refer to the opaque data type <code>rb.RingBuffer</code> or the functions <code>rb.initialise</code> etc&hellip;</p>
 <p>Formally, the import declaration is as follows:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Import</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;import&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;internal&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Identifier</span> <span style="color:#000">QUOTE</span> <span style="color:#000">ImportPath</span> <span style="color:#000">QUOTE</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Import</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;import&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;internal&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Identifier</span> <span style="color:#000">QUOTE</span> <span style="color:#000">ImportPath</span> <span style="color:#000">QUOTE</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> 
 <span style="color:#000">ImportPath</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;/&#34;</span> | <span style="color:#000">&#34;../&#34;</span>+<span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Path</span>
 <span style="color:#000">Path</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;/&#34;</span> <span style="color:#000">Identifier</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">*</span>
 </code></pre></div><h3 id="import-paths">Import paths</h3>
@@ -521,7 +521,7 @@ It is set by the <code>--project-dir</code> compiler flag.</p>
 <h3 id="exposing-imported-names">Exposing imported names</h3>
 <p>The import statement may <em>expose</em> some names directly to the client code. This makes those names available in the same namespace as the client code without using the given local name prefix.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import Math &#34;libs/utils/math&#34; exposes pi
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import Math &#34;libs/utils/math&#34; exposes pi
 </code></pre></div><p>Assuming <code>pi</code> is a name declared in the referenced module, the client code can access this name not only as <code>Math.pi</code> but also as <code>pi</code> directly.</p>
 <h3 id="whitebox-imports">Whitebox imports</h3>
 <p>Finally, an import can be declared as <code>internal</code>.
@@ -628,7 +628,7 @@ This breaks the information hiding mechanisms and should not be used to circumve
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

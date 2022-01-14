@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/language-evolution/borrowing/40_partials/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Partial borrowing and borrowed parts">
 <meta itemprop="description" content="Adopt the ideas of borrowing in Rust to Blech
 ">
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="428">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Partial borrowing and borrowed parts"/>
@@ -42,8 +42,8 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -338,7 +338,7 @@
 	</header>    
 	<h2 id="partial-borrow-from-a-struct">Partial borrow from a struct</h2>
 <p>Imagine the following</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
 struct From 
     var a: int32
     var b: int32
@@ -353,7 +353,7 @@ end
 </code></pre></div><p>The compiler can statically decide on partial borrowing for structs.
 But not for arrays.</p>
 <p>The following code would be rejected</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">activity main (i: int32)
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">activity main (i: int32)
     var f: [2]int43
     run outIsPlus1(f[1])(f[i])
     await true
@@ -363,12 +363,12 @@ That means borrowing form arrays borrows the whole array.</p>
 <h2 id="structs-with-references">Structs with references</h2>
 <p>A struct may contain a field that is a reference in order to define an alias or an associated data type.</p>
 <p>Structs with references contain borrowed fields.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct RefStruct
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct RefStruct
     var a: int32
     let ref b: int32
 end
 </code></pre></div><p>Return a struct with references requires to define which references a borrowed by the struct.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32) returns RefStruct shares refb
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32) returns RefStruct shares refb
     return {a = 42, b = refb}
 end
 
@@ -379,13 +379,13 @@ var result = initRefStruct(b)
 As a consequence <code>result</code> immutably borrows <code>b</code>.
 Consequently <code>b</code> is frozen after <code>result</code> is iniatialized.</p>
 <p>We could also write <code>initRefers</code> in the following way.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32) returns RefStruct shares refb
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32) returns RefStruct shares refb
     var r: RefStruct = {a = 42, b = refB}
     return r
 end
 </code></pre></div><p>The return value is a shallow copy of the struct.</p>
 <p>The borrow checker conservatively overestimates all possible borrowing if the return value is constructed through different control path.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32, refother: int32) returns RefStruct shares refb, refother
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32, refother: int32) returns RefStruct shares refb, refother
     if aB &lt; aB2 then
         return {a = 42, b = refb}
     else
@@ -393,7 +393,7 @@ end
     end
 end
 </code></pre></div><p>It also overestimates the sharing if the <code>shares</code> refers to an output, although the <code>RefStruct</code> value immutably borrows <code>refb</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct () (refb: int32) returns RefStruct shares refb
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct () (refb: int32) returns RefStruct shares refb
     refB = refB + 1
     return {a = 42, b = refB}
 end
@@ -403,7 +403,7 @@ var rs: RefStruct = initRefStruct()(b)
 </code></pre></div><p>Overestimation is necessary for a rather simple signature.</p>
 <p>For separate compilation borrowing in the result must become part of the signature of a function without inspection of the actual code.</p>
 <p>The three variants have of <code>initRefStruct</code> have the following signatures</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
 function initRefStruct (refb: int32) returns RefStruct shares refb
 
 function initRefStruct (refb: int32, refOther: int32) returns RefStruct shares refb, refother
@@ -506,7 +506,7 @@ function initRefStruct ()(refb: int32) returns RefStruct shares refb
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

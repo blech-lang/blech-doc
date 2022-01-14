@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -35,13 +35,13 @@ Every declaration exists in a lexical scope. Scopes define the visibility of a n
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/user-manual/declarations/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Declarations">
 <meta itemprop="description" content="Declarations introduce new names for entities in the program. Declarable entities include
  activities functions types data storage  In the future more of such entities may be added to the language such as clocks and physical units.
 Every declaration exists in a lexical scope. Scopes define the visibility of a name. The top-level or file scope is the most global scope in Blech. Functions, activities and types are defined here.">
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="3100">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Declarations"/>
@@ -52,8 +52,8 @@ Every declaration exists in a lexical scope. Scopes define the visibility of a n
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -398,9 +398,9 @@ The definition may refer to names that were previously declared.</p>
 <p>In the following we discuss the various entities that can be defined in a Blech program.</p>
 <h2 id="data">Data</h2>
 <p>Data declarations consist of an access and placement qualifier, an identifier, a data type and an initialisation.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">DataDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Qualifier</span> <span style="color:#000">Identifier</span> <span style="color:#000">&#34;:&#34;</span> <span style="color:#000">Type</span> <span style="color:#000">&#34;=&#34;</span> <span style="color:#000">Init</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">DataDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Qualifier</span> <span style="color:#000">Identifier</span> <span style="color:#000">&#34;:&#34;</span> <span style="color:#000">Type</span> <span style="color:#000">&#34;=&#34;</span> <span style="color:#000">Init</span>
 </code></pre></div><p>A variable declaration:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: int32 = 17
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: int32 = 17
 </code></pre></div><p>The type is either a built-in type or a name of a user defined type.
 Built-in types are discussed in the <a href="../types">Types chapter</a>
 .
@@ -410,7 +410,7 @@ Type declarations are discussed <a href="#user-defined-types">below</a>
 .</p>
 <h3 id="qualifiers">Qualifiers</h3>
 <p>There are four possible qualifiers.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Qualifier</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;const&#34;</span> | <span style="color:#000">&#34;param&#34;</span> | <span style="color:#000">&#34;let&#34;</span> | <span style="color:#000">&#34;var&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Qualifier</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;const&#34;</span> | <span style="color:#000">&#34;param&#34;</span> | <span style="color:#000">&#34;let&#34;</span> | <span style="color:#000">&#34;var&#34;</span>
 </code></pre></div><p><code>const</code> qualified data is relevant for the compilation phase only and does not have any representation in memory at run time.
 Typical use cases for <code>const</code> are sizes of data structures, addresses in memory, &hellip;
 In C, these are represented by <code>#define</code> macros, which, too, have no representation after the preprocessor finishes.
@@ -422,7 +422,7 @@ The name &ldquo;param&rdquo; indicates that such data is a parameter of the fina
 Tools exist to customise such parameters in a binary file directly in order to adapt the given software to a variant of a product.
 Like with <code>const</code> data, the <code>param</code> value must be initialised with constant expressions.
 You cannot write the following</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function f (input: int32)
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function f (input: int32)
    param x: int32 = input // error!
 end
 </code></pre></div><p>This is because the value of <code>input</code> is determined at <em>runtime</em> but <code>x</code> must be initialised at <em>compile time</em>.</p>
@@ -433,7 +433,7 @@ Finally, <code>var</code> declares the usual mutable variable.
 Initialisation may be omitted for mutable variables. In this case the Blech compiler will automatically initialise the variable with its type&rsquo;s default value.
 The type annotation may be omitted if the type can be unambiguously determined from the initialisation expression.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">const LEN: int32 = 8
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">const LEN: int32 = 8
 param lut: [LEN]float64 = {1.0, 0.5, 0.25, 0.125} // LEN is constant and may be used here
                                                   // the array literal will be filled with additional 0&#39;s up to length LEN.
 function f()
@@ -496,7 +496,7 @@ See the chapter on <a href="../types/#structure-types">struct types</a>
 Their behaviour is different. Activities must pause at least once whereas functions need to terminate within one reaction. Functions are therefore called &ldquo;instantaneous&rdquo;.
 The precise differences will be worked out in the chapter on Blech statements.
 From a syntactic declaration point of view there is hardly any difference.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">ProgramDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;singleton&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">ProgramType</span> <span style="color:#000">Identifier</span> <span style="color:#000">ParamList</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">ParamList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;returns&#34;</span> <span style="color:#000">Type</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">StmtBlock</span> <span style="color:#000">&#34;end&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">ProgramDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;singleton&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">ProgramType</span> <span style="color:#000">Identifier</span> <span style="color:#000">ParamList</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">ParamList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;returns&#34;</span> <span style="color:#000">Type</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">StmtBlock</span> <span style="color:#000">&#34;end&#34;</span>
 <span style="color:#000">ProgramType</span>        ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;function&#34;</span> | <span style="color:#000">&#34;activity&#34;</span>
 <span style="color:#000">ParamList</span>          ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;()&#34;</span> | <span style="color:#000">&#34;(&#34;</span> <span style="color:#000">ParamDeclaration</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">ParamDeclaration</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">&#34;)&#34;</span>
 <span style="color:#000">ParamDeclaration</span>   ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000">&#34;:&#34;</span> <span style="color:#000">Type</span>
@@ -506,7 +506,7 @@ In particular the two lists are useful for activities which, in every reaction, 
 We will therefore often refer to these two parameter lists as &ldquo;input list&rdquo; and &ldquo;output list&rdquo;.</p>
 <p>The programming model is that all variables are passed by reference (even though in reality the compiler will optimise this into by-value for simple value typed inputs).</p>
 <p>Example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function add (x: int32, y: int32) returns int32
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function add (x: int32, y: int32) returns int32
    return x + y
 end
 
@@ -532,7 +532,7 @@ This allows for example to make use of existing libraries.
 Such variables and functions are <em>external</em> from the point of view of a Blech program.
 Annotations are required to tell the compiler how to code-generate access to these external entities.</p>
 <p>Formally, we have the following syntax.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">ExternFunctionDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;extern&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;singleton&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">&#34;function&#34;</span> <span style="color:#000">Identifier</span> <span style="color:#000">ParamList</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">ParamList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">returns</span> <span style="color:#000">Type</span><span style="color:#000;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">ExternFunctionDeclaration</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;extern&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;singleton&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">&#34;function&#34;</span> <span style="color:#000">Identifier</span> <span style="color:#000">ParamList</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">ParamList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">returns</span> <span style="color:#000">Type</span><span style="color:#000;font-weight:bold">]</span>
 <span style="color:#000">ExternDataDeclaration</span>     ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;extern&#34;</span> <span style="color:#000">Qualifier</span> <span style="color:#000">Identifier</span> <span style="color:#000">&#34;:&#34;</span> <span style="color:#000">Type</span>
 </code></pre></div><p>Obviously, external functions have no body and external variables cannot be initialised.
 As before, external functions may be characterised as <code>singleton</code> which means such a function may not be called concurrently with another instance of itself. This is useful when the external function to be called is not a pure function because it either returns a volatile value or has some effect on the environment. Invoking multiple instances of such a function concurrently would violate the synchrony assumptions and lead to unexpected results.</p>
@@ -550,7 +550,7 @@ As before, external functions may be characterised as <code>singleton</code> whi
 <p>In C, constant values may be defined using macros or <code>const</code> variables.
 In order to make these values available in Blech, external constants may be declared.
 External constant declarations may appear in any scope.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CConst (binding = &#34;PI&#34;, header = &#34;math.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CConst (binding = &#34;PI&#34;, header = &#34;math.h&#34;)]
 extern const pi: float64
 @[CParam (binding = &#34;characteristics&#34;, header = &#34;magic.h&#34;)]
 extern param map: [10]float32
@@ -578,7 +578,7 @@ Additionally, local Blech variables that link to external global variables may b
 <p>Access to external variables is useful to keep interfaces slim. That is you do not need to pass all data into the entry point activity and down the call chain to the piece of code that actually needs this data and then propagate the results back up this chain to the entry point to communicate the updated values to the environment.
 These variables follow the same rules as the usual activity-local variables.</p>
 <p>Read-only external variables are annotated with the <code>CInput</code> annotation.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CInput (binding = &#34;PIN_7&#34;, header = &#34;head.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CInput (binding = &#34;PIN_7&#34;, header = &#34;head.h&#34;)]
 extern let isButtonPressed: bool
 </code></pre></div><p>This example assumes there is either a C macro or a C variable <code>PIN_7</code> that returns a volatile boolean value indicating a button press.</p>
 <p>The declaration creates a local variable inside the enclosing activity.
@@ -589,7 +589,7 @@ This corresponds to the semantics of activity input parameters.</p>
 <p>An activity that declares an immutable external variable does not become a singleton.
 Concurrent instances may exist but they may contain different values for the same external variable if it is volatile.</p>
 <p>Read-write external variables are annotated with the <code>COutput</code> annotation.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[COutput (binding = &#34;PIN_7&#34;, header = &#34;head.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[COutput (binding = &#34;PIN_7&#34;, header = &#34;head.h&#34;)]
 extern var isButtonPressed: bool
 </code></pre></div><p>Here at the beginning of a reaction the value of <code>PIN_7</code> is copied in.
 During a reaction the variable <code>isButtonPressed</code> can be modified as usual.
@@ -599,7 +599,7 @@ This guarantees a stable output behaviour. Intermediate changes to the local var
 It returns the value that the variable held at the end of the previous reaction.
 This behaviour corresponds to using <code>prev</code> on normal local variables but there is a subtle difference.
 External variables may be changed by the environment.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[COutput (binding = &#34;PIN_7&#34;, header = &#34;head.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[COutput (binding = &#34;PIN_7&#34;, header = &#34;head.h&#34;)]
 extern var isButtonPressed: bool
 isButtonPressed = true
 await cond // some boolean condition
@@ -618,16 +618,16 @@ Concurrent instances lead to a write-write conflict and compilation is rejected.
 <li>Via a wrapper to be implemented in some .c file.</li>
 </ol>
 <p>In the first case we annotate the call to the C function and the file wherein this function is declared. The call must list the parameters using a <code>$i</code> notation. In this way, we can map the input and output parameters of the Blech prototype to the positions of the C function.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;ceil($1)&#34;, header = &#34;math.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;ceil($1)&#34;, header = &#34;math.h&#34;)]
 extern function ceiling(i: float64) returns float64
 </code></pre></div><p>Inside the Blech program this function is now available through name <code>ceiling</code>.</p>
 <p>In the second case we annotate which file we intend to implement the C function in.
 Actually this information is irrelevant for the Blech compilation itself.
 However, it may become useful in the future once a build system can make sense of these annotations and automatically detect which files are required for the compilation of the whole project.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (source=&#34;impl.c&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (source=&#34;impl.c&#34;)]
 extern function myCFunction(i: float64) returns float64
 </code></pre></div><p>Assume the above declaration is written in a Blech file called <code>MyFile.blc</code>, then the code generator will produce a header file <code>MyFile.h</code> with the following code:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#8f5902;font-style:italic">// extern functions to be implemented in C
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#8f5902;font-style:italic">// extern functions to be implemented in C
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">blc_float64</span> <span style="color:#000">blc_MyFile_myCFunction</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">blc_float64</span> <span style="color:#000">blc_i</span><span style="color:#000;font-weight:bold">);</span>
 </code></pre></div><p>It is up to the C programmer now to include this header in his implementation file <code>impl.c</code> and provide an actual definition of this function.</p>
 <h3 id="remarks-on-caveats-when-interfacing-with-c">Remarks on caveats when interfacing with C</h3>
@@ -639,16 +639,16 @@ The Blech compiler ensures that inputs will only be read.
 However the Blech compiler has no chance to check that the external code adheres to this contract.</p>
 <p>For example, say we have an external function that takes an array of length 10 and sorts it in-place.
 The correct binding would look something like this:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;sort($1)&#34;, header = &#34;utils.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;sort($1)&#34;, header = &#34;utils.h&#34;)]
 extern function sort()(arr: [10]int32)
 </code></pre></div><p>In this way, the Blech compiler knows that <code>sort</code> will modify the given array. When calling this function in a concurrent context the compiler will prevent write-write conflicts and read-write cycles on the array.</p>
 <p>However, the programmer could erroneously declare the same function as follows:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;sort($1)&#34;, header = &#34;utils.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;sort($1)&#34;, header = &#34;utils.h&#34;)]
 extern function sort(arr: [10]int32)
 </code></pre></div><p>The code will compile all the same but the causality guarantees are gone because the Blech compiler relies on the assumption that the array will only be read and not modified. At runtime the program may then exhibit unexpected behaviour.</p>
 <h4 id="singletons">Singletons</h4>
 <p>The <code>singleton</code> annotation is a help to the Blech programmer but does not completely prevent concurrent calls to functions with conflicting effects. For example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;foo&#34;, header = &#34;head.h&#34;)]
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">@[CFunction (binding = &#34;foo&#34;, header = &#34;head.h&#34;)]
 extern singleton function doA() 
 @[CFunction (binding = &#34;foo&#34;, header = &#34;head.h&#34;)]
 extern singleton function doB() 
@@ -762,7 +762,7 @@ Furthermore unicode characters may be used given by <code>\u{codepoint}</code> w
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

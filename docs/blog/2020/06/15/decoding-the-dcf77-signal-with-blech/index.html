@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -26,13 +26,13 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/blog/2020/06/15/decoding-the-dcf77-signal-with-blech/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-06-15T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-12-30T16:11:41&#43;01:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:published_time" content="2020-06-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-30T16:11:41+01:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Decoding the DCF77 signal with Blech">
 <meta itemprop="description" content="Radio-controlled clocks and watches in Germany usually rely on the DCF77 signal for time synchronization. In this article we demonstrate a structured top-down implementation approach for decoding the DCF77 time information using Blech.
-"><meta itemprop="datePublished" content="2020-06-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-12-30T16:11:41&#43;01:00" />
+"><meta itemprop="datePublished" content="2020-06-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-12-30T16:11:41+01:00" />
 <meta itemprop="wordCount" content="2845">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Decoding the DCF77 signal with Blech"/>
@@ -42,8 +42,8 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -365,7 +365,7 @@ Hardware setup of the DCF77 decoder: Discovery board (top) and RF receiver modul
 
 
 <div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/06/15/decoding-the-dcf77-signal-with-blech/scope_hub36a3150171d15fb70dc7d6eab6ef70f_1185503_600x0_resize_catmullrom_2.png" width="600" height="360">
+	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/06/15/decoding-the-dcf77-signal-with-blech/scope_hub36a3150171d15fb70dc7d6eab6ef70f_1185503_600x0_resize_catmullrom_3.png" width="600" height="360">
 	
 	<div class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -395,14 +395,14 @@ Oszilloscope capture of the DCF77 time signal on GPIO PB7.
 <p>The corresponding signature of the Blech entry point activity looks like this:</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">// @param[in]   dcf77   The DCF77 signal level (true = &#39;HIGH&#39;).
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">// @param[in]   dcf77   The DCF77 signal level (true = &#39;HIGH&#39;).
 // @param[in]   btn     The user button state (true = &#39;PRESSED&#39;).
 // @param[out]  leds    The LED states (true = &#39;ON&#39;).
 @[EntryPoint]
@@ -415,7 +415,7 @@ activity Main (dcf77: bool, btn: bool) (leds: LedStates)
 <p>We follow this approach and execute the Blech application part every 10 milliseconds. This leads to a sample rate of 100Hz which is sufficiently fast in order to distinguish between a binary zero, a binary one and the synchronization mark. For the periodic execution, we take advantage of a simple delay function (<code>HAL_Delay</code>) provided by the microcontroller&rsquo;s driver library. An outline of <code>main.c</code> is shown below.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -435,7 +435,7 @@ activity Main (dcf77: bool, btn: bool) (leds: LedStates)
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#8f5902;font-style:italic">#include</span> <span style="color:#8f5902;font-style:italic">&#34;blech/control.h&#34;      // Include C code generated from Blech.</span><span style="color:#8f5902;font-style:italic">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#8f5902;font-style:italic">#include</span> <span style="color:#8f5902;font-style:italic">&#34;blech/control.h&#34;      // Include C code generated from Blech.</span><span style="color:#8f5902;font-style:italic">
 </span><span style="color:#8f5902;font-style:italic"></span>
 <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">main</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
     <span style="color:#8f5902;font-style:italic">// ... init system ...
@@ -488,7 +488,7 @@ activity Main (dcf77: bool, btn: bool) (leds: LedStates)
 
 
 <div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
-	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/06/15/decoding-the-dcf77-signal-with-blech/activity_tree_hu8eb9351a76627fa7002efdf26ac3730a_44992_400x0_resize_catmullrom_2.png" width="400" height="320">
+	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/06/15/decoding-the-dcf77-signal-with-blech/activity_tree_hu8eb9351a76627fa7002efdf26ac3730a_44992_400x0_resize_catmullrom_3.png" width="400" height="320">
 	
 	<div class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -512,7 +512,7 @@ Hierarchical call structure of activities.
 
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -543,7 +543,7 @@ Hierarchical call structure of activities.
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">@[EntryPoint]
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">@[EntryPoint]
 activity Main (dcf77: bool, btn: bool) (leds: LedStates)
     ledsAllOn()(leds)
     run AwaitStableSignal(dcf77)
@@ -590,7 +590,7 @@ end
 <p>Reflecting the time signal level on the LED is a pretty simple task in Blech. We establish an infinite loop which alternates between the signal levels. First, it awaits the high level for switching off the LED. Second, it awaits the low level for switching on the same LED. Third, the whole process repeats &ndash; that&rsquo;s it.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -600,7 +600,7 @@ end
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity Visualize (dcf77: bool) (ledDcf77: bool)
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity Visualize (dcf77: bool) (ledDcf77: bool)
     repeat
         await dcf77         // Await rising edge.
         ledDcf77 = false    // Turn off LED.
@@ -617,7 +617,7 @@ end
 <p>If the signal level goes <code>LOW</code> during the measurement the process has to be resetted. For this, we use the <code>when ... reset</code> block in Blech which causes the contained code to restart from the first line if the given condition is met. So in this case the code will jump back to <code>var len: nat16 = 0</code> as soon as the level drops.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -629,7 +629,7 @@ end
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity CaptureSync (dcf77: bool)
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity CaptureSync (dcf77: bool)
     // Perform the measurement and restart if the level drops meanwhile.
     when not dcf77 reset
         var len: nat16 = 0
@@ -646,7 +646,7 @@ end
 <p>Implementing the time information capture based on <code>CaptureSync</code> and <code>CaptureBit</code> becomes a trivial task. First, we capture the synchronization mark. Before and after that we turn off and on the associated LED (orange) respectively. Second, we enter the <code>while</code> loop in which we collect the 59 time code bits by repeatedly calling <code>CaptureBit</code>. Each successfully received bit is passed to <code>processBit</code> in order to update the gathered time information in <code>ti</code>. This means that decoding the DCF77 signal actually happens bit-wise on-the-fly. Finally, <code>CaptureTimeInfo</code> terminates, thereby returning the success status and the decoded time information to the caller.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -672,7 +672,7 @@ end
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity CaptureTimeInfo (dcf77: bool)(ti: TimeInfo, ledSync: bool) returns bool
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity CaptureTimeInfo (dcf77: bool)(ti: TimeInfo, ledSync: bool) returns bool
     ledSync = false // Turn off LED.
     run CaptureSync(dcf77)
     ledSync = true  // Turn on LED.
@@ -701,7 +701,7 @@ end
 </div><p>The job of <code>Decode</code> is to retrieve two consecutive time codes (<code>tmp</code> and <code>ti</code>) and apply a simple validity check by comparing them. A common approach is to check whether the second timestamp (<code>ti</code>) is exactly one minute ahead of the first one (<code>tmp</code>). If that is the case the second one is considered valid and returned to the caller &ndash; the decoding is done.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -721,7 +721,7 @@ end
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity Decode (dcf77: bool) (ti: TimeInfo, ledSync: bool) returns bool
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity Decode (dcf77: bool) (ti: TimeInfo, ledSync: bool) returns bool
     var success: bool
     var tmp: TimeInfo
 
@@ -861,7 +861,7 @@ end
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

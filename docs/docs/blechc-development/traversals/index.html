@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -30,11 +30,11 @@ let rec private …&lt;/!--&gt;">
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/blechc-development/traversals/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="Recursive traversals that do similar things TypeChecking.fs Traversing statements only /// Determine the return type of a statement let rec private stmtType stmt /// An activity must have some synchronous delay statement on every possible /// execution path through its body. /// This can be an await or a run statement. // This is partially double work with causality analysis, // here and there we will find instantaneous loops. // Here we throw an error if that is the only statement in the activity.">
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="668">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
@@ -43,8 +43,8 @@ let rec private …&lt;/!--&gt;">
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -347,9 +347,9 @@ let rec private …&lt;/!--&gt;">
 <!-- ## Recursive traversals on typed Blech data structures -->
 <h3 id="typecheckingfs">TypeChecking.fs</h3>
 <h4 id="traversing-statements-only">Traversing statements only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Determine the return type of a statement
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Determine the return type of a statement
 let rec private stmtType stmt
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// An activity must have some synchronous delay statement on every possible 
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// An activity must have some synchronous delay statement on every possible 
 /// execution path through its body.
 /// This can be an await or a run statement.
 // This is partially double work with causality analysis, 
@@ -357,19 +357,19 @@ let rec private stmtType stmt
 // Here we throw an error if that is the only statement in the activity.
 // In causality analysis we throw an error any way.
 let private checkStmtsWillPause p name stmts
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let private determineGlobalOutputs lut bodyRes
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let private determineGlobalOutputs lut bodyRes
 </code></pre></div><h4 id="traversing-expressions-and-statements">Traversing expressions and statements</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Checks whether the lists of statements does not contain any synchronous
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Checks whether the lists of statements does not contain any synchronous
 /// statements. This check is required for function bodies.
 let private checkAbsenceOfSyncStmts stmts
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let private determineCalledSingletons lut bodyRes =
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let private determineCalledSingletons lut bodyRes =
 </code></pre></div><h3 id="tychkexpressionsfs">TyChkExpressions.fs</h3>
 <h4 id="traversing-expressions-only">Traversing expressions only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Returns true when the evaluation of expr does not change the program&#39;s state
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Returns true when the evaluation of expr does not change the program&#39;s state
 let rec private hasNoSideEffect expr
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// True if given expression contains only compile time or param values
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// True if given expression contains only compile time or param values
 let rec internal isStaticExpr lut expr
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Given a typed rhs expression, this function tries to evaluate this 
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Given a typed rhs expression, this function tries to evaluate this 
 /// expression to a constant and return a new TypedRhs such that
 /// isLiteral returns true on that.
 /// However, it may return a non-constant expression if it cannot be
@@ -377,7 +377,7 @@ let rec internal isStaticExpr lut expr
 let rec internal tryEvalConst lut (checkedExpr: TypedRhs) : TypedRhs
 </code></pre></div><h3 id="tychkamendmentfs">TyChkAmendment.fs</h3>
 <h4 id="traversing-expressions-only-1">Traversing expressions only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Returns yes if the expression contains at least one name
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Returns yes if the expression contains at least one name
 /// This is useful for type checking where we want to make sure that
 /// in a variable declaration such as &#34;var x = 8&#34;, we do not merely
 /// look at the type of &#34;8&#34; which is int8 and falsely make x an int8
@@ -385,8 +385,8 @@ let rec internal tryEvalConst lut (checkedExpr: TypedRhs) : TypedRhs
 let rec private exprContainsName rhs
 </code></pre></div><h3 id="programgraphfs">ProgramGraph.fs</h3>
 <h4 id="traversing-expressions-only-2">Traversing expressions only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let rec internal addNameRead context node trhs =
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// This function is here temporarily. It solves the following problem:
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let rec internal addNameRead context node trhs =
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// This function is here temporarily. It solves the following problem:
 /// Since the abort conditions are pushed into the body of the abort statement
 /// conditions may become concurrent in the context of a cobegin in the body.
 /// This is a problem if the condition is modified in the body. The scheduler
@@ -403,11 +403,11 @@ let rec private exprContainsName rhs
 /// current implementation always works.
 let private tempPrevHelper context cond subPg
 </code></pre></div><h4 id="traversing-statements-only-1">Traversing statements only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Generates a program graph for a given statement
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Generates a program graph for a given statement
 let rec private createPGofStmt context thread stmt
 </code></pre></div><h3 id="cpdataaccessfs">CPdataAccess.fs</h3>
 <h4 id="traversing-expressions-only-3">Traversing expressions only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Convert expressions into Doc
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Convert expressions into Doc
 /// Ensures that function calls with struct literals in their input list are
 /// converted to function calls on precomputed structure variables.
 // The result propagates recursively.
@@ -417,14 +417,14 @@ let rec private createPGofStmt context thread stmt
 and private cpExpr inFunction ctx expr
 </code></pre></div><h3 id="activitytranslatorfs">ActivityTranslator.fs</h3>
 <h4 id="traversing-expressions-only-4">Traversing expressions only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Extract all QNames of variables that require a prev location in given code
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/// Extract all QNames of variables that require a prev location in given code
 // runs on nodes and program graphs instead of statements
 // became necessary when strong abort was translated by introducing a prev on the condition and thus deviating from given source code
 // might change again
 let private collectVarsToPrev2 pg
 </code></pre></div><h3 id="functiontranslatorfs">FunctionTranslator.fs</h3>
 <h4 id="traversing-statements-only-2">Traversing statements only</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">and private translateFunctionStatement ctx curComp stmt
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">and private translateFunctionStatement ctx curComp stmt
 </code></pre></div>
 	
 	
@@ -520,7 +520,7 @@ let private collectVarsToPrev2 pg
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

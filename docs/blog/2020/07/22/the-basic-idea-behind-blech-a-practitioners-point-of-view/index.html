@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -26,13 +26,13 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/blog/2020/07/22/the-basic-idea-behind-blech-a-practitioners-point-of-view/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-07-22T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:published_time" content="2020-07-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="The basic idea behind Blech – A practitioner&#39;s point of view">
 <meta itemprop="description" content="Maintaining control over the increasing complexity of today&#39;s embedded systems is the main goal of Blech. Therefore, Blech lifts embedded programming to a higher level of abstraction. But what does that actually mean? In this article we consider this from a practitioner&#39;s point of view.   
-"><meta itemprop="datePublished" content="2020-07-22T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+"><meta itemprop="datePublished" content="2020-07-22T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="3153">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The basic idea behind Blech – A practitioner&#39;s point of view"/>
@@ -42,8 +42,8 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -298,7 +298,7 @@
 <p>Let us assume that we &ndash; as software developers &ndash; do not have any experience in writing embedded code and we do not know anything about the stringent constraints imposed by the embedded domain. We just (naively) start by implementing a function <code>send_buffer</code> that encapsulates all the details required for data transmission. This approach is reasonable and natural because this is what we have been taught in school and at the university. Motivated by several fundamental software engineering principles such as abstraction, separation of concerns, encapsulation and so forth we develop the solution below:</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -308,7 +308,7 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">send_buffer</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">u8</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">buf</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">u16</span> <span style="color:#000">len</span><span style="color:#000;font-weight:bold">)</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">send_buffer</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">u8</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">buf</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">u16</span> <span style="color:#000">len</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">u16</span> <span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">len</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span>
     <span style="color:#000;font-weight:bold">{</span>
@@ -329,7 +329,7 @@
 
 
 <div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
-	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/07/22/the-basic-idea-behind-blech-a-practitioners-point-of-view/oszi_1_hu7a477f07b182b110426619a64863e79e_99242_800x0_resize_catmullrom_2.png" width="800" height="217">
+	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/07/22/the-basic-idea-behind-blech-a-practitioners-point-of-view/oszi_1_hu7a477f07b182b110426619a64863e79e_99242_800x0_resize_catmullrom_3.png" width="800" height="217">
 	
 	<div class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -369,7 +369,7 @@ Exemplary scope capture of three byte transmission with software in polling mode
 <p>Event-driven behaviour, however, is not supported by C on language level. Typical workarounds rely on <em>statemachines</em> and <em>callbacks</em> that are executed in an asynchronous-concurrent fashion. See the example below:</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -390,7 +390,7 @@ Exemplary scope capture of three byte transmission with software in polling mode
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#000">u8</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">_buf</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">u16</span> <span style="color:#000">_len</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">u16</span> <span style="color:#000">_tx</span><span style="color:#000;font-weight:bold">;</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#000">u8</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">_buf</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">u16</span> <span style="color:#000">_len</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">u16</span> <span style="color:#000">_tx</span><span style="color:#000;font-weight:bold">;</span>
 
 <span style="color:#000">ISR</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">UART1_TX</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000;font-weight:bold">{</span>
@@ -421,7 +421,7 @@ Exemplary scope capture of three byte transmission with software in polling mode
 
 
 <div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
-	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/07/22/the-basic-idea-behind-blech-a-practitioners-point-of-view/oszi_2_hue664559e19091397989b194e3be32ca9_97431_800x0_resize_catmullrom_2.png" width="800" height="217">
+	<img class="card-img-top" src="https://www.blech-lang.org/blog/2020/07/22/the-basic-idea-behind-blech-a-practitioners-point-of-view/oszi_2_hue664559e19091397989b194e3be32ca9_97431_800x0_resize_catmullrom_3.png" width="800" height="217">
 	
 	<div class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -481,7 +481,7 @@ Exemplary scope capture of three byte transmission with software in event-driven
 <p>The following code snippet shows how the buffer transmission can look like in Blech:</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -498,7 +498,7 @@ Exemplary scope capture of three byte transmission with software in event-driven
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">@[CFunction (binding = &#34;UART_isReady&#34;, header = &#34;uart.h&#34;)]
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">@[CFunction (binding = &#34;UART_isReady&#34;, header = &#34;uart.h&#34;)]
 extern singleton function uart_isReady() returns bool
 @[CFunction (binding = &#34;UART_sendByte&#34;, header = &#34;uart.h&#34;)]
 extern singleton function uart_sendByte(val: nat8)
@@ -550,7 +550,7 @@ end
 <p>Let us slightly extend above example. We want to make an LED blink on every system tick, e.g. every millisecond, while a buffer transmission is in progress. At this point, we are aware that blinking an LED with such a high frequency is generally not useful since it is not visible for the human eye. Here, we just use it for demonstration purpose to show how easy it is to express concurrent behaviour by taking advantage of Blech&rsquo;s <code>cobegin</code> statement:</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -564,7 +564,7 @@ end
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity SendBufferBlinking (buf: [LEN]nat8, len: nat16, sysTick: bool)(led: bool)
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">activity SendBufferBlinking (buf: [LEN]nat8, len: nat16, sysTick: bool)(led: bool)
     cobegin   // Buffer transmission.
         run SendBuffer(buf, len)
     with weak // LED flashing.
@@ -688,7 +688,7 @@ end
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         

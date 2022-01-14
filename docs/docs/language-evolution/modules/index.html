@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.91.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.blech-lang.org/docs/language-evolution/modules/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-04T16:47:05&#43;02:00" /><meta property="og:site_name" content="Blech" />
+<meta property="article:modified_time" content="2021-05-04T16:47:05+02:00" /><meta property="og:site_name" content="Blech" />
 
 <meta itemprop="name" content="Programs and modules - the Blech compilation units">
 <meta itemprop="description" content="Modules and programs - proposal for Blech compilation units.
 ">
-<meta itemprop="dateModified" content="2021-05-04T16:47:05&#43;02:00" />
+<meta itemprop="dateModified" content="2021-05-04T16:47:05+02:00" />
 <meta itemprop="wordCount" content="1159">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Programs and modules - the Blech compilation units"/>
@@ -42,8 +42,8 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.c91212390f86c2bdc4e153a6feceeb61d884ce986135bf97744c2c018d6be513.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -378,11 +378,11 @@ A program is always a top-level file of a Blech application.</p>
 In order to become a module, a Blech code file must be marked as a <code>module</code> and export at least one top-level declaration or a wildcard, see below. TODO: Add a relref here, how?.</p>
 <p>Different to other languages we do not use accessibility modifiers in front of declarations.
 Instead, we require an explicit declaration of exported top-level declarations.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes TopLevelIdentifier
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes TopLevelIdentifier
 </code></pre></div><p>Every top-level declaration inside a module file can be exported to be used by another module or program file.
 All neccessary declared identifiers must also be exported.
 Optionally, the exported identifiers can be classified for readability.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes T, MyActivity
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes T, MyActivity
 
 type T = int32
 
@@ -396,7 +396,7 @@ end
 The compiler checks the correctness of exports.
 It is a compiler error, if type <code>T</code> is not exported.
 For a correct module file an interface file is created that contains all compile-time information that is necessary to compile a Blech file that uses this module file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
 
 type T = int32
 
@@ -407,7 +407,7 @@ Only exported entities can be used.
 The internal - non-exposed - entities are hidden.</p>
 <h3 id="importing-a-blech-module-file-for-use-in-a-program-or-another-module">Importing a Blech module file for use in a program or another module</h3>
 <p>In order to use a module file it needs to be imported by another compilation unit, for example a Blech program.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import m = &#34;mymodule&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import m = &#34;mymodule&#34;
 
 @[EntryPoint]
 activity MyMain()
@@ -418,7 +418,7 @@ In order order to use it we declare a Blech identifier for the module.
 It is fine to use any valid identifier, here <code>m</code>.
 By default all imports are qualified with this module name.
 In order to use an imported name without qualification is must be exposed at the import.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import m = &#34;mymodule&#34; exposes MyActivity
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import m = &#34;mymodule&#34; exposes MyActivity
 
 @[EntryPoint]
 activity MyMain()
@@ -427,7 +427,7 @@ activity MyMain()
 end
 </code></pre></div><p>Note: The other exported entity &ndash; type <code>T</code> &ndash; can only be used, when qualifed with the module name.</p>
 <p>For exposing everything from an imported module, which is usually neither necessary nor recommended, you can use the short cut <code>...</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import _ = &#34;mymodule&#34; exposes ...
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import _ = &#34;mymodule&#34; exposes ...
 
 @[EntryPoint]
 activity MyMain()
@@ -449,7 +449,7 @@ Therefore, use unqualified exposed imports sparingly.
 <h3 id="no-implicit-export-for-imported-modules">No implicit export for imported modules</h3>
 <p>Assume the following two modules.</p>
 <p>Module file <code>pair.blc</code> only exports type alias <code>Pair</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes Pair
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes Pair
 
 type Pair = [2]int32
 
@@ -461,7 +461,7 @@ function snd(p: Pair) returns int32
     return p[1]
 end
 </code></pre></div><p>Module file <code>usepair.blc</code> imports modul <code>pair</code>, but cannot access hidden functions <code>fst</code> and <code>snd</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import pair = &#34;pair&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import pair = &#34;pair&#34;
 
 module exposes sum
 
@@ -473,17 +473,17 @@ function sum(p: pair.Pair) returns int32
     return p[0] + snd(p)
 end
 </code></pre></div><p>On successful compilation the compiler generates the following signature - the interface of a module - in file <code>pair.blh</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
 
 type Pair = [2]int32
 </code></pre></div><p>Module <code>&quot;usepair&quot;</code> requires an <code>import</code> of module <code>&quot;pair&quot;</code> and exports function <code>sum</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import pair = &#34;pair&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import pair = &#34;pair&#34;
 
 signature
 
 function sum(p: pair.Pair) returns int32
 </code></pre></div><p>For reuse, a program that imports module file <code>&quot;usepair&quot;</code> also needs to import module file <code>&quot;pair&quot;</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import up = &#34;usepair&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import up = &#34;usepair&#34;
 import p = &#34;pair&#34;
 
 @[EntryPoint]
@@ -494,7 +494,7 @@ activity Main()
 end
 </code></pre></div><p>Note: Module <code>&quot;pair&quot;</code> is <strong>not</strong> exported indirectly via the import of module <code>&quot;usepair&quot;</code>.</p>
 <p>The following program cannot be compiled.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import up = &#34;usepair&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import up = &#34;usepair&#34;
 
 @[EntryPoint]
 activity Main()
@@ -506,7 +506,7 @@ end
 </code></pre></div><h3 id="exporting-nothing">Exporting nothing</h3>
 <p>For development purposes it might be useful to expose nothing until a module can be used.
 A wildcard <code>_</code> can be used for this purpose.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes _
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes _
 
 type Pair = [2]int32
 
@@ -520,7 +520,7 @@ end
 </code></pre></div><h3 id="exporting-everything">Exporting everything</h3>
 <p>Sometimes it might be useful to expose everything in a module.
 There is a shortcut <code>...</code> for this.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes ...
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes ...
 
 type Pair = [2]int32
 
@@ -534,7 +534,7 @@ end
 </code></pre></div><h3 id="exporting-abstract-types-as-new-types">Exporting abstract types as new types</h3>
 <p>Sometimes it is useful to hide the implementation of a type, from its importers.
 You can create a <code>newtype</code> for this purpose.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes Pair, set, fst, snd
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes Pair, set, fst, snd
 
 newtype Pair = [2]int32
 
@@ -551,7 +551,7 @@ function snd(p: Pair) returns int32
 end
 </code></pre></div><p>Since the internal structure is unknown additional functions must be exposed.
 The module&rsquo;s signature does not expose the internal type structure.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
 
 newtype Pair
 
@@ -680,7 +680,7 @@ The compilation of a Blech program file, for example <code>program.blc</code>, g
       </div>
       
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2019-2021 The Blech contributors</small>
+        <small class="text-white">&copy; 2019-2022 The Blech contributors</small>
         
         <small class="ml-1"><a href="https://www.blech-lang.org/about/privacy-policy/" target="_blank" rel="noopener" style="color: skyblue">Privacy Policy</a></small>
         
