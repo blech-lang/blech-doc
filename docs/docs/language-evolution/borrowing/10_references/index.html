@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -42,15 +42,13 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -58,7 +56,7 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -197,7 +195,7 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docslanguage-evolutionborrowing-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/" title="References, borrowing and causality" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docslanguage-evolutionborrowing"><span class="">Borrowing</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docslanguage-evolutionborrowing10_references-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionborrowing10_references-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/10_references/" title="References in Blech" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing10_references"><span class="td-sidebar-nav-active-item">References</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionborrowing20_borrowing-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/20_borrowing/" title="Borrowing for references" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing20_borrowing"><span class="">Borrowing</span></a>
@@ -330,66 +328,66 @@
 	<div class="lead">Adopt the ideas of borrowing in Rust to Blech</div>
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<h2 id="parameters-are-references">Parameters are references</h2>
 <p>Semantically, Blech passes parameters by reference.</p>
 <p>Imagine the following Blech program</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function outIsInPlus1 (a: int32) (b: int32)
-    b = 1
-    b = a + b 
-end
-
-activity godUsage ()
-    var i = 42: int32
-    var j: int32
-    outIsInPlus1(i)(j) // 43 --&gt; j
-    await true
-end
-</code></pre></div><p>So far so good, the program has the expected behaviour: <code>j</code> gets <code>i + 1</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>function outIsInPlus1 (a: int32) (b: int32)
+</span></span><span style="display:flex;"><span>    b = 1
+</span></span><span style="display:flex;"><span>    b = a + b 
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>activity godUsage ()
+</span></span><span style="display:flex;"><span>    var i = 42: int32
+</span></span><span style="display:flex;"><span>    var j: int32
+</span></span><span style="display:flex;"><span>    outIsInPlus1(i)(j) // 43 --&gt; j
+</span></span><span style="display:flex;"><span>    await true
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>So far so good, the program has the expected behaviour: <code>j</code> gets <code>i + 1</code>.</p>
 <p>But if we call the same function with the same <code>variable</code> as input and output we get a strange behaviour.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">activity badUsage ()
-    var i = 42: int32
-    outIsInPlus1(i)(i)
-    await true
-end
-</code></pre></div><p>If Blech would allow this code and we assume call-by-reference semantics, <code>i</code> has value <code>2</code> after the execution of the function.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>activity badUsage ()
+</span></span><span style="display:flex;"><span>    var i = 42: int32
+</span></span><span style="display:flex;"><span>    outIsInPlus1(i)(i)
+</span></span><span style="display:flex;"><span>    await true
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>If Blech would allow this code and we assume call-by-reference semantics, <code>i</code> has value <code>2</code> after the execution of the function.</p>
 <p>This would be an unexpected behavior both from the implementation and the usage point of view.</p>
 <p>The implementation does not take into account that <code>a</code> and <code>b</code> may point to the same memory location.
 The point of usage we know nothing about the actual implementation.
 The implicit assumption, input <code>a</code> and output <code>b</code> must no be the same memory location is not transparent.</p>
 <p>In order to prevent such errors, Blech forbids this usage.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">error: Read-write conflict. i or an alias thereof occurs both in the input and output list of the sub program call.
-  --&gt; incr.blc:3:5 [causality]
-
-3  |     outIsInPlus1(i)(i)
-   |                     - Output argument.
-3  |     outIsInPlus1(i)(i)
-   |                  ^ Input argument.
-</code></pre></div><p>One might wonder, why a simple increment is allowed</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    i = i + 1
-</code></pre></div><p>while the call of the function</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    outIsInPlus1(i)(i)
-</code></pre></div><p>is not.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>error: Read-write conflict. i or an alias thereof occurs both in the input and output list of the sub program call.
+</span></span><span style="display:flex;"><span>  --&gt; incr.blc:3:5 [causality]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3  |     outIsInPlus1(i)(i)
+</span></span><span style="display:flex;"><span>   |                     - Output argument.
+</span></span><span style="display:flex;"><span>3  |     outIsInPlus1(i)(i)
+</span></span><span style="display:flex;"><span>   |                  ^ Input argument.
+</span></span></code></pre></div><p>One might wonder, why a simple increment is allowed</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    i = i + 1
+</span></span></code></pre></div><p>while the call of the function</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    outIsInPlus1(i)(i)
+</span></span></code></pre></div><p>is not.</p>
 <p>The reason is, that parameters are passed by-reference.</p>
 <p>The input <code>a</code> takes a read-only reference to the actual input, the output <code>b</code> takes a read-write reference to the actual input.</p>
 <p>Semantically the function <code>outIsInPlus1</code> has the following form</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function outIsInPlus1 (let ref a: int32) (var ref b: int32)
-    b = 1
-    b = a + b 
-end
-</code></pre></div><p>Blech forbids taking a read-only reference and an read-write reference to the same memory location at the same time.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>function outIsInPlus1 (let ref a: int32) (var ref b: int32)
+</span></span><span style="display:flex;"><span>    b = 1
+</span></span><span style="display:flex;"><span>    b = a + b 
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>Blech forbids taking a read-only reference and an read-write reference to the same memory location at the same time.</p>
 <p>Since the compiler rejects such programs, the code generation is free to pass input parameters of functions by value or by reference.
 Currently, simple types are passed by reference while composed types are passed by reference.</p>
 <p>Activity parameters have the same pass-by-reference semantics. Due to the nature of activities input parameters must always be passed by-reference in the code generation</p>
@@ -400,41 +398,40 @@ Currently, simple types are passed by reference while composed types are passed 
 <p>Blech also allows references definitions. They are a restricted form of pointers for expressing aliases and associating data structures.</p>
 <h3 id="the-benefit-of-references">The benefit of references</h3>
 <p>References can be used to express aliases.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct S
-    var buffer: [3]int32
-end
-
-...
-    var s: S
-
-    do 
-        let i: nat8 = 1
-        if s.buffer[i] &gt; 0 then
-            s.buffer[i] = s.buffer[i] + 1
-        end
-    end
-
-    do 
-        let i: nat8 = 1
-        var ref elem = s.buffer[i]
-        if elem &gt; 0 then 
-            elem = elem + 1
-        end
-    end
-
-</code></pre></div><p>This prevents repetition and make a program better readable.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>struct S
+</span></span><span style="display:flex;"><span>    var buffer: [3]int32
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>    var s: S
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    do 
+</span></span><span style="display:flex;"><span>        let i: nat8 = 1
+</span></span><span style="display:flex;"><span>        if s.buffer[i] &gt; 0 then
+</span></span><span style="display:flex;"><span>            s.buffer[i] = s.buffer[i] + 1
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    do 
+</span></span><span style="display:flex;"><span>        let i: nat8 = 1
+</span></span><span style="display:flex;"><span>        var ref elem = s.buffer[i]
+</span></span><span style="display:flex;"><span>        if elem &gt; 0 then 
+</span></span><span style="display:flex;"><span>            elem = elem + 1
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>    end
+</span></span></code></pre></div><p>This prevents repetition and make a program better readable.</p>
 <p>References can also be used to associate data structures</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
-struct S
-    var ref buffer: [3]int32
-end
-
-
-...
-    
-    var array: [3]int32
-    var s: S = {buffer = array}
-</code></pre></div><p>The variable <code>s</code> is associated to (points to) the variable <code>array</code> via the read-write reference <code>s.buffer</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>struct S
+</span></span><span style="display:flex;"><span>    var ref buffer: [3]int32
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    var array: [3]int32
+</span></span><span style="display:flex;"><span>    var s: S = {buffer = array}
+</span></span></code></pre></div><p>The variable <code>s</code> is associated to (points to) the variable <code>array</code> via the read-write reference <code>s.buffer</code>.</p>
 <h3 id="references-are-not-first-class-types">References are not first-class types</h3>
 <p>References only occur implicitly as parameters or explicitly as reference definitions.</p>
 <p>Blech implicitly takes references and de-references them if necessary.
@@ -452,48 +449,48 @@ It is an additional property of a memory location or a value.</p>
 <h3 id="the-problem-with-references">The problem with references</h3>
 <p>The use of references can make a program difficult to reason about.</p>
 <p>If we do the same thing as above in sequential code,</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var i: int32
-
-let ref a = i
-var ref b = i
-
-b = 1
-b = a + b
-</code></pre></div><p>we run into the same problems: <code>a</code> is a read-only reference to <code>i</code>, <code>b</code> is a read-write reference to <code>i</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var i: int32
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>let ref a = i
+</span></span><span style="display:flex;"><span>var ref b = i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>b = 1
+</span></span><span style="display:flex;"><span>b = a + b
+</span></span></code></pre></div><p>we run into the same problems: <code>a</code> is a read-only reference to <code>i</code>, <code>b</code> is a read-write reference to <code>i</code>.
 When we change <code>i</code> via <code>b</code> we implicitly change the value we get from <code>a</code>.</p>
 <p>Even in the simple case</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var i: int32
-
-let ref a = i
-
-b = 1
-b = a + b
-</code></pre></div><p>where we have a read-only reference to <code>i</code> while at the same time we can change <code>i</code> directly, we run into the same problems, when reasoning about a program.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var i: int32
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>let ref a = i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>b = 1
+</span></span><span style="display:flex;"><span>b = a + b
+</span></span></code></pre></div><p>where we have a read-only reference to <code>i</code> while at the same time we can change <code>i</code> directly, we run into the same problems, when reasoning about a program.</p>
 <p>Having a read-only access to a memory location, would not guarantee, that the underlying value does not change.</p>
 <p>With references we need to be able to rule out calls like</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    var i: integer
-    let ref a = i
-    var ref b = i
-
-    run anActivity(a)(b)
-    run anActivity(b)(i)
-    run anActivity(i)(b)
-    run anActivity(a)(i)
-
-    aFunction(a)(b)
-    aFunction(b)(i)
-    aFunction(i)(b)
-    aFunction(a)(i)
-
-    cobegin 
-        run fstTread(a)(i)
-    with
-        run sndThread(a)(b)
-    end
-</code></pre></div><p>due to read-write and write-write conflicts.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    var i: integer
+</span></span><span style="display:flex;"><span>    let ref a = i
+</span></span><span style="display:flex;"><span>    var ref b = i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    run anActivity(a)(b)
+</span></span><span style="display:flex;"><span>    run anActivity(b)(i)
+</span></span><span style="display:flex;"><span>    run anActivity(i)(b)
+</span></span><span style="display:flex;"><span>    run anActivity(a)(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    aFunction(a)(b)
+</span></span><span style="display:flex;"><span>    aFunction(b)(i)
+</span></span><span style="display:flex;"><span>    aFunction(i)(b)
+</span></span><span style="display:flex;"><span>    aFunction(a)(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cobegin 
+</span></span><span style="display:flex;"><span>        run fstTread(a)(i)
+</span></span><span style="display:flex;"><span>    with
+</span></span><span style="display:flex;"><span>        run sndThread(a)(b)
+</span></span><span style="display:flex;"><span>    end
+</span></span></code></pre></div><p>due to read-write and write-write conflicts.</p>
 <p>With references causality errors might be very difficult to understand and even sequential code is already confusing.</p>
 <p>Luckily there is way of handling these problems at compile time.
-In Rust this is called <a href="../20_borrowing"><strong>Borrowing Analysis</strong></a>
+In Rust this is called <a href="../20_borrowing">&lt;strong&gt;Borrowing Analysis&lt;/strong&gt;</a>
 .</p>
 
 	
@@ -509,21 +506,6 @@ In Rust this is called <a href="../20_borrowing"><strong>Borrowing Analysis</str
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -634,7 +616,7 @@ In Rust this is called <a href="../20_borrowing"><strong>Borrowing Analysis</str
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -42,15 +42,13 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -58,7 +56,7 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -216,7 +214,7 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsblechc-developmentconst-and-expr-li">
   <a href="https://www.blech-lang.org/docs/blechc-development/const-and-expr/" title="Expressions, conditions, initialisers, constants" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsblechc-developmentconst-and-expr"><span class="">Expressions</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsblechc-developmentpctree-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsblechc-developmentpctree-li">
   <a href="https://www.blech-lang.org/docs/blechc-development/pctree/" title="Program counter trees" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsblechc-developmentpctree"><span class="td-sidebar-nav-active-item">PC trees</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsblechc-developmentexternal-vars-li">
   <a href="https://www.blech-lang.org/docs/blechc-development/external-vars/" title="Local and external variables" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsblechc-developmentexternal-vars"><span class="">Variables</span></a>
@@ -322,17 +320,17 @@
 	<div class="lead">This explains the how &ldquo;program counter&rdquo; variables are used to memorise the control flow location(s) a Blech program resides in and how such program counters are managed in a tree structure in the code generator.</div>
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<h2 id="program-counters">Program counters</h2>
@@ -351,13 +349,13 @@ Each thread is represented by an individual program counter.
 Thus there is always at least one program counter for an activity&rsquo;s <em>root thread</em> and possibly more for subthreads which are forked by <code>cobegin</code>.</p>
 <h2 id="pc-tree">PC tree</h2>
 <p>The Blech compiler constructs a so-called program counter tree (pc tree) for every activity.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fsharp" data-lang="fsharp"><span style="color:#204a87;font-weight:bold">type</span> <span style="color:#000">PCtree</span> <span style="color:#ce5c00;font-weight:bold">=</span>
-    <span style="color:#ce5c00;font-weight:bold">{</span>
-        <span style="color:#000">mainpc</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">ParamDecl</span>
-        <span style="color:#000">thread</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Thread</span>
-        <span style="color:#000">subPCs</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">PCtree</span> <span style="color:#204a87;font-weight:bold">list</span>
-    <span style="color:#ce5c00;font-weight:bold">}</span>
-</code></pre></div><p>A pc tree corresponds to a thread and maintains the program counter <code>mainpc</code> for this <code>thread</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fsharp" data-lang="fsharp"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">type</span> <span style="color:#000">PCtree</span> <span style="color:#ce5c00;font-weight:bold">=</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">mainpc</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">ParamDecl</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">thread</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Thread</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">subPCs</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">PCtree</span> <span style="color:#204a87;font-weight:bold">list</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p>A pc tree corresponds to a thread and maintains the program counter <code>mainpc</code> for this <code>thread</code>.
 If this thread forks control flow then <code>subPCs</code> contains a list of corresponding subthread program counter trees.
 The activity context of a single-threaded activity will only have a flat pc tree in which <code>subPCs</code> is an empty list.</p>
 <p>
@@ -382,8 +380,8 @@ Subactivities which are possibly called have their own activity context with the
 <h2 id="constructing-the-tree">Constructing the tree</h2>
 <p>The only function for constructing pc trees which is used outside the <code>CodeGenContext.fs</code> file is <code>Compilation.addPc</code>.
 Every time a new block is translated in <code>ActivityTranslator.fs</code> this function is called once:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fsharp" data-lang="fsharp"><span style="color:#000">curComp</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">Compilation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addPc</span> <span style="color:#ce5c00;font-weight:bold">!</span><span style="color:#000">curComp</span> <span style="color:#000">block</span> <span style="color:#000">pc</span>
-</code></pre></div><p>The given <code>pc</code> is a <code>ParamDecl</code> which contains all info about the program counter variable itself.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fsharp" data-lang="fsharp"><span style="display:flex;"><span><span style="color:#000">curComp</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">Compilation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addPc</span> <span style="color:#ce5c00;font-weight:bold">!</span><span style="color:#000">curComp</span> <span style="color:#000">block</span> <span style="color:#000">pc</span>
+</span></span></code></pre></div><p>The given <code>pc</code> is a <code>ParamDecl</code> which contains all info about the program counter variable itself.
 The given <code>block</code> is a <code>Block</code> instance corresponding to this program counter and contains all necessary thread information.
 <code>addPc</code> returns a new <code>Compilation</code> instance.</p>
 <p>The logics of <code>addPc</code> are rather simple:</p>
@@ -399,11 +397,11 @@ The given <code>block</code> is a <code>Block</code> instance corresponding to t
 </ul>
 <h2 id="using-the-pc-tree">Using the pc tree</h2>
 <p>In <code>ActivityTranslator.fs</code> there is the function</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fsharp" data-lang="fsharp"><span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">private</span> <span style="color:#000">findTreeFor</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">comp</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Compilation</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Node</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">PCtree</span>
-</code></pre></div><p>which is vital to work with program counters.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fsharp" data-lang="fsharp"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">private</span> <span style="color:#000">findTreeFor</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">comp</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Compilation</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Node</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">PCtree</span>
+</span></span></code></pre></div><p>which is vital to work with program counters.</p>
 <p>The tree structure is particularly exploited in</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fsharp" data-lang="fsharp"><span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">private</span> <span style="color:#000">endThread</span> <span style="color:#000">comp</span> <span style="color:#000">node</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">Doc</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fsharp" data-lang="fsharp"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">private</span> <span style="color:#000">endThread</span> <span style="color:#000">comp</span> <span style="color:#000">node</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">Doc</span>
+</span></span></code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
@@ -417,21 +415,6 @@ The given <code>block</code> is a <code>Block</code> instance corresponding to t
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -542,7 +525,7 @@ The given <code>block</code> is a <code>Block</code> instance corresponding to t
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

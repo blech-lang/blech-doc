@@ -44,11 +44,24 @@ Now you are ready to work with the repository.
 
 ## Working with the repository 
 
-The Blech documentation already contains the Docsy theme as a git submodule. For more information see the [Docsy Getting Started Documentation](https://www.docsy.dev/docs/getting-started/). 
-Therefore clone in the following way:
+Clone this repository:
 
 ```
-git clone --recurse-submodules --depth 1 https://github.com/blech-lang/blech-doc.git
+git clone https://github.com/blech-lang/blech-doc.git
+```
+
+The Blech documentation uses the Docsy theme as a Hugo module. For more information see the [Docsy Getting Started Documentation](https://www.docsy.dev/docs/getting-started/). 
+
+To update the Docsy theme go to the `website` subfolder in your cloned repository.
+
+```
+cd blech-doc/website
+```
+
+Invoke Hugo’s module get subcommand with the update flag
+
+```
+hugo mod get -u github.com/google/docsy
 ```
 
 #### Install local npm modules
@@ -75,14 +88,6 @@ npm install -D postcss-cli
 npm install -D postcss
 ```
 
-#### Update the Docsy theme
-
-The Hugo Docsy theme is frequently updated. From time to time update the Docsy theme submodule.
-
-From the root of your repository run:
-```
-git submodule update --remote
-```
 
 #### Preview the website
 

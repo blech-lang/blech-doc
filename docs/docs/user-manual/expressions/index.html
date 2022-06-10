@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -45,15 +45,13 @@ All operators are left associative in Blech."/>
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -61,7 +59,7 @@ All operators are left associative in Blech."/>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -177,7 +175,7 @@ All operators are left associative in Blech."/>
   <a href="https://www.blech-lang.org/docs/user-manual/declarations/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsuser-manualdeclarations"><span class="">Declarations</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-manualtypes-li">
   <a href="https://www.blech-lang.org/docs/user-manual/types/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsuser-manualtypes"><span class="">Types</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsuser-manualexpressions-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-manualexpressions-li">
   <a href="https://www.blech-lang.org/docs/user-manual/expressions/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsuser-manualexpressions"><span class="td-sidebar-nav-active-item">Expressions</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-manualmodules-li">
   <a href="https://www.blech-lang.org/docs/user-manual/modules/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsuser-manualmodules"><span class="">Modules</span></a>
@@ -345,17 +343,17 @@ All operators are left associative in Blech."/>
 	
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<p>The nomenclature in Blech is similar to that in C.
@@ -425,15 +423,15 @@ The following table summarizes the operator precedence in Blech, from lowest pre
 <h2 id="atoms">Atoms</h2>
 <p>Atoms are the building blocks of expressions.
 They are composed using operators.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Atom</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> | <span style="color:#000">Literal</span> | <span style="color:#000">&#34;{}&#34;</span> | <span style="color:#000">ArrayLiteral</span> | <span style="color:#000">StructLiteral</span> | <span style="color:#000">ParenthForm</span>
-</code></pre></div><p>Note that the term &ldquo;atom&rdquo; is not to be taken too literally because array and structure literals may contain arbitrary expressions themselves.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Atom</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> | <span style="color:#000">Literal</span> | <span style="color:#000">&#34;{}&#34;</span> | <span style="color:#000">ArrayLiteral</span> | <span style="color:#000">StructLiteral</span> | <span style="color:#000">ParenthForm</span>
+</span></span></code></pre></div><p>Note that the term &ldquo;atom&rdquo; is not to be taken too literally because array and structure literals may contain arbitrary expressions themselves.</p>
 <h3 id="identifiers">Identifiers</h3>
 <p>An identifier occurring as an atom is a name. See section <a href="../lexical/#identifiers">Identifiers</a>
  for a lexical definition.</p>
 <h3 id="literals">Literals</h3>
 <p>Blech supports various numeric literals:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Literal</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">BoolLiteral</span> | <span style="color:#000">Integer</span> | <span style="color:#000">FloatNumber</span>
-</code></pre></div><p>Evaluation of a literal yields an object of the given type (bytes, natural number, signed integer, floating point number) with the given value.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Literal</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">BoolLiteral</span> | <span style="color:#000">Integer</span> | <span style="color:#000">FloatNumber</span>
+</span></span></code></pre></div><p>Evaluation of a literal yields an object of the given type (bytes, natural number, signed integer, floating point number) with the given value.
 The value may be approximated in the case of floating point literals.</p>
 <p>Numeric literals are untyped on their own.
 This makes their use more flexible and permits writing more generic code.
@@ -443,40 +441,40 @@ This section explains how to use literals and what type errors may happen.</p>
 <h4 id="annotated-literals">Annotated literals</h4>
 <p>For example, the literal <code>1</code> could represent a natural number, a signed integer or a byte word of some size. It could even be a floating point number.
 It can be explicitly annotated using a type annotation.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">1: nat16    // 2 bytes long natural number
-1: int8     // 1 byte signed integer
-1: bits32   // 4 bytes long word
-1: float32  // single precision floating point number
-</code></pre></div><p>The lexical analysis of <code>Literal</code> above suggests there are three kinds of literals.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>1: nat16    // 2 bytes long natural number
+</span></span><span style="display:flex;"><span>1: int8     // 1 byte signed integer
+</span></span><span style="display:flex;"><span>1: bits32   // 4 bytes long word
+</span></span><span style="display:flex;"><span>1: float32  // single precision floating point number
+</span></span></code></pre></div><p>The lexical analysis of <code>Literal</code> above suggests there are three kinds of literals.
 In fact, we distinguish two kinds of integers.
 Binary, octal and hexadecimal integer literals form the group of <em>bits literals</em>.
 They may be interpreted as a byte word of some length or as a natural number of some length.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">0xFF: nat32    // 4 byte natural number with value 255
-0b101: bit8    // 1 byte word with value 5
-</code></pre></div><p><a name="bitsandints"></a>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>0xFF: nat32    // 4 byte natural number with value 255
+</span></span><span style="display:flex;"><span>0b101: bit8    // 1 byte word with value 5
+</span></span></code></pre></div><p><a name="bitsandints"></a>
 They cannot be treated as a signed integer because depending on the length and the machine&rsquo;s representation of negative numbers they might yield a negative or positive value.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">0xFF: int8    // error! Would be -1 if represented in two&#39;s complement
-0xFF: int16   // error! Would be 255 in a two byte word
-</code></pre></div><p>Also, bits literals cannot be interpreted as floating point numbers.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>0xFF: int8    // error! Would be -1 if represented in two&#39;s complement
+</span></span><span style="display:flex;"><span>0xFF: int16   // error! Would be 255 in a two byte word
+</span></span></code></pre></div><p>Also, bits literals cannot be interpreted as floating point numbers.
 <em>For the exact specification of floating point numbers a hexadecimal float literal will be introduced.</em></p>
 <p><em>Decimal integers</em> may be interpreted as any kind of numeric type as long as the value fits the domain. The example above shows the straightforward use case with the literal <code>1</code>. Below some corner cases are exemplified:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">-2: nat16     // error! Outside range of natural numbers
--200: int8    // error! Outside range [-128..127]
--2: bits8     // 1 byte word with value 254
--200: float32 // single precision floating point number
-</code></pre></div><p>Float literals may only be interpreted as either single or double precision floating point numbers even if their fraction part is zero as in <code>10.0</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>-2: nat16     // error! Outside range of natural numbers
+</span></span><span style="display:flex;"><span>-200: int8    // error! Outside range [-128..127]
+</span></span><span style="display:flex;"><span>-2: bits8     // 1 byte word with value 254
+</span></span><span style="display:flex;"><span>-200: float32 // single precision floating point number
+</span></span></code></pre></div><p>Float literals may only be interpreted as either single or double precision floating point numbers even if their fraction part is zero as in <code>10.0</code>.</p>
 <p>In summary: annotations may only be used where they do not change the value of the expression and the value fits into the domain of the type.</p>
 <h4 id="type-deduction-for-literals">Type deduction for literals</h4>
 <p>When a literal occurs as part of a binary expression where one side is already fully typed, the literal&rsquo;s type may be automatically deduced.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">var a: int32 = 9
-let b = a + 17    
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>var a: int32 = 9
+</span></span><span style="display:flex;"><span>let b = a + 17    
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>In line 1, the 9 is deduced to have type <code>int32</code> because the left hand side is already typed.
 Note that a bits literal cannot be used to initialise an integer for reasons explained <a href="#bitsandints">above</a>
@@ -487,21 +485,21 @@ Note that a bits literal cannot be used to initialise an integer for reasons exp
 <p>Empty braces <code>{}</code> have a special meaning.
 They represent the default value for any struct or literal.
 Using the reset literal in a declaration has the same effect as leaving out the initialisation:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: [8]float32 = {}
-var y: [8]float32
-</code></pre></div><p>Both <code>x</code> and <code>y</code> will be initialised with zeros in all cells.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: [8]float32 = {}
+</span></span><span style="display:flex;"><span>var y: [8]float32
+</span></span></code></pre></div><p>Both <code>x</code> and <code>y</code> will be initialised with zeros in all cells.
 The reset literal, as the name suggests, is most useful to set a modified data structure back to its default values:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: [8]float32 = {1, 2, 3, 4, 5, 6, 7, 8}
-x = {}    // now x == {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0}
-</code></pre></div><p>The reset literal cannot be assigned to a structure that contains immutable fields (or, recursively, substructures with immutable fields).
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: [8]float32 = {1, 2, 3, 4, 5, 6, 7, 8}
+</span></span><span style="display:flex;"><span>x = {}    // now x == {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0}
+</span></span></code></pre></div><p>The reset literal cannot be assigned to a structure that contains immutable fields (or, recursively, substructures with immutable fields).
 The same is true for arrays with struct payloads.
 See the section on <a href="../types/#structure-types">Structure types</a>
  for more details.</p>
 <h4 id="array-literals">Array literals</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">ArrayLiteral</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;{&#34;</span> <span style="color:#000">CellInit</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">CellInit</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">&#34;}&#34;</span>
-<span style="color:#000">CellInit</span>     ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">IndexExpr</span> <span style="color:#000">&#34;=&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Expr</span>
-<span style="color:#000">IndexExpr</span>    ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;[&#34;</span> <span style="color:#000">Expr</span> <span style="color:#000">&#34;]&#34;</span>
-</code></pre></div><p>The array literal has to fit the shape of the array it is assigned to.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">ArrayLiteral</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;{&#34;</span> <span style="color:#000">CellInit</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">CellInit</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">&#34;}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">CellInit</span>     ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">IndexExpr</span> <span style="color:#000">&#34;=&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">IndexExpr</span>    ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;[&#34;</span> <span style="color:#000">Expr</span> <span style="color:#000">&#34;]&#34;</span>
+</span></span></code></pre></div><p>The array literal has to fit the shape of the array it is assigned to.
 That is, the <code>Expr</code> in <code>IndexExpr</code> must evaluate to a non-negative number within array bounds.
 It is however permitted to specify fewer values than the number given by the array dimensions.
 The missing values are implicitly set to the data type&rsquo;s default value.
@@ -509,77 +507,77 @@ It is possible to set specific array cells by also specifying an index for a val
 Subsequent unindexed values will be set for the next array cells in order.</p>
 <p>The <code>Expr</code> in <code>CellInit</code> must match the array&rsquo;s data type.</p>
 <h5 id="example-setting-array-values">Example: Setting array values</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: [2][3]nat8 = {{1, 2, 3},{4, 5, 6}} // all explicit
-// x is
-// 1  2  3
-// 4  5  6
-
-x[1] = {7, 8}                             // third value implicitly 0
-// x is
-// 1  2  3
-// 7  8  0
-
-x[1] = {[1] = 9, 10}                      // first value implicitly 0
-// x is                                   // the index of `10` implicitly is 2
-// 1  2  3
-// 0  9  10
-
-x = {{[1] = 11},{[0] = 12, [2] = 13}}
-// x is
-// 0  11  0
-// 12  0  13
-
-x = { {[2]=14} }                          // second row implicitly zeroed out
-// x is
-// 0  0  14
-// 0  0  0
-</code></pre></div><h4 id="struct-literals">Struct literals</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">StructLiteral</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;{&#34;</span> <span style="color:#000">FieldInit</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">FieldInit</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">&#34;}&#34;</span>
-<span style="color:#000">FieldInit</span>     ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000">&#34;=&#34;</span> <span style="color:#000">Expr</span>
-</code></pre></div><p>The identifiers must match the field names of the struct to be assigned.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: [2][3]nat8 = {{1, 2, 3},{4, 5, 6}} // all explicit
+</span></span><span style="display:flex;"><span>// x is
+</span></span><span style="display:flex;"><span>// 1  2  3
+</span></span><span style="display:flex;"><span>// 4  5  6
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x[1] = {7, 8}                             // third value implicitly 0
+</span></span><span style="display:flex;"><span>// x is
+</span></span><span style="display:flex;"><span>// 1  2  3
+</span></span><span style="display:flex;"><span>// 7  8  0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x[1] = {[1] = 9, 10}                      // first value implicitly 0
+</span></span><span style="display:flex;"><span>// x is                                   // the index of `10` implicitly is 2
+</span></span><span style="display:flex;"><span>// 1  2  3
+</span></span><span style="display:flex;"><span>// 0  9  10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x = {{[1] = 11},{[0] = 12, [2] = 13}}
+</span></span><span style="display:flex;"><span>// x is
+</span></span><span style="display:flex;"><span>// 0  11  0
+</span></span><span style="display:flex;"><span>// 12  0  13
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x = { {[2]=14} }                          // second row implicitly zeroed out
+</span></span><span style="display:flex;"><span>// x is
+</span></span><span style="display:flex;"><span>// 0  0  14
+</span></span><span style="display:flex;"><span>// 0  0  0
+</span></span></code></pre></div><h4 id="struct-literals">Struct literals</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">StructLiteral</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;{&#34;</span> <span style="color:#000">FieldInit</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">FieldInit</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">&#34;}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">FieldInit</span>     ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000">&#34;=&#34;</span> <span style="color:#000">Expr</span>
+</span></span></code></pre></div><p>The identifiers must match the field names of the struct to be assigned.
 The <code>Expr</code> must match the corresponding field&rsquo;s data type.
 Immutable (<code>let</code> declared) fields may only be set in the initialisation of the structure.
 Fields that are not specified in the literal are implicitly set to their data type&rsquo;s default value.</p>
 <h5 id="example-setting-struct-values">Example: Setting struct values</h5>
 <p>Assume the following declarations:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct S
-    var a: int8
-    var b: int8
-end
-
-struct T
-    let x: bool
-    var y: S
-end
-</code></pre></div><p>The following code may be written (in some local scope):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var t: T = {x = true, y = {a = 1, b = 2}}
-// t is
-// t.x == true
-// t.y.a == 1
-// t.y.b == 2
-
-t = {y = {a = 7}} // error! Cannot assign immutable field t.x
-
-t.y = {a = 7}     // implicitly b = 0
-// t is
-// t.x == true
-// t.y.a == 7
-// t.y.b == 0
-</code></pre></div><h2 id="parenthesised-form">Parenthesised form</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>struct S
+</span></span><span style="display:flex;"><span>    var a: int8
+</span></span><span style="display:flex;"><span>    var b: int8
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>struct T
+</span></span><span style="display:flex;"><span>    let x: bool
+</span></span><span style="display:flex;"><span>    var y: S
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>The following code may be written (in some local scope):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var t: T = {x = true, y = {a = 1, b = 2}}
+</span></span><span style="display:flex;"><span>// t is
+</span></span><span style="display:flex;"><span>// t.x == true
+</span></span><span style="display:flex;"><span>// t.y.a == 1
+</span></span><span style="display:flex;"><span>// t.y.b == 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t = {y = {a = 7}} // error! Cannot assign immutable field t.x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t.y = {a = 7}     // implicitly b = 0
+</span></span><span style="display:flex;"><span>// t is
+</span></span><span style="display:flex;"><span>// t.x == true
+</span></span><span style="display:flex;"><span>// t.y.a == 7
+</span></span><span style="display:flex;"><span>// t.y.b == 0
+</span></span></code></pre></div><h2 id="parenthesised-form">Parenthesised form</h2>
 <p>A parenthesised form is an expression enclosed in parentheses:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">ParenthForm</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">&#34;(&#34;</span> <span style="color:#000">Expr</span> <span style="color:#000">&#34;)&#34;</span>
-</code></pre></div><p>A parenthesised expression yields whatever that expression yields.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">ParenthForm</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">&#34;(&#34;</span> <span style="color:#000">Expr</span> <span style="color:#000">&#34;)&#34;</span>
+</span></span></code></pre></div><p>A parenthesised expression yields whatever that expression yields.</p>
 <h2 id="primaries">Primaries</h2>
 <p>Primaries represent the most tightly bound operations of the language. Their syntax is:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Primary</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">Atom</span> | <span style="color:#000">Selection</span> | <span style="color:#000">Subscription</span> | <span style="color:#000">FunctionCallExpr</span>
-</code></pre></div><h2 id="field-selection">Field selection</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Primary</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">Atom</span> | <span style="color:#000">Selection</span> | <span style="color:#000">Subscription</span> | <span style="color:#000">FunctionCallExpr</span>
+</span></span></code></pre></div><h2 id="field-selection">Field selection</h2>
 <p>A field selection is a primary expression followed by a period and a name:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Selection</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">Primary</span> <span style="color:#000">&#34;.&#34;</span> <span style="color:#000">Identifier</span>
-</code></pre></div><p><code>Primary</code> must evaluate to a struct instance that contains a field with the name given by <code>Identifier</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Selection</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">Primary</span> <span style="color:#000">&#34;.&#34;</span> <span style="color:#000">Identifier</span>
+</span></span></code></pre></div><p><code>Primary</code> must evaluate to a struct instance that contains a field with the name given by <code>Identifier</code>.</p>
 <h2 id="subscriptions">Subscriptions</h2>
 <p>A subscripting expression selects an item of an array:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Subscription</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">Primary</span> <span style="color:#000">&#34;[&#34;</span> <span style="color:#000">Expression</span> <span style="color:#000">&#34;]&#34;</span>
-</code></pre></div><p>The index expression must return a value that is non-negative and smaller than the array length.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Subscription</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>  <span style="color:#000">Primary</span> <span style="color:#000">&#34;[&#34;</span> <span style="color:#000">Expression</span> <span style="color:#000">&#34;]&#34;</span>
+</span></span></code></pre></div><p>The index expression must return a value that is non-negative and smaller than the array length.
 Otherwise the program will crash in debug build mode and saturate to array index bounds in release mode.</p>
 
 
@@ -592,25 +590,25 @@ Otherwise the program will crash in debug build mode and saturate to array index
 
 <h2 id="calls">Calls</h2>
 <p>A call calls a function with a possibly empty series of arguments:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">FunctionCallExpr</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000">RhsArgList</span> <span style="color:#000">LhsArgList</span>
-</code></pre></div><h2 id="all-computation-expressions">All computation expressions</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">FunctionCallExpr</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000">RhsArgList</span> <span style="color:#000">LhsArgList</span>
+</span></span></code></pre></div><h2 id="all-computation-expressions">All computation expressions</h2>
 <p>All expressions above are concerned with retrieving a single value from some data structure. (With the exception of function calls).
 Now all expressions are presented which take a value (or two) and produce a new value from it (those).
 The following rule gives an overview of the remaining expression syntax.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Expr</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>
-    <span style="color:#000">Primary</span>                                            <span style="color:#000;font-weight:bold">(</span><span style="color:#000">highest</span> <span style="color:#000">precedence</span><span style="color:#000;font-weight:bold">)</span> 
-    | <span style="color:#000">&#34;-&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">&#34;~&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">&#34;not&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;*&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;/&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;%&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;+&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;-&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&gt;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&lt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&gt;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&lt;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;+&gt;&gt;&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&amp;&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;^&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;|&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;=&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&gt;=&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;==&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;!=&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;and&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;or&#34;</span> <span style="color:#000">Expr</span>
-    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;:&#34;</span> <span style="color:#000">Type</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;as&#34;</span> <span style="color:#000">Type</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;as!&#34;</span> <span style="color:#000">Type</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">lowest</span> <span style="color:#000">precedence</span><span style="color:#000;font-weight:bold">)</span>
-</code></pre></div><p>Operator precedence has been discussed <a href="#operator-precedence">above</a>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Expr</span> ::<span style="color:#ce5c00;font-weight:bold">=</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">Primary</span>                                            <span style="color:#000;font-weight:bold">(</span><span style="color:#000">highest</span> <span style="color:#000">precedence</span><span style="color:#000;font-weight:bold">)</span> 
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">&#34;-&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">&#34;~&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">&#34;not&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;*&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;/&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;%&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;+&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;-&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&gt;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&lt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&gt;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&lt;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;+&gt;&gt;&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&amp;&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;^&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;|&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&gt;&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&lt;=&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;&gt;=&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;==&#34;</span> <span style="color:#000">Expr</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;!=&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;and&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;or&#34;</span> <span style="color:#000">Expr</span>
+</span></span><span style="display:flex;"><span>    | <span style="color:#000">Expr</span> <span style="color:#000">&#34;:&#34;</span> <span style="color:#000">Type</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;as&#34;</span> <span style="color:#000">Type</span> | <span style="color:#000">Expr</span> <span style="color:#000">&#34;as!&#34;</span> <span style="color:#000">Type</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">lowest</span> <span style="color:#000">precedence</span><span style="color:#000;font-weight:bold">)</span>
+</span></span></code></pre></div><p>Operator precedence has been discussed <a href="#operator-precedence">above</a>
 .</p>
 <h3 id="unary-operations">Unary operations</h3>
 <p>The unary <code>-</code> (minus) operator yields the negation of its numeric argument.
@@ -623,15 +621,15 @@ It cannot be applied to a literal without a type annotation.</p>
 <p>The arithmetic operations work as expected on all arithmetic types.
 See the sections on <a href="../types/#integer-types">arithmetic types</a>
  for details regarding overflow handling.</p>
-<p>The arguments' types may differ only in size.
+<p>The arguments&rsquo; types may differ only in size.
 When they differ, the smaller size value is lifted implicitly to the larger size.
 The operation is then carried out on (possibly lifted) arguments of the same type.</p>
 <h4 id="lifting-types">Lifting types</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: int8 = 7
-var y: int16 = 300
-var z = x + y
-var u = x + 1
-</code></pre></div><p><code>x</code> and <code>y</code> are both signed integers but have different sizes.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: int8 = 7
+</span></span><span style="display:flex;"><span>var y: int16 = 300
+</span></span><span style="display:flex;"><span>var z = x + y
+</span></span><span style="display:flex;"><span>var u = x + 1
+</span></span></code></pre></div><p><code>x</code> and <code>y</code> are both signed integers but have different sizes.
 In the context of the addition in line 3, the smaller type is lifted to the larger, effectively making <code>x</code> an <code>int16</code>.
 Then, 16-bit signed addition is carried out producing an <code>int16</code> typed result.
 This result is stored into <code>z</code> making it a <code>int16</code> variable, too.</p>
@@ -640,25 +638,25 @@ This result is stored into <code>z</code> making it a <code>int16</code> variabl
 Then, 8-bit signed addition is carried out producing an <code>int8</code> typed result.
 This result is stored into <code>u</code> making it a <code>int8</code> variable, too.</p>
 <p>The following snippet shows typical caveats.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">var x: int32 = 49 - 7    // error! Cannot determine type of &#39;49&#39; and &#39;7&#39;
-
-var y: int8 = (49: int8) - 128 // error 128 does not fit into int8
-
-var a: bits8 = 0x1
-var b: nat8 = 2
-var c = a + b            // error! Type mismatch
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>var x: int32 = 49 - 7    // error! Cannot determine type of &#39;49&#39; and &#39;7&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>var y: int8 = (49: int8) - 128 // error 128 does not fit into int8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>var a: bits8 = 0x1
+</span></span><span style="display:flex;"><span>var b: nat8 = 2
+</span></span><span style="display:flex;"><span>var c = a + b            // error! Type mismatch
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>In line 1, the context of <code>49</code> is <code>7</code> and vice versa.
 Both do not have a concrete type.
@@ -687,17 +685,17 @@ Furthermore the precedence of comparison operators is lower than that of any ari
 <p>Note that all operators are left associative.
 Hence chaining comparisons is possible syntactically but makes little sense.</p>
 <h4 id="comparison-chaining">Comparison chaining</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var b = 4 &lt; 5 &lt;= false // evaluates to true &lt;= false which is false
-var c = 4 &lt; 5 &lt;= 6 // type error: cannot compare true &lt;= 6
-</code></pre></div><p>This is different to C because in Blech Booleans and numbers are incomparable.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var b = 4 &lt; 5 &lt;= false // evaluates to true &lt;= false which is false
+</span></span><span style="display:flex;"><span>var c = 4 &lt; 5 &lt;= 6 // type error: cannot compare true &lt;= 6
+</span></span></code></pre></div><p>This is different to C because in Blech Booleans and numbers are incomparable.</p>
 <h4 id="comparison-lifting">Comparison lifting</h4>
 <p>Comparison operators lift their arguments to a common sized type like arithmetic operators do (see above).
 Additionally, comparisons permit using literals that would require a larger domain.
 This allows writing (in)equalities without cluttering the code with trivial type casts.</p>
 <h5 id="example-comparison-with-literals-outside-the-domain">Example: Comparison with literals outside the domain</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: int8 = 7
-var y = x &lt; 1000
-</code></pre></div><p>The literal <code>1000</code> is a (signed) integral number and would fit into an <code>int16</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: int8 = 7
+</span></span><span style="display:flex;"><span>var y = x &lt; 1000
+</span></span></code></pre></div><p>The literal <code>1000</code> is a (signed) integral number and would fit into an <code>int16</code>.
 Therefore we allow to implicitly lift <code>x</code> to <code>int16</code> and carry out the comparison.
 This makes sense because the result of all comparison operators is always a Boolean value.
 There are no &ldquo;surprises&rdquo; about the outcome.</p>
@@ -712,20 +710,20 @@ The evaluation is performed lazily: first <code>a</code> is evaluated. If it is 
 <p>Type casts <em>change</em> the type of an already typed expression.
 Casts are only permitted where the (machine) representation of a value will not change and casts assume that the value fits into the target type&rsquo;s domain.</p>
 <h4 id="safe-casts">Safe casts</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: int16 = 100
-let y = x as nat8    // ok, y == 100 of type nat8
-
-x = x * 3
-let z = x as nat8    // runtime error: 300 outside nat8 domain 0..255
-
-x = -256             // assuming 2&#39;s complement on the machine:
-                     // x == 0xb_1111_1111_0000_0000
-let u = x as bits8   // runtime error
-let v = x as bits16  // ok, v == 65280
-
-let f: float32 = 1
-x = f as int16       // error! impossible to cast floating point to integral types
-</code></pre></div><p>The restrictions on the casts do not rule out runtime errors.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: int16 = 100
+</span></span><span style="display:flex;"><span>let y = x as nat8    // ok, y == 100 of type nat8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x = x * 3
+</span></span><span style="display:flex;"><span>let z = x as nat8    // runtime error: 300 outside nat8 domain 0..255
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x = -256             // assuming 2&#39;s complement on the machine:
+</span></span><span style="display:flex;"><span>                     // x == 0xb_1111_1111_0000_0000
+</span></span><span style="display:flex;"><span>let u = x as bits8   // runtime error
+</span></span><span style="display:flex;"><span>let v = x as bits16  // ok, v == 65280
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>let f: float32 = 1
+</span></span><span style="display:flex;"><span>x = f as int16       // error! impossible to cast floating point to integral types
+</span></span></code></pre></div><p>The restrictions on the casts do not rule out runtime errors.
 At the same time they prevent some manipulations that are possible in C.
 For example, it is not possible to interpret a floating point as a bits type and change individual bits.</p>
 
@@ -753,21 +751,6 @@ For example, it is not possible to interpret a floating point as a bits type and
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -878,7 +861,7 @@ For example, it is not possible to interpret a floating point as a bits type and
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

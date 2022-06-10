@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -42,15 +42,13 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -58,7 +56,7 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -201,7 +199,7 @@
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/10_references/" title="References in Blech" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing10_references"><span class="">References</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionborrowing20_borrowing-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/20_borrowing/" title="Borrowing for references" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing20_borrowing"><span class="">Borrowing</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docslanguage-evolutionborrowing30_let-ref-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionborrowing30_let-ref-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/30_let-ref/" title="Immutable references - `let ref`" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing30_let-ref"><span class="td-sidebar-nav-active-item">Immutable references</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionborrowing40_partials-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/40_partials/" title="Partial borrowing and borrowed parts" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing40_partials"><span class="">Partials</span></a>
@@ -325,56 +323,56 @@
 	<div class="lead">Adopt the ideas of borrowing in Rust to Blech</div>
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<h2 id="read-only-references">Read-only references</h2>
 <p>Different to Rust, Blech takes references and de-references whenever it is necessary.</p>
 <p>Althoug Blech semantically uses pass-by-reference it is possible to pass a complete right-hand-side expression for input parameters.</p>
 <p>Let&rsquo;s take our example from the introduction</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    var i: int32
-    var j: int32
-
-    outIsInPlus1(j + 1)(i)
-</code></pre></div><p>This programm is valid.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    var i: int32
+</span></span><span style="display:flex;"><span>    var j: int32
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    outIsInPlus1(j + 1)(i)
+</span></span></code></pre></div><p>This programm is valid.
 Semantically Blech creates a auxiliary memory location from which the read-only reference can be taken.
 For a function on simple types the generated code can be optimized and the parameter can be passed by-value.</p>
 <p>This is not true for an activity.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">activity outAlwaysIsInPlus1 (a: int32) (b: int32)
-    repeat 
-        b = 1
-        b = a + b 
-        await true
-        b = 1
-        b = a + b
-        await true
-    end
-end
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    var i: int32
-    var j: int32
-
-    run outAlwaysIsInPlus1(j + 1)(i)
-</code></pre></div><p>In every step the activity gets <code>j+1</code> as its input.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>activity outAlwaysIsInPlus1 (a: int32) (b: int32)
+</span></span><span style="display:flex;"><span>    repeat 
+</span></span><span style="display:flex;"><span>        b = 1
+</span></span><span style="display:flex;"><span>        b = a + b 
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>        b = 1
+</span></span><span style="display:flex;"><span>        b = a + b
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    var i: int32
+</span></span><span style="display:flex;"><span>    var j: int32
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    run outAlwaysIsInPlus1(j + 1)(i)
+</span></span></code></pre></div><p>In every step the activity gets <code>j+1</code> as its input.</p>
 <p>For the code generation the auxiliary memory location is necessary.</p>
 <p>We imagine the new value is <em>pumped into</em> the activity in every step.</p>
 <h2 id="immutable-borrowing-in-sub-expressions">Immutable borrowing in sub-expressions</h2>
 <p>Due to a causality error the Blech compiler rejects the following program.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    var i: int32
-    run outAlwaysIsInPlus1(i + 1)(i)
-</code></pre></div><p>Furthermore the compiler rejects a similar function call</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    var i: int32
-    outIsInPlus1(i + 1)(i)
-</code></pre></div><p>This is different to Rust, because Rust cannot take immutable (read-only) references to right-hand side expressions.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    var i: int32
+</span></span><span style="display:flex;"><span>    run outAlwaysIsInPlus1(i + 1)(i)
+</span></span></code></pre></div><p>Furthermore the compiler rejects a similar function call</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    var i: int32
+</span></span><span style="display:flex;"><span>    outIsInPlus1(i + 1)(i)
+</span></span></code></pre></div><p>This is different to Rust, because Rust cannot take immutable (read-only) references to right-hand side expressions.</p>
 <p>The borrow checker needs to check the occurence of read-only borrowing in right-hand side expressions.</p>
 <h2 id="pure-functions">Pure functions</h2>
 <p>Pure functions only have input parameters and a return value.</p>
@@ -383,53 +381,53 @@ end
 <h2 id="read-only-references-1">Read-only references</h2>
 <p>Since we can pass a right-hand-side expression as an input parameter we should also be able to take a reference to a right-hand-side expression in sequential code.
 This makes sense in an activity and is called <code>bind</code> in the language Quartz.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">activity a (i: int32) (j: int32)
-    let ref double = i * 2
-    repeat
-        j = double
-        await true
-    end
-end
-</code></pre></div><p>In order to take a reference to a right-hand-side expression the compiler would generate an additional memory location.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>activity a (i: int32) (j: int32)
+</span></span><span style="display:flex;"><span>    let ref double = i * 2
+</span></span><span style="display:flex;"><span>    repeat
+</span></span><span style="display:flex;"><span>        j = double
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>In order to take a reference to a right-hand-side expression the compiler would generate an additional memory location.</p>
 <p>This has roughly the following semantics:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">activity a (i: int32) (j: int32)
-    var aux_double: int32  // not subject to borrow checking
-    let ref double = internal_aux_double
-    cobegin weak
-        repeat
-            aux_double = i * 2
-            await true
-        end
-    with 
-        repeat
-            j = double
-            await true
-        end
-    end
-end
-</code></pre></div><p>For the declaration <code>let ref double = i * 2</code> we need to apply the borrowing rules for the sub-expression <code>i</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>activity a (i: int32) (j: int32)
+</span></span><span style="display:flex;"><span>    var aux_double: int32  // not subject to borrow checking
+</span></span><span style="display:flex;"><span>    let ref double = internal_aux_double
+</span></span><span style="display:flex;"><span>    cobegin weak
+</span></span><span style="display:flex;"><span>        repeat
+</span></span><span style="display:flex;"><span>            aux_double = i * 2
+</span></span><span style="display:flex;"><span>            await true
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>    with 
+</span></span><span style="display:flex;"><span>        repeat
+</span></span><span style="display:flex;"><span>            j = double
+</span></span><span style="display:flex;"><span>            await true
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>For the declaration <code>let ref double = i * 2</code> we need to apply the borrowing rules for the sub-expression <code>i</code>.</p>
 <p>For example in the following code would then be rejected.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    var i: int32
-    var z: int32
-    let ref double = i * 2  // immutable borrow of i
-    repeat
-        z = double
-        await true
-    until z &gt; 1000 end
-    i = i + 1 // i is no longer accessible here 
-</code></pre></div><p>The read-only reference <code>double</code> immutable borrows <code>i</code>, which locks <code>i</code> for further usage.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    var i: int32
+</span></span><span style="display:flex;"><span>    var z: int32
+</span></span><span style="display:flex;"><span>    let ref double = i * 2  // immutable borrow of i
+</span></span><span style="display:flex;"><span>    repeat
+</span></span><span style="display:flex;"><span>        z = double
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>    until z &gt; 1000 end
+</span></span><span style="display:flex;"><span>    i = i + 1 // i is no longer accessible here 
+</span></span></code></pre></div><p>The read-only reference <code>double</code> immutable borrows <code>i</code>, which locks <code>i</code> for further usage.</p>
 <p>As usual a separate scope can solve the problem:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    var i: int32
-    var z: int32
-    do
-        let ref double = i * 2
-        repeat
-            z = double
-            await true
-        until z &gt; 1000
-    end
-    i = i + 1
-</code></pre></div><p>For purely sequential code that is not <em>re-entered</em> on every tick, the contents of the auxiliary memory location gets only assigned once.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    var i: int32
+</span></span><span style="display:flex;"><span>    var z: int32
+</span></span><span style="display:flex;"><span>    do
+</span></span><span style="display:flex;"><span>        let ref double = i * 2
+</span></span><span style="display:flex;"><span>        repeat
+</span></span><span style="display:flex;"><span>            z = double
+</span></span><span style="display:flex;"><span>            await true
+</span></span><span style="display:flex;"><span>        until z &gt; 1000
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>    i = i + 1
+</span></span></code></pre></div><p>For purely sequential code that is not <em>re-entered</em> on every tick, the contents of the auxiliary memory location gets only assigned once.</p>
 <p>It not possible to take a reference for a right-hand-side expression as an output or a <code>var ref</code> declaration.</p>
 
 	
@@ -445,21 +443,6 @@ end
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -570,7 +553,7 @@ end
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

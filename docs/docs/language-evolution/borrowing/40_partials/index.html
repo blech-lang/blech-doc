@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -42,15 +42,13 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -58,7 +56,7 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -203,7 +201,7 @@
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/20_borrowing/" title="Borrowing for references" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing20_borrowing"><span class="">Borrowing</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionborrowing30_let-ref-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/30_let-ref/" title="Immutable references - `let ref`" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing30_let-ref"><span class="">Immutable references</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docslanguage-evolutionborrowing40_partials-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionborrowing40_partials-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/40_partials/" title="Partial borrowing and borrowed parts" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionborrowing40_partials"><span class="td-sidebar-nav-active-item">Partials</span></a>
 </li>
   </ul>
@@ -323,94 +321,93 @@
 	<div class="lead">Adopt the ideas of borrowing in Rust to Blech</div>
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<h2 id="partial-borrow-from-a-struct">Partial borrow from a struct</h2>
 <p>Imagine the following</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
-struct From 
-    var a: int32
-    var b: int32
-end
-
-
-activity main ()
-    var f: From
-    run outIsPlus1(f.a)(f.b)
-    await true
-end
-</code></pre></div><p>The compiler can statically decide on partial borrowing for structs.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>struct From 
+</span></span><span style="display:flex;"><span>    var a: int32
+</span></span><span style="display:flex;"><span>    var b: int32
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>activity main ()
+</span></span><span style="display:flex;"><span>    var f: From
+</span></span><span style="display:flex;"><span>    run outIsPlus1(f.a)(f.b)
+</span></span><span style="display:flex;"><span>    await true
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>The compiler can statically decide on partial borrowing for structs.
 But not for arrays.</p>
 <p>The following code would be rejected</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">activity main (i: int32)
-    var f: [2]int43
-    run outIsPlus1(f[1])(f[i])
-    await true
-end
-</code></pre></div><p>It cannot be decide at compile-time that <code>f[1]</code> and <code>f[i]</code> do not overlap.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>activity main (i: int32)
+</span></span><span style="display:flex;"><span>    var f: [2]int43
+</span></span><span style="display:flex;"><span>    run outIsPlus1(f[1])(f[i])
+</span></span><span style="display:flex;"><span>    await true
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>It cannot be decide at compile-time that <code>f[1]</code> and <code>f[i]</code> do not overlap.
 That means borrowing form arrays borrows the whole array.</p>
 <h2 id="structs-with-references">Structs with references</h2>
 <p>A struct may contain a field that is a reference in order to define an alias or an associated data type.</p>
 <p>Structs with references contain borrowed fields.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">struct RefStruct
-    var a: int32
-    let ref b: int32
-end
-</code></pre></div><p>Return a struct with references requires to define which references a borrowed by the struct.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32) returns RefStruct shares refb
-    return {a = 42, b = refb}
-end
-
-var b: int32 = 1
-var result = initRefStruct(b)
-// b is immutably borrowed to result here
-</code></pre></div><p>The result of type <code>RefStruct</code> shares read-only reference <code>refb</code>. That means it immutably borrows <code>refb</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>struct RefStruct
+</span></span><span style="display:flex;"><span>    var a: int32
+</span></span><span style="display:flex;"><span>    let ref b: int32
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>Return a struct with references requires to define which references a borrowed by the struct.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>function initRefStruct (refb: int32) returns RefStruct shares refb
+</span></span><span style="display:flex;"><span>    return {a = 42, b = refb}
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>var b: int32 = 1
+</span></span><span style="display:flex;"><span>var result = initRefStruct(b)
+</span></span><span style="display:flex;"><span>// b is immutably borrowed to result here
+</span></span></code></pre></div><p>The result of type <code>RefStruct</code> shares read-only reference <code>refb</code>. That means it immutably borrows <code>refb</code>.
 As a consequence <code>result</code> immutably borrows <code>b</code>.
 Consequently <code>b</code> is frozen after <code>result</code> is iniatialized.</p>
 <p>We could also write <code>initRefers</code> in the following way.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32) returns RefStruct shares refb
-    var r: RefStruct = {a = 42, b = refB}
-    return r
-end
-</code></pre></div><p>The return value is a shallow copy of the struct.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>function initRefStruct (refb: int32) returns RefStruct shares refb
+</span></span><span style="display:flex;"><span>    var r: RefStruct = {a = 42, b = refB}
+</span></span><span style="display:flex;"><span>    return r
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>The return value is a shallow copy of the struct.</p>
 <p>The borrow checker conservatively overestimates all possible borrowing if the return value is constructed through different control path.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct (refb: int32, refother: int32) returns RefStruct shares refb, refother
-    if aB &lt; aB2 then
-        return {a = 42, b = refb}
-    else
-        return {a = -42, b = refother}
-    end
-end
-</code></pre></div><p>It also overestimates the sharing if the <code>shares</code> refers to an output, although the <code>RefStruct</code> value immutably borrows <code>refb</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">function initRefStruct () (refb: int32) returns RefStruct shares refb
-    refB = refB + 1
-    return {a = 42, b = refB}
-end
-
-var b: int32
-var rs: RefStruct = initRefStruct()(b)
-</code></pre></div><p>Overestimation is necessary for a rather simple signature.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>function initRefStruct (refb: int32, refother: int32) returns RefStruct shares refb, refother
+</span></span><span style="display:flex;"><span>    if aB &lt; aB2 then
+</span></span><span style="display:flex;"><span>        return {a = 42, b = refb}
+</span></span><span style="display:flex;"><span>    else
+</span></span><span style="display:flex;"><span>        return {a = -42, b = refother}
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>It also overestimates the sharing if the <code>shares</code> refers to an output, although the <code>RefStruct</code> value immutably borrows <code>refb</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>function initRefStruct () (refb: int32) returns RefStruct shares refb
+</span></span><span style="display:flex;"><span>    refB = refB + 1
+</span></span><span style="display:flex;"><span>    return {a = 42, b = refB}
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>var b: int32
+</span></span><span style="display:flex;"><span>var rs: RefStruct = initRefStruct()(b)
+</span></span></code></pre></div><p>Overestimation is necessary for a rather simple signature.</p>
 <p>For separate compilation borrowing in the result must become part of the signature of a function without inspection of the actual code.</p>
 <p>The three variants have of <code>initRefStruct</code> have the following signatures</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
-function initRefStruct (refb: int32) returns RefStruct shares refb
-
-function initRefStruct (refb: int32, refOther: int32) returns RefStruct shares refb, refother
-
-function initRefStruct ()(refb: int32) returns RefStruct shares refb
-
-</code></pre></div><p>Struct with references can only be assigned once, because a references need to be defined at the point of their declaration.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>function initRefStruct (refb: int32) returns RefStruct shares refb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>function initRefStruct (refb: int32, refOther: int32) returns RefStruct shares refb, refother
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>function initRefStruct ()(refb: int32) returns RefStruct shares refb
+</span></span></code></pre></div><p>Struct with references can only be assigned once, because a references need to be defined at the point of their declaration.</p>
 
 	
 	
@@ -425,21 +422,6 @@ function initRefStruct ()(refb: int32) returns RefStruct shares refb
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -550,7 +532,7 @@ function initRefStruct ()(refb: int32) returns RefStruct shares refb
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

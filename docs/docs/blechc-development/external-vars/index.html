@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -42,15 +42,13 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -58,7 +56,7 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -218,7 +216,7 @@
   <a href="https://www.blech-lang.org/docs/blechc-development/const-and-expr/" title="Expressions, conditions, initialisers, constants" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsblechc-developmentconst-and-expr"><span class="">Expressions</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsblechc-developmentpctree-li">
   <a href="https://www.blech-lang.org/docs/blechc-development/pctree/" title="Program counter trees" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsblechc-developmentpctree"><span class="">PC trees</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsblechc-developmentexternal-vars-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsblechc-developmentexternal-vars-li">
   <a href="https://www.blech-lang.org/docs/blechc-development/external-vars/" title="Local and external variables" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsblechc-developmentexternal-vars"><span class="td-sidebar-nav-active-item">Variables</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsblechc-developmentcpdata-li">
   <a href="https://www.blech-lang.org/docs/blechc-development/cpdata/" title="Translating Blech variable names to C" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsblechc-developmentcpdata"><span class="">Variable Translation</span></a>
@@ -323,17 +321,17 @@
 	<div class="lead">This explains the difference between local and external variables in code generation.</div>
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<h2 id="local-variables">Local variables</h2>
@@ -347,15 +345,15 @@ The step-function itself will create the prev variables (where needed) and fill 
 <p>Special attention has to be given to the reaction in which the declaration of the local variable takes place.
 Here the local variable assumes its first value.
 This is defined to be the prev value and thus the prev variable has to be reset here once.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">...
-var x: int32 = 7 // prev x = 7
-cobegin
-    run B(prev y)(x) // x may have changed
-with
-    run A(prev x)(y) // prev x is guaranteed to be 7 in the first reaction
-end
-...
-</code></pre></div><h2 id="external-variables">External Variables</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>var x: int32 = 7 // prev x = 7
+</span></span><span style="display:flex;"><span>cobegin
+</span></span><span style="display:flex;"><span>    run B(prev y)(x) // x may have changed
+</span></span><span style="display:flex;"><span>with
+</span></span><span style="display:flex;"><span>    run A(prev x)(y) // prev x is guaranteed to be 7 in the first reaction
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h2 id="external-variables">External Variables</h2>
 <p>External variables (inside the activity scope) are dual to local variables in terms of code generation.
 We do not need to store external variables in the static context which is passed to the step-function.
 Instead an external variable will be represented by an automatic variable which is set at the beginning of the reaction using the value of the actual external C-variable that it is bound to.
@@ -422,21 +420,6 @@ Note however that the value shown in the trace is the prev value for the <em>nex
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -547,7 +530,7 @@ Note however that the value shown in the trace is the prev value for the <em>nex
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

@@ -16,38 +16,8 @@ See the [GitHub Privacy Statement](https://help.github.com/en/github/site-policy
 
 This Website does **not** collect data or use cookies **by default**.
 
-In order to improve the content and the experience on the website we kindly ask you to allow the usage of site analytics. If you opt-in to this service we use cookies to collect anonymous usage data.
-
+This website links to external services that usually use cookies.
 - You can learn about cookies and site analytics at [www.cookiechoices.org](https://www.cookiechoices.org/)
-
-
-### Opt-in for Google Analytics
-
-You can opt-in for site analytics, in this opt-in notice
-
-![Opt-in notice](/images/opt-in-notice.png)
-
-- If you `Opt-in` we use site analytics to collect your anonymous resource usage data.
-- If you close `x` this notice, no data will be collected.
-- We use a cookie to remember your decision.
-
-After your opt-in we use [Google Analytics](https://marketingplatform.google.com/about/analytics/features/) tracking on
-this website, which uses cookies for this purpose.
-
-We are interested in understanding
-- what pages you visited and for how long, 
-- what site referred you to this web page,
-- what types of content and topic areas you are interested in, 
-- including what content or sections never get viewed or used.
-
-Your IP-Adress is anonymized, so we do **not** store wether you have been to the site before.
-
-### Do not track
-
-We respect your [Do-Not-Track](https://en.wikipedia.org/wiki/Do_Not_Track) settings if your browser requests this.
-
-This means, you will never see the above opt-in notice, if you configured your browser for Do-Not-Track.
-No cookies will be set. Google Analytics will not be used.
 
 ### Linked services
 

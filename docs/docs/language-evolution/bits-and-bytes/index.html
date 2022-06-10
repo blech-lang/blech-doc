@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -42,15 +42,13 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -58,7 +56,7 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -192,7 +190,7 @@
   <a href="https://www.blech-lang.org/docs/language-evolution/blech-c-interface/c-bindings/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionblech-c-interfacec-bindings"><span class="">C bindings</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docslanguage-evolutionbits-and-bytes-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-evolutionbits-and-bytes-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/bits-and-bytes/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docslanguage-evolutionbits-and-bytes"><span class="td-sidebar-nav-active-item">Bits and bytes</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docslanguage-evolutionborrowing-li">
   <a href="https://www.blech-lang.org/docs/language-evolution/borrowing/" title="References, borrowing and causality" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docslanguage-evolutionborrowing"><span class="">Borrowing</span></a>
@@ -331,21 +329,21 @@
 	<div class="lead">The <code>bitsN</code> datatype and bitwise operations.</div>
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<h2 id="bits-and-bytes">Bits and bytes</h2>
-<p>Some notes on <a href="https://blog.feabhas.com/2014/10/vulnerabilities-in-c-when-integers-go-bad/" target="_blank">C’s integers</a>
+<p>Some notes on <a href="https://blog.feabhas.com/2014/10/vulnerabilities-in-c-when-integers-go-bad/" target="_blank">C&amp;rsquo;s integers</a>
 </p>
 <p>Some think, <a href="https://www.learncpp.com/cpp-tutorial/unsigned-integers-and-why-to-avoid-them/" target="_blank">unsigned integers should be avoided</a>
 .</p>
@@ -383,16 +381,16 @@ NOTE: Maybe the default should be <code>float32</code> for embedded systems?</p>
 <p>Any <code>natLiteral</code> can be annotated with a float type.
 The range is checked, to get a precise float representation.</p>
 <p>The following are all valid float literals.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
-(42: float64)
-(42: float32)
-
-(-17: float32)
-(-1.2: float32)
-
-42.0 // has type float64
-(42.0: float32)
-</code></pre></div><h3 id="bit-types">Bit types</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(42: float64)
+</span></span><span style="display:flex;"><span>(42: float32)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(-17: float32)
+</span></span><span style="display:flex;"><span>(-1.2: float32)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>42.0 // has type float64
+</span></span><span style="display:flex;"><span>(42.0: float32)
+</span></span></code></pre></div><h3 id="bit-types">Bit types</h3>
 <p>Bit types allow bitwise, relational, and arithmetic operators.
 Arithmetic operators wrap-around.</p>
 <p>Different to <code>nat</code> types which must not over- or underflow.</p>
@@ -462,35 +460,35 @@ Decimal literals have type <code>AnyInteger</code>.</p>
 <p>A type annotation can be ommited if an assignment determines the type.</p>
 <p>For negative values of type <code>AnyInteger</code> the two&rsquo;s-complement representation is used to create the bits.</p>
 <p>IMPORTANT: The two&rsquo;s-complement representation for <code>intN</code> is not mandatory in C.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let b1: bits8 = 0x1
-let b2 = 0x1 : bits8
-let b3 = (0x1 : bits8) &lt;&lt; 2  // 0x4 as bits8
-let b32 = 0x1A4: bits8   // type error not representable in bits8
-let b4: bits8 = 255
-let b5 = 255 : bits8 
-let b6: bits8 = -129   // type error, no representable as 2-complement in bits8
-let b7 = -128: bits8   // ok
-let b8 = (-50 - 150): bits8 // compile time error, not representable as 2-complement in bits8
-</code></pre></div><h3 id="use-of-operations">Use of operations</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>let b1: bits8 = 0x1
+</span></span><span style="display:flex;"><span>let b2 = 0x1 : bits8
+</span></span><span style="display:flex;"><span>let b3 = (0x1 : bits8) &lt;&lt; 2  // 0x4 as bits8
+</span></span><span style="display:flex;"><span>let b32 = 0x1A4: bits8   // type error not representable in bits8
+</span></span><span style="display:flex;"><span>let b4: bits8 = 255
+</span></span><span style="display:flex;"><span>let b5 = 255 : bits8 
+</span></span><span style="display:flex;"><span>let b6: bits8 = -129   // type error, no representable as 2-complement in bits8
+</span></span><span style="display:flex;"><span>let b7 = -128: bits8   // ok
+</span></span><span style="display:flex;"><span>let b8 = (-50 - 150): bits8 // compile time error, not representable as 2-complement in bits8
+</span></span></code></pre></div><h3 id="use-of-operations">Use of operations</h3>
 <p>Bitwise operatorions and arithmetic operations cannot be applied to values of type <code>AnyBits</code>.
 Bitwise and arithmetic operations can only be applied to values of type <code>bitsN</code>, that means the size has to be fixed before any operation.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">let x: bits8 = -0x1 // type error size of `0x1` not known, for a suitable unary minus
-let x = -(0x1: bits8) // ok, is (0xFF: bits8), by wrap around
-</code></pre></div><h3 id="hackers-delight-translated-to-blech">Hacker&rsquo;s Delight translated to Blech</h3>
-<p><a href="https://en.wikipedia.org/wiki/Hacker%27s_Delight" target="_blank">Hacker’s Delight</a>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>let x: bits8 = -0x1 // type error size of `0x1` not known, for a suitable unary minus
+</span></span><span style="display:flex;"><span>let x = -(0x1: bits8) // ok, is (0xFF: bits8), by wrap around
+</span></span></code></pre></div><h3 id="hackers-delight-translated-to-blech">Hacker&rsquo;s Delight translated to Blech</h3>
+<p><a href="https://en.wikipedia.org/wiki/Hacker%27s_Delight" target="_blank">Hacker&amp;rsquo;s Delight</a>
  is the definitive source of bitwise programming algorithms.
 It should be possible to use these hacks in Blech.</p>
 <p>Turn off the rightmost 1-bit in a byte, producing 0 if none (e.g. 0b_0101_1000 =&gt; 0b_0101_0000, 0x_00 =&gt; 0x_00).</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits8
-x = x &amp; (x - (1: bits8))
-// or
-x = x &amp; (x - 0x_01)
-</code></pre></div><p>Turn on the rightmost 0-bit in a word, producing all 1&rsquo;s if none (e.g. 0x7AF3 =&gt; 0x7AF4, 0xFFFF =&gt; 0xFFFF).</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var x: bits32
-x = x | (x + (1: bits32))
-// or
-x = x | (x + 0b_1)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: bits8
+</span></span><span style="display:flex;"><span>x = x &amp; (x - (1: bits8))
+</span></span><span style="display:flex;"><span>// or
+</span></span><span style="display:flex;"><span>x = x &amp; (x - 0x_01)
+</span></span></code></pre></div><p>Turn on the rightmost 0-bit in a word, producing all 1&rsquo;s if none (e.g. 0x7AF3 =&gt; 0x7AF4, 0xFFFF =&gt; 0xFFFF).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>var x: bits32
+</span></span><span style="display:flex;"><span>x = x | (x + (1: bits32))
+</span></span><span style="display:flex;"><span>// or
+</span></span><span style="display:flex;"><span>x = x | (x + 0b_1)
+</span></span></code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
@@ -504,21 +502,6 @@ x = x | (x + 0b_1)
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -629,7 +612,7 @@ x = x | (x + 0b_1)
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

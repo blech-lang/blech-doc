@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -42,15 +42,13 @@
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page td-blog">
@@ -58,7 +56,7 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -155,7 +153,7 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20211220the-blech-abides-li">
   <a href="https://www.blech-lang.org/blog/2021/12/20/the-blech-abides/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20211220the-blech-abides"><span class="">The Blech abides</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog20201123a-module-system-for-blech-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20201123a-module-system-for-blech-li">
   <a href="https://www.blech-lang.org/blog/2020/11/23/a-module-system-for-blech/" title="A module system for Blech" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-blog20201123a-module-system-for-blech"><span class="td-sidebar-nav-active-item">Modules for Blech</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20200812push-button-handling-li">
   <a href="https://www.blech-lang.org/blog/2020/08/12/push-button-handling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-blog20200812push-button-handling"><span class="">Push button handling</span></a>
@@ -270,17 +268,17 @@
 	</div>
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>
 	<p>The Blech module system supports modular programming for reactive, embedded, safety-critical applications.
@@ -327,43 +325,43 @@ A program file cannot be imported by other modules or programs.</p>
 <p>Assume the following module implementation in file <code>ringbuffer.blc</code>.
 In order to make an entity accessible it needs to be exposed.
 Here, functions <code>initialise</code>, <code>push</code>, and <code>average</code> are exposed for usage, in any importing module or program.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes initialise, push, average
-
-const Size: nat8 = 10
-
-struct RingBuffer
-    var buffer: [Size]nat32
-    var nextIndex: nat8
-    var count: nat8
-end
-
-/// returns an initialisation value for a ring buffer
-function initialise () returns RingBuffer
-    return { nextIndex = 0, count = 0 }
-end
-
-/// pushes a new value to the ring buffer
-/// displaces the &#34;oldest&#34; value if the ring buffer is full
-function push (value: nat32) (rb: RingBuffer)
-    rb.buffer[rb.nextIndex] = value
-    rb.nextIndex = rb.nextIndex + 1
-    if rb.count == Size then // ringbuffer is completely filled
-        rb.nextIndex = rb.nextIndex % Size
-    else
-        rb.count = rb.count + 1
-    end
-end
-
-/// calculates the average value of all values stored in the ring buffer
-function average (rb: RingBuffer) returns nat32
-    var idx: nat8 = 0
-    var avg: nat32 = 0
-    while idx &lt; rb.count repeat
-        avg = avg + rb.buffer[idx]
-    end
-    return avg / rb.count
-end
-</code></pre></div><h2 id="module-interface">Module interface</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>module exposes initialise, push, average
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>const Size: nat8 = 10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>struct RingBuffer
+</span></span><span style="display:flex;"><span>    var buffer: [Size]nat32
+</span></span><span style="display:flex;"><span>    var nextIndex: nat8
+</span></span><span style="display:flex;"><span>    var count: nat8
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// returns an initialisation value for a ring buffer
+</span></span><span style="display:flex;"><span>function initialise () returns RingBuffer
+</span></span><span style="display:flex;"><span>    return { nextIndex = 0, count = 0 }
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// pushes a new value to the ring buffer
+</span></span><span style="display:flex;"><span>/// displaces the &#34;oldest&#34; value if the ring buffer is full
+</span></span><span style="display:flex;"><span>function push (value: nat32) (rb: RingBuffer)
+</span></span><span style="display:flex;"><span>    rb.buffer[rb.nextIndex] = value
+</span></span><span style="display:flex;"><span>    rb.nextIndex = rb.nextIndex + 1
+</span></span><span style="display:flex;"><span>    if rb.count == Size then // ringbuffer is completely filled
+</span></span><span style="display:flex;"><span>        rb.nextIndex = rb.nextIndex % Size
+</span></span><span style="display:flex;"><span>    else
+</span></span><span style="display:flex;"><span>        rb.count = rb.count + 1
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// calculates the average value of all values stored in the ring buffer
+</span></span><span style="display:flex;"><span>function average (rb: RingBuffer) returns nat32
+</span></span><span style="display:flex;"><span>    var idx: nat8 = 0
+</span></span><span style="display:flex;"><span>    var avg: nat32 = 0
+</span></span><span style="display:flex;"><span>    while idx &lt; rb.count repeat
+</span></span><span style="display:flex;"><span>        avg = avg + rb.buffer[idx]
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>    return avg / rb.count
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><h2 id="module-interface">Module interface</h2>
 <blockquote>
 <p>A module interface expresses the elements that are provided and required by the module. The elements defined in the interface are detectable by other modules. The implementation contains the working code that corresponds to the elements declared in the interface. <a href="#ModularProgramming">[1]</a>
 </p>
@@ -372,20 +370,20 @@ end
 The signature is generated by the compiler from the module implementation and the <code>exposes</code> declaration.
 A Blech programmer never writes a signature file.
 After compilation of file <code>ringbuffer.blc</code> you will find the following module interface in file <code>ringbuffer.blh</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
-
-type RingBuffer
-
-/// returns an initialisation value for a ring buffer
-function initialise () returns RingBuffer
-
-/// pushes a new value to the ring buffer
-/// replaces the &#34;oldest&#34; value if the ring buffer is completely filled
-function push (value: nat32) (rb: RingBuffer)
-
-/// calculates the average value of all values stored in the ring buffer
-function average (rb: RingBuffer) returns nat32
-</code></pre></div><p>The exposed functions additionally need the type <code>RingBuffer</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>signature
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>type RingBuffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// returns an initialisation value for a ring buffer
+</span></span><span style="display:flex;"><span>function initialise () returns RingBuffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// pushes a new value to the ring buffer
+</span></span><span style="display:flex;"><span>/// replaces the &#34;oldest&#34; value if the ring buffer is completely filled
+</span></span><span style="display:flex;"><span>function push (value: nat32) (rb: RingBuffer)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// calculates the average value of all values stored in the ring buffer
+</span></span><span style="display:flex;"><span>function average (rb: RingBuffer) returns nat32
+</span></span></code></pre></div><p>The exposed functions additionally need the type <code>RingBuffer</code>.</p>
 <p>Since <code>struct RingBuffer</code> is not exposed in the module it is made available as an opaque <code>type RingBuffer</code> in the signature.
 While the implementation remains hidden, the opaque type can be used to define variables and assign values of this type.
 This allows to change the internal representation, while any code the uses the module remains unchanged.
@@ -405,41 +403,41 @@ It is enough to deliver compiled libraries with:</p>
 </blockquote>
 <p>In order to use a module it gets imported by another module or program.
 Assume the following use of the <code>ringbuffer</code> module from a module implementation in file <code>slidingaverage.blc</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import rb &#34;ringbuffer&#34;
-
-module exposes SlidingAverage 
-
-param Threshold: nat32 = 10000 // Application parameter, can be modified in the binary 
-
-/// Calculates the average of the latest values in every tick
-/// Values outside a fixed threshold are ignored.
-activity SlidingAverage (value: nat32) (average: nat32)
-    var buf: rb.RingBuffer = rb.initialise() 
-    repeat
-        if value &lt;= Threshold then
-            rb.push(value)(buf)
-        end
-        average = rb.average(buf)
-        await true
-    end
-end
-</code></pre></div><p>This module imports a module from file <code>ringbuffer.blc</code> with the local name <code>rb</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import rb &#34;ringbuffer&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>module exposes SlidingAverage 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>param Threshold: nat32 = 10000 // Application parameter, can be modified in the binary 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// Calculates the average of the latest values in every tick
+</span></span><span style="display:flex;"><span>/// Values outside a fixed threshold are ignored.
+</span></span><span style="display:flex;"><span>activity SlidingAverage (value: nat32) (average: nat32)
+</span></span><span style="display:flex;"><span>    var buf: rb.RingBuffer = rb.initialise() 
+</span></span><span style="display:flex;"><span>    repeat
+</span></span><span style="display:flex;"><span>        if value &lt;= Threshold then
+</span></span><span style="display:flex;"><span>            rb.push(value)(buf)
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>        average = rb.average(buf)
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>This module imports a module from file <code>ringbuffer.blc</code> with the local name <code>rb</code>.
 It implements and exposes a single activity <code>SlidingAverage</code>, with a local variable of type <code>rb.RingBuffer</code>.
 The module completely hides its internal implementation, which uses the abstract type <code>RingBuffer</code> and functions <code>initialise</code>, <code>push</code> and <code>average</code> from module <code>rb</code>.</p>
 <p>The generated signature in file <code>slidingaverage.blh</code> is simple.
 The implementations details are completely hidden.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
-
-/// Calculates the average of the latest values in every tick
-activity SlidingAverage (value: nat32) (average: nat32)
-</code></pre></div><p>Using this module in a Blech program file <code>main.blc</code> is straight forward.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import sa &#34;slidingaverage&#34;
-
-@[EntryPoint]
-activity SlidingAverage (sensor: nat32) (sensorAverage: nat32)
-    run sa.SlidingAverage(sensor)(sensorAverage)    
-end
-</code></pre></div><h2 id="compiling-a-program">Compiling a program</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>signature
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// Calculates the average of the latest values in every tick
+</span></span><span style="display:flex;"><span>activity SlidingAverage (value: nat32) (average: nat32)
+</span></span></code></pre></div><p>Using this module in a Blech program file <code>main.blc</code> is straight forward.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import sa &#34;slidingaverage&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@[EntryPoint]
+</span></span><span style="display:flex;"><span>activity SlidingAverage (sensor: nat32) (sensorAverage: nat32)
+</span></span><span style="display:flex;"><span>    run sa.SlidingAverage(sensor)(sensorAverage)    
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><h2 id="compiling-a-program">Compiling a program</h2>
 <blockquote>
 <p>Often modules form a directed acyclic graph (DAG); in this case a cyclic dependency between modules is seen as indicating that these should be a single module. In the case where modules do form a DAG they can be arranged as a hierarchy, where the lowest-level modules are independent, depending on no other modules, and higher-level modules depend on lower-level ones. <a href="#ModularProgramming">[1]</a>
 </p>
@@ -470,32 +468,32 @@ A layered and cylce-free module hierarchy is always guaranteed.</p>
 An <code>import internal ...&quot;</code> makes all elements in the imported module detectable - nothing is hidden.</p>
 <p>In the following example, it is not enough to use the signature <code>ringbuffer.blh</code> to compile the white-box test program.
 In fact the compiler needs the source code of the module implementation <code>ringbuffer.blc</code> in order to detect the hidden implementation details.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import n8 &#34;box:base/nat8&#34;  // base library for nat8-related stuff
-
-import internal rb &#34;ringbuffer&#34;
-
-@[EntryPoint]
-activity TestPush ()
-    var buf: rb.RingBuffer = rb.initialise()
-    var i: nat8 = 0
-    repeat
-        assert buf.nextIndex &lt; rb.Size
-        assert buf.nextIndex == i % rb.Size
-        assert buf.count &gt;= 0 
-        assert buf.count &lt;= rb.Size
-        
-        rb.push(42)(buf) // the value is irrelevant
-        i = i + 1
-        
-        if i &lt; rb.Size then
-            assert buf.count == i
-        else
-            assert buf.count == rb.Size
-        end
-        await true
-    until i == n8.Max end
-end
-</code></pre></div><p>The modules provided by a library cannot be white-box tested, because a packaged library usually does not contain module implementation files.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import n8 &#34;box:base/nat8&#34;  // base library for nat8-related stuff
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>import internal rb &#34;ringbuffer&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@[EntryPoint]
+</span></span><span style="display:flex;"><span>activity TestPush ()
+</span></span><span style="display:flex;"><span>    var buf: rb.RingBuffer = rb.initialise()
+</span></span><span style="display:flex;"><span>    var i: nat8 = 0
+</span></span><span style="display:flex;"><span>    repeat
+</span></span><span style="display:flex;"><span>        assert buf.nextIndex &lt; rb.Size
+</span></span><span style="display:flex;"><span>        assert buf.nextIndex == i % rb.Size
+</span></span><span style="display:flex;"><span>        assert buf.count &gt;= 0 
+</span></span><span style="display:flex;"><span>        assert buf.count &lt;= rb.Size
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        rb.push(42)(buf) // the value is irrelevant
+</span></span><span style="display:flex;"><span>        i = i + 1
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        if i &lt; rb.Size then
+</span></span><span style="display:flex;"><span>            assert buf.count == i
+</span></span><span style="display:flex;"><span>        else
+</span></span><span style="display:flex;"><span>            assert buf.count == rb.Size
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>    until i == n8.Max end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>The modules provided by a library cannot be white-box tested, because a packaged library usually does not contain module implementation files.</p>
 <h2 id="packaging-modules-into-a-library">Packaging modules into a library</h2>
 <blockquote>
 <p>A particular library is a [&hellip;] collection of modules of its own hierarchy, but can in turn be seen as a lower-level module collection [&hellip;] to be used by a higher-level program, library, or system. <a href="#ModularProgramming">[1]</a>
@@ -508,56 +506,56 @@ Typically some modules of a box are supposed to be used from those higher levels
 In order to hide a module in a box it can be declared as an <code>internal module</code>.</p>
 <p>In our running example, we could decide to make the module <code>ringbuffer</code> an internal module.
 This can be done by declaring the module as <code>internal module</code> - the rest remains unchanged.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">internal module exposes initialise, push, average
-
-const Size ...
-struct RingBuffer  ...
-function initialise () returns RingBuffer ...
-function push (value: nat32) (rb: RingBuffer) ...
-function average (rb: RingBuffer) returns nat32 ...
-</code></pre></div><p>The signature becomes <code>internal</code> as well.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">internal signature
-
-type RingBuffer
-function initialise () returns RingBuffer
-function push (value: nat32) (rb: RingBuffer)
-function average (rb: RingBuffer) returns nat32
-</code></pre></div><p>If we package this module together with module <code>slidingaverage</code> from above into a box,
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>internal module exposes initialise, push, average
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>const Size ...
+</span></span><span style="display:flex;"><span>struct RingBuffer  ...
+</span></span><span style="display:flex;"><span>function initialise () returns RingBuffer ...
+</span></span><span style="display:flex;"><span>function push (value: nat32) (rb: RingBuffer) ...
+</span></span><span style="display:flex;"><span>function average (rb: RingBuffer) returns nat32 ...
+</span></span></code></pre></div><p>The signature becomes <code>internal</code> as well.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>internal signature
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>type RingBuffer
+</span></span><span style="display:flex;"><span>function initialise () returns RingBuffer
+</span></span><span style="display:flex;"><span>function push (value: nat32) (rb: RingBuffer)
+</span></span><span style="display:flex;"><span>function average (rb: RingBuffer) returns nat32
+</span></span></code></pre></div><p>If we package this module together with module <code>slidingaverage</code> from above into a box,
 only the signature for <code>slidingaverage</code> should be detectable, the signatures of internal modules are hidden.</p>
 <p>In order to write a non-internal module that imports an <code>internal module</code>, the details of those imports must not leak through its interface.
 For example, the following module <code>ringbufferaverage</code> implicitly exposes the opaque type <code>RingBuffer</code> from the imported internal module <code>ringbuffer</code>.
 The internal implementation leaks through its interface and therefore the module becomes itself an <code>internal module</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import rb &#34;ringbuffer&#34;
-
-internal module exposes RingBufferAverage
-
-activity RingBufferAverage (buf: rb.RingBuffer) (average: nat32)
-    repeat
-        average = rb.average(buf)
-        await true
-    end
-end
-</code></pre></div><p>This means, module <code>ringbufferaverage</code> is not accessible outside of its box.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import rb &#34;ringbuffer&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>internal module exposes RingBufferAverage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>activity RingBufferAverage (buf: rb.RingBuffer) (average: nat32)
+</span></span><span style="display:flex;"><span>    repeat
+</span></span><span style="display:flex;"><span>        average = rb.average(buf)
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>This means, module <code>ringbufferaverage</code> is not accessible outside of its box.
 The compiler checks this, and it is an error to omit the the classification <code>internal</code> for the module.</p>
 <p>The signature of module <code>ringbufferaverage</code> looks as follows.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import rb &#34;ringbuffer&#34;
-
-internal signature
-
-activity RingBufferAverage (buf: rb.RingBuffer) (average: nat32)
-</code></pre></div><p>For pragmatic reasons it might be necessary to circumvent the black-box interface of a module and use a white-box import instead.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import rb &#34;ringbuffer&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>internal signature
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>activity RingBufferAverage (buf: rb.RingBuffer) (average: nat32)
+</span></span></code></pre></div><p>For pragmatic reasons it might be necessary to circumvent the black-box interface of a module and use a white-box import instead.
 This can only be done within the same box, since it requires the source of the module implementation.
 As an example, we would like to use <code>param Threshold</code> from module <code>slidingaverage</code> - which is not exposed - in a new module <code>slidingaveragewithreset</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import internal sa &#34;slidingaverage&#34;
-
-module exposes SlidingAverageWithReset
-
-activity SlidingAverageWithReset (sensor: nat32) (sensorAverage: nat32)
-    when sensor &gt; sa.Treshold reset
-        run sa.SlidingAverage(sensor)(sensorAverage)
-    end
-end
-</code></pre></div><p>Since the interface does not leak any implementation details from the white-box import it can be made detectable (non-internal) in the box.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import internal sa &#34;slidingaverage&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>module exposes SlidingAverageWithReset
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>activity SlidingAverageWithReset (sensor: nat32) (sensorAverage: nat32)
+</span></span><span style="display:flex;"><span>    when sensor &gt; sa.Treshold reset
+</span></span><span style="display:flex;"><span>        run sa.SlidingAverage(sensor)(sensorAverage)
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>Since the interface does not leak any implementation details from the white-box import it can be made detectable (non-internal) in the box.</p>
 <p>There are two simple rules:</p>
 <ul>
 <li>a module that leaks details of an imported <code>internal module</code> in its signature becomes an <code>internal module</code>,</li>
@@ -566,8 +564,8 @@ end
 <h2 id="importing-inside-and-outside-a-box">Importing inside and outside a box</h2>
 <p>In order to distinguish between imports inside a box and imports from other boxes, Blech uses an URL-like import path.</p>
 <p>Imports inside a box just adress the imported file.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import m &#34;localmodule&#34;
-</code></pre></div><p>The compiler searches for file <code>localmodule.blc</code> to compile it, or uses <code>localmodule.blh</code> if nothing has changed and <code>localmodule.blc</code> has been compiled before.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import m &#34;localmodule&#34;
+</span></span></code></pre></div><p>The compiler searches for file <code>localmodule.blc</code> to compile it, or uses <code>localmodule.blh</code> if nothing has changed and <code>localmodule.blc</code> has been compiled before.
 Note, that a recompilation of <code>localmodule.blc</code> is also necessary, if any of <code>localmodule</code>&rsquo;s imports have changed.</p>
 <p>In general, the imported file name for an import inside a box, can be adressed</p>
 <ul>
@@ -575,14 +573,14 @@ Note, that a recompilation of <code>localmodule.blc</code> is also necessary, if
 <li>absolutely from the top of the box.</li>
 </ul>
 <p>Here are some examples for an import inside a box:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import ma &#34;../moduleA&#34;           // relative path, one directory up
-import mb &#34;./subdir/moduleB&#34;     // relative path one directory down
-import mb2 &#34;subdir/moduleB&#34;      // as before with a different local name 
-import mc  &#34;/toplevel/moduleC&#34;   // absolute path inside the box
-</code></pre></div><p>In order to import a module from another box, we need a prefix to address a box, the name of the box and the module inside the box.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import ma &#34;../moduleA&#34;           // relative path, one directory up
+</span></span><span style="display:flex;"><span>import mb &#34;./subdir/moduleB&#34;     // relative path one directory down
+</span></span><span style="display:flex;"><span>import mb2 &#34;subdir/moduleB&#34;      // as before with a different local name 
+</span></span><span style="display:flex;"><span>import mc  &#34;/toplevel/moduleC&#34;   // absolute path inside the box
+</span></span></code></pre></div><p>In order to import a module from another box, we need a prefix to address a box, the name of the box and the module inside the box.
 The import declaration has the following form</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import m &#34;box:library/module&#34;
-</code></pre></div><p>This tells the compiler to import a module <code>module</code> from box <code>box:library</code> and name it <code>m</code> locally.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import m &#34;box:library/module&#34;
+</span></span></code></pre></div><p>This tells the compiler to import a module <code>module</code> from box <code>box:library</code> and name it <code>m</code> locally.
 The compiler searches for the signature file <code>module.blh</code> in the box named <code>library</code>.</p>
 <p>When importing from another box, the compiler prevents:</p>
 <ul>
@@ -611,16 +609,16 @@ The <code>import</code> declaration optionally <code>exposes</code> selected ent
 <ol>
 <li>Make selected entities directly accessible</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import rb &#34;ringbuffer&#34; exposes initialise, push
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import rb &#34;ringbuffer&#34; exposes initialise, push
+</span></span></code></pre></div><ol start="2">
 <li>Create an import dependency but do not use it right now in the current status of development</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import _ &#34;ringbuffer&#34; // no name for qualified access
-</code></pre></div><ol start="3">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import _ &#34;ringbuffer&#34; // no name for qualified access
+</span></span></code></pre></div><ol start="3">
 <li>Omit the local module name</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import _ &#34;ringbuffer&#34; exposes RingBuffer, initialise, push
-</code></pre></div><p>Use these &ldquo;tricks of trade&rdquo; wisely, and only if necessary. Keep in mind, Blech implements a rigid no-shadowing strategy.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import _ &#34;ringbuffer&#34; exposes RingBuffer, initialise, push
+</span></span></code></pre></div><p>Use these &ldquo;tricks of trade&rdquo; wisely, and only if necessary. Keep in mind, Blech implements a rigid no-shadowing strategy.
 If two imports expose the same name, the second will create an error because it shadows the first.</p>
 <h2 id="modules-are-not-generic">Modules are not generic</h2>
 <blockquote>
@@ -711,21 +709,6 @@ It will definitely need some more Blech releases before we can adress generics.<
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -836,7 +819,7 @@ It will definitely need some more Blech releases before we can adress generics.<
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 

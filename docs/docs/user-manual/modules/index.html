@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.100.2" />
 <meta name="robots" content="index, follow">
 
 
@@ -43,15 +43,13 @@ Both a program file and a module file have the .blc extension. However a file re
 
 
 
-<link rel="preload" href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" as="style">
-<link href="https://www.blech-lang.org/scss/main.min.0205cde680612a80dbfc8a6e7880b0ca7fff022104f14282981e934e6a070746.css" rel="stylesheet" integrity="">
+<link rel="preload" href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" as="style">
+<link href="https://www.blech-lang.org/scss/main.min.b425653523b32cfc9a46843559a2b667ffe6e06683c10adf958a0b7e2a1ed7bd.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
-<script src=https://www.blech-lang.org/js/opt-in.js></script>
-
 
   </head>
   <body class="td-page">
@@ -59,7 +57,7 @@ Both a program file and a module file have the .blc extension. However a file re
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="https://www.blech-lang.org/">
-		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold ">Blech</span>
+		<span class="navbar-logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.08 47.3"><defs><style>.cls-1{fill:#919392;stroke:#919392;stroke-linecap:round;stroke-linejoin:round}</style></defs><title>blech_grau_kontur</title><polygon class="cls-1" points="3.23 25.31 0.5 26.95 33.53 46.8 66.58 26.95 66.58 20.35 63.77 18.66 33.54 36.82 33.53 33.61 61.08 17.05 33.53 0.5 0.5 20.35 33.53 40.2 63.39 22.28 63.39 25.5 33.53 43.61 3.23 25.31"/></svg></span><span class="font-weight-bold">Blech</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -177,7 +175,7 @@ Both a program file and a module file have the .blc extension. However a file re
   <a href="https://www.blech-lang.org/docs/user-manual/types/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsuser-manualtypes"><span class="">Types</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-manualexpressions-li">
   <a href="https://www.blech-lang.org/docs/user-manual/expressions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsuser-manualexpressions"><span class="">Expressions</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsuser-manualmodules-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-manualmodules-li">
   <a href="https://www.blech-lang.org/docs/user-manual/modules/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsuser-manualmodules"><span class="td-sidebar-nav-active-item">Modules</span></a>
 </li>
   </ul>
@@ -329,17 +327,17 @@ Both a program file and a module file have the .blc extension. However a file re
 	
 	<header class="article-meta">
 		
-		
-			
-				
+
+  
+    
 
 
-			
-				
+  
+    
 
 
-			
-		
+  
+
 		
 	</header>    
 	<h2 id="compilation-units">Compilation units</h2>
@@ -365,51 +363,51 @@ All declarations <em>within</em> a module are visible.
 In particular, implementations details such as the fields of a structure are visible.</p>
 <p>By contrast, no declaration is visible <em>outside</em> the module unless it is explicitly <em>exposed</em>.</p>
 <p>Thus modules are a mechanism to encapsulate code, provide an API for it and hide implementation details from client code.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Module</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;module&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">DeclarationList</span>
-<span style="color:#000">IdentifierList</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000">DeclarationList</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;&#34;</span> | <span style="color:#000">StructDeclaration</span> | <span style="color:#000">DataDeclaration</span> | <span style="color:#000">ProgramDeclaration</span>
-</code></pre></div><p>Note that the module itself has no identifier. Client code which uses this module will <em>find</em> it by its file name and <em>give</em> it some local name when <a href="#Imports">importing</a>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Module</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;module&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">DeclarationList</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">IdentifierList</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;,&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">DeclarationList</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;&#34;</span> | <span style="color:#000">StructDeclaration</span> | <span style="color:#000">DataDeclaration</span> | <span style="color:#000">ProgramDeclaration</span>
+</span></span></code></pre></div><p>Note that the module itself has no identifier. Client code which uses this module will <em>find</em> it by its file name and <em>give</em> it some local name when <a href="#Imports">importing</a>
  the module.</p>
 <p>Also, remember that the <a href="../declarations/#qualifiers">qualifiers</a>
  <code>let</code> and <code>var</code> must not appear on the top-level scope - no globals in Blech.</p>
 <p>Example of a module:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes initialise, push, average
-
-const Size: nat8 = 10
-
-struct RingBuffer
-    var buffer: [Size]nat32
-    var nextIndex: nat8
-    var count: nat8
-end
-
-/// returns an initialisation value for a ring buffer
-function initialise () returns RingBuffer
-    return { nextIndex = 0, count = 0 }
-end
-
-/// pushes a new value to the ring buffer
-/// displaces the &#34;oldest&#34; value if the ring buffer is full
-function push (value: nat32) (rb: RingBuffer)
-    rb.buffer[rb.nextIndex] = value
-    rb.nextIndex = rb.nextIndex + 1
-    if rb.count == Size then // ringbuffer is completely filled
-        rb.nextIndex = rb.nextIndex % Size
-    else
-        rb.count = rb.count + 1
-    end
-end
-
-/// calculates the average value of all values stored in the ring buffer
-function average (rb: RingBuffer) returns nat32
-    var idx: nat8 = 0
-    var avg: nat32 = 0
-    while idx &lt; rb.count repeat
-        avg = avg + rb.buffer[idx]
-    end
-    return avg / rb.count
-end
-</code></pre></div><p>This module encapsulates the implementation of a ring buffer.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>module exposes initialise, push, average
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>const Size: nat8 = 10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>struct RingBuffer
+</span></span><span style="display:flex;"><span>    var buffer: [Size]nat32
+</span></span><span style="display:flex;"><span>    var nextIndex: nat8
+</span></span><span style="display:flex;"><span>    var count: nat8
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// returns an initialisation value for a ring buffer
+</span></span><span style="display:flex;"><span>function initialise () returns RingBuffer
+</span></span><span style="display:flex;"><span>    return { nextIndex = 0, count = 0 }
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// pushes a new value to the ring buffer
+</span></span><span style="display:flex;"><span>/// displaces the &#34;oldest&#34; value if the ring buffer is full
+</span></span><span style="display:flex;"><span>function push (value: nat32) (rb: RingBuffer)
+</span></span><span style="display:flex;"><span>    rb.buffer[rb.nextIndex] = value
+</span></span><span style="display:flex;"><span>    rb.nextIndex = rb.nextIndex + 1
+</span></span><span style="display:flex;"><span>    if rb.count == Size then // ringbuffer is completely filled
+</span></span><span style="display:flex;"><span>        rb.nextIndex = rb.nextIndex % Size
+</span></span><span style="display:flex;"><span>    else
+</span></span><span style="display:flex;"><span>        rb.count = rb.count + 1
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// calculates the average value of all values stored in the ring buffer
+</span></span><span style="display:flex;"><span>function average (rb: RingBuffer) returns nat32
+</span></span><span style="display:flex;"><span>    var idx: nat8 = 0
+</span></span><span style="display:flex;"><span>    var avg: nat32 = 0
+</span></span><span style="display:flex;"><span>    while idx &lt; rb.count repeat
+</span></span><span style="display:flex;"><span>        avg = avg + rb.buffer[idx]
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>    return avg / rb.count
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>This module encapsulates the implementation of a ring buffer.
 The ring buffer is represented by the <code>RingBuffer</code> structure that holds a buffer of fixed size.
 Three functions are implemented to initialise the buffer, add values to it, and calculate the average over all values currently stored in the ring buffer.
 The module exposes the functions <code>initialise</code>, <code>push</code> and <code>average</code> to client code that will use this module.
@@ -431,21 +429,21 @@ Since Blech programs cannot be imported in other <code>.blc</code> files, no sig
 Opaque types only have a name but do not reveal their inner implementation details.
 The declaration of the name is required by the client code so that it can &ldquo;pass around&rdquo; values of the opaque types between procedures even though the content cannot be accessed directly.</p>
 <p>Here is an example of the generated signature for the module in the previous section.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
-
-@[StructType]
-type RingBuffer
-
-/// returns an initialisation value for a ring buffer
-function initialise () returns RingBuffer
-
-/// pushes a new value to the ring buffer
-/// displaces the &#34;oldest&#34; value if the ring buffer is full
-function push (value: nat32) (rb: RingBuffer)
-
-/// calculates the average value of all values stored in the ring buffer
-function average (rb: RingBuffer) returns nat32
-</code></pre></div><p>The type <code>RingBuffer</code> was not exposed by the module but it is used by the exposed functions. For instance, it is the return type of the exposed function <code>initialise</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>signature
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@[StructType]
+</span></span><span style="display:flex;"><span>type RingBuffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// returns an initialisation value for a ring buffer
+</span></span><span style="display:flex;"><span>function initialise () returns RingBuffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// pushes a new value to the ring buffer
+</span></span><span style="display:flex;"><span>/// displaces the &#34;oldest&#34; value if the ring buffer is full
+</span></span><span style="display:flex;"><span>function push (value: nat32) (rb: RingBuffer)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// calculates the average value of all values stored in the ring buffer
+</span></span><span style="display:flex;"><span>function average (rb: RingBuffer) returns nat32
+</span></span></code></pre></div><p>The type <code>RingBuffer</code> was not exposed by the module but it is used by the exposed functions. For instance, it is the return type of the exposed function <code>initialise</code>.
 Therefore the type name <code>RingBuffer</code> appears in the signature.
 The annotation <code>@[StructType]</code> is not part of the Blech language but merely a hint to the C code generator.</p>
 <p>Furthermore, signatures contain import declarations (see <a href="#Imports">below</a>
@@ -455,55 +453,55 @@ Then, in order to declare a prototype of this function in the signature, an impo
 <p>Finally, signatures also declare <em>opaque singletons</em>.
 These are the names of procedures which are singletons themselves, not explicitly exposed, but used in exposed procedures.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">module exposes f
-
-singleton x
-@[CFunction (binding = &#34;foo()&#34;, header = &#34;bar.h&#34;)]
-extern singleton function y ()
-
-singleton [x] function f()
-    y()
-    //...
-end
-</code></pre></div><p>Accordingly, the signature contains an opaque singleton <code>y</code> without specifying that it was an (external) function.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">signature
-
-singleton x
-
-@[CFunction(binding = &#34;foo()&#34;, header = &#34;bar.h&#34;)]
-singleton y
-
-singleton [x, y] function f ()
-</code></pre></div><p>Also note, how the declaration of <code>f</code> contains the <em>full</em> list of singletons that it depends on.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>module exposes f
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>singleton x
+</span></span><span style="display:flex;"><span>@[CFunction (binding = &#34;foo()&#34;, header = &#34;bar.h&#34;)]
+</span></span><span style="display:flex;"><span>extern singleton function y ()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>singleton [x] function f()
+</span></span><span style="display:flex;"><span>    y()
+</span></span><span style="display:flex;"><span>    //...
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>Accordingly, the signature contains an opaque singleton <code>y</code> without specifying that it was an (external) function.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>signature
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>singleton x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@[CFunction(binding = &#34;foo()&#34;, header = &#34;bar.h&#34;)]
+</span></span><span style="display:flex;"><span>singleton y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>singleton [x, y] function f ()
+</span></span></code></pre></div><p>Also note, how the declaration of <code>f</code> contains the <em>full</em> list of singletons that it depends on.</p>
 <h2 id="imports">Imports</h2>
 <p>A module needs to be imported by the down stream client code if the latter want to use the exposed members.</p>
 <p>Following our previous ring buffer example, its usage might look like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import rb &#34;/data_structures/ringbuffer&#34;
-
-module exposes SlidingAverage 
-
-param Threshold: nat32 = 10000 // Application parameter
-
-/// Calculates the average of the latest values in every tick
-/// Values outside a fixed threshold are ignored.
-activity SlidingAverage (value: nat32) (average: nat32)
-    var buf: rb.RingBuffer = rb.initialise() 
-    repeat
-        if value &lt;= Threshold then
-            rb.push(value)(buf)
-        end
-        average = rb.average(buf)
-        await true
-    end
-end
-</code></pre></div><p>Here we assume that in the root <code>/</code> of the current project there is a <code>data_structures</code> folder which contains a <code>ringbuffer.blc</code> module file. (The extension is omitted on purpose).
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import rb &#34;/data_structures/ringbuffer&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>module exposes SlidingAverage 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>param Threshold: nat32 = 10000 // Application parameter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/// Calculates the average of the latest values in every tick
+</span></span><span style="display:flex;"><span>/// Values outside a fixed threshold are ignored.
+</span></span><span style="display:flex;"><span>activity SlidingAverage (value: nat32) (average: nat32)
+</span></span><span style="display:flex;"><span>    var buf: rb.RingBuffer = rb.initialise() 
+</span></span><span style="display:flex;"><span>    repeat
+</span></span><span style="display:flex;"><span>        if value &lt;= Threshold then
+</span></span><span style="display:flex;"><span>            rb.push(value)(buf)
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>        average = rb.average(buf)
+</span></span><span style="display:flex;"><span>        await true
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>Here we assume that in the root <code>/</code> of the current project there is a <code>data_structures</code> folder which contains a <code>ringbuffer.blc</code> module file. (The extension is omitted on purpose).
 In order to use its exposed members the local name <code>rb</code> is introduced.
 Now we can refer to the opaque data type <code>rb.RingBuffer</code> or the functions <code>rb.initialise</code> etc&hellip;</p>
 <p>Formally, the import declaration is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-abnf" data-lang="abnf"><span style="color:#000">Import</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;import&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;internal&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Identifier</span> <span style="color:#000">QUOTE</span> <span style="color:#000">ImportPath</span> <span style="color:#000">QUOTE</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> 
-<span style="color:#000">ImportPath</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;/&#34;</span> | <span style="color:#000">&#34;../&#34;</span>+<span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Path</span>
-<span style="color:#000">Path</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;/&#34;</span> <span style="color:#000">Identifier</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">*</span>
-</code></pre></div><h3 id="import-paths">Import paths</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-abnf" data-lang="abnf"><span style="display:flex;"><span><span style="color:#000">Import</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">&#34;import&#34;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;internal&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Identifier</span> <span style="color:#000">QUOTE</span> <span style="color:#000">ImportPath</span> <span style="color:#000">QUOTE</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;exposes&#34;</span> <span style="color:#000">IdentifierList</span><span style="color:#000;font-weight:bold">]</span> 
+</span></span><span style="display:flex;"><span><span style="color:#000">ImportPath</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;/&#34;</span> | <span style="color:#000">&#34;../&#34;</span>+<span style="color:#000;font-weight:bold">]</span> <span style="color:#000">Path</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Path</span> ::<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Identifier</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">&#34;/&#34;</span> <span style="color:#000">Identifier</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">*</span>
+</span></span></code></pre></div><h3 id="import-paths">Import paths</h3>
 <p>There are three kinds of import paths according to this grammar:</p>
 <ol>
 <li>the path starts with an identifier</li>
@@ -521,8 +519,8 @@ It is set by the <code>--project-dir</code> compiler flag.</p>
 <h3 id="exposing-imported-names">Exposing imported names</h3>
 <p>The import statement may <em>expose</em> some names directly to the client code. This makes those names available in the same namespace as the client code without using the given local name prefix.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import Math &#34;libs/utils/math&#34; exposes pi
-</code></pre></div><p>Assuming <code>pi</code> is a name declared in the referenced module, the client code can access this name not only as <code>Math.pi</code> but also as <code>pi</code> directly.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import Math &#34;libs/utils/math&#34; exposes pi
+</span></span></code></pre></div><p>Assuming <code>pi</code> is a name declared in the referenced module, the client code can access this name not only as <code>Math.pi</code> but also as <code>pi</code> directly.</p>
 <h3 id="whitebox-imports">Whitebox imports</h3>
 <p>Finally, an import can be declared as <code>internal</code>.
 Internal imports behave as if all declarations were exposed by the imported module. Of course, this only works if the original Blech source code is available.
@@ -547,21 +545,6 @@ This breaks the information hiding mechanisms and should not be used to circumve
         </div>
       </div>
       
-
-
-<div class="analytics-opt-in">
-    <div class="text">
-        
-        <p>If you opt-in, we use cookies to improve your experience on our site. <a href="https://www.blech-lang.org/about/privacy-policy/">Find out more.</a> 
-        </p>
-        
-    </div>  
-    <div class="buttons">
-        
-        <a class="ok btn-sm btn-primary" onclick="optIn()">Opt-in</a>
-        <a class="close" onclick="closeNotice()">&times</a>
-    </div>
-</div>
 
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
@@ -672,7 +655,7 @@ This breaks the information hiding mechanisms and should not be used to circumve
 
 
 
-<script src="https://www.blech-lang.org/js/main.min.d4852be3b12f7ba8ffeeb8acd8db4bb8c4dea2f1dfac3a72d3777445c1f673ea.js" integrity="sha256-1IUr47Eve6j/7ris2NtLuMTeovHfrDpy03d0RcH2c&#43;o=" crossorigin="anonymous"></script>
+<script src="https://www.blech-lang.org/js/main.min.5d08c1889c5c6515a54f7a9d499f51c38eaa62e5c971c7e38bf9860c8fa76d2c.js" integrity="sha256-XQjBiJxcZRWlT3qdSZ9Rw46qYuXJccfji/mGDI&#43;nbSw=" crossorigin="anonymous"></script>
 
 
 
