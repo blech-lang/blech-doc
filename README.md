@@ -130,7 +130,7 @@ and run
 ./build.[sh, bat]
 ```
 
-The website is deployed as a [GitHub Project Page](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-project-pages). For simplicity, we deploy the project pages [from the `/docs` folder on the `master` branch](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-docs-folder-on-master-branch)
+The website is deployed as a [GitHub Project Page](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-project-pages). For simplicity, we deploy the project pages [from the `/docs` folder on the `main` branch](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-docs-folder-on-master-branch)
 
 For publishing just push the content of the `/docs` folder to the master branch.
 
