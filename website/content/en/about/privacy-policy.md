@@ -14,7 +14,7 @@ See the [GitHub Privacy Statement](https://help.github.com/en/github/site-policy
 
 ### This Website
 
-This Website does **not** collect data or use cookies **by default**.
+This Website does **not** collect data or use cookies.
 
 This website links to external services that usually use cookies.
 - You can learn about cookies and site analytics at [www.cookiechoices.org](https://www.cookiechoices.org/)
